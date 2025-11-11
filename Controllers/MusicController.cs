@@ -3,7 +3,7 @@ using System.Linq;
 using Microsoft.AspNetCore.Mvc;
 using  MusicNameSpace.Models;
 using homeWorkSe.Services;
-
+using MusicServices.Interfaces;
 
 namespace homeWork.Controllers;
 
@@ -11,11 +11,11 @@ namespace homeWork.Controllers;
     [Route("[controller]")]
     public class MusicController : ControllerBase{
 
-        private MusicService service;
+        IMusicService service;
 
-        public MusicController()
+        public MusicController(IMusicService musicService)
         {
-            service = new MusicService();
+            this.service=musicService;
         }
 
         // private Music find(int id)
