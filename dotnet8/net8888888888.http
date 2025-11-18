@@ -1,0 +1,6 @@
+@net8888888888_HostAddress = http://localhost:5281
+
+GET {{net8888888888_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

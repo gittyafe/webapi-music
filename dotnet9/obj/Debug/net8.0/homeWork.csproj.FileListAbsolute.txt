@@ -1,0 +1,8 @@
+Z:\יד תשפו\יפה גיטה\webapi-music\obj\Debug\net8.0\homeWork.csproj.AssemblyReference.cache
+Z:\יד תשפו\יפה גיטה\webapi-music\obj\Debug\net8.0\homeWork.GeneratedMSBuildEditorConfig.editorconfig
+Z:\יד תשפו\יפה גיטה\webapi-music\obj\Debug\net8.0\homeWork.AssemblyInfoInputs.cache
+Z:\יד תשפו\יפה גיטה\webapi-music\obj\Debug\net8.0\homeWork.AssemblyInfo.cs
+Z:\יד תשפו\יפה גיטה\webapi-music\obj\Debug\net8.0\homeWork.csproj.CoreCompileInputs.cache
+Z:\יד תשפו\יפה גיטה\webapi-music\obj\Debug\net8.0\homeWork.MvcApplicationPartsAssemblyInfo.cs
+Z:\יד תשפו\יפה גיטה\webapi-music\obj\Debug\net8.0\homeWork.MvcApplicationPartsAssemblyInfo.cache
+Z:\יד תשפו\יפה גיטה\webapi-music\obj\Debug\net8.0\homeWork.sourcelink.json
