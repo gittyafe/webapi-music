@@ -3,15 +3,15 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>MUSIC - instruments</title>
+    <title>USERS</title>
     <link rel="stylesheet" href="css/site.css" />
 </head>
 
 <body>
-    <h1>MUSIC - instruments</h1>
+    <h1>USERS</h1>
     <h3>Add</h3>
     <form action="javascript:void(0);" method="POST" onsubmit="addItem()">
-        <input type="text" id="add-name" placeholder="New Music">
+        <input type="text" id="add-name" placeholder="New User">
         <input type="submit" value="Add">
     </form>
 
@@ -19,8 +19,9 @@
         <h3>Edit</h3>
         <form action="javascript:void(0);" onsubmit="updateItem()">
             <input type="hidden" id="edit-id">
-            <input type="checkbox" id="edit-isAccompanying">
             <input type="text" id="edit-name">
+            <input type="text" id="edit-age">
+
             <input type="submit" value="Save">
             <a onclick="closeInput()" aria-label="Close">&#10006;</a>
         </form>
@@ -30,16 +31,16 @@
 
     <table>
         <tr>
-            <th>Is Accompanying?</th>
+            <th>id</th>
             <th>Name</th>
+            <th>age</th>
             <th></th>
             <th></th>
         </tr>
-        <tbody id="musics"></tbody>
+        <tbody id="usrs"></tbody>
     </table>
-    <a href="./users.html">to go to users</a>
-
-    <script src="js/site.js" asp-append-version="true"></script>
+<a href="./index.html">to music</a>
+    <script src="js/siteUsers.js" asp-append-version="true"></script>
     <script type="text/javascript">
         getItems();
     </script>

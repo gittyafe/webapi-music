@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="..\build\net8888888888.props" />
-</Project>

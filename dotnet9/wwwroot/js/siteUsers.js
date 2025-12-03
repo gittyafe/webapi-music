@@ -1,5 +1,5 @@
-const uri = '/Music';
-let instruments = [];
+const uri = '/User';
+let users = [];
 
 function getItems() {
     fetch(uri)
@@ -12,7 +12,6 @@ function addItem() {
     const addNameTextbox = document.getElementById('add-name');
 
     const item = {
-        isAccompanying: false,
         name: addNameTextbox.value.trim()
     };
 
@@ -41,11 +40,13 @@ function deleteItem(id) {
 }
 
 function displayEditForm(id) {
-    const item = instruments.find(item => item.id === id);
-
-    document.getElementById('edit-name').value = item.name;
+    const item = users.find(item => item.id === id);
+    
     document.getElementById('edit-id').value = item.id;
-    document.getElementById('edit-isAccompanying').checked = item.isAaccompanying;
+    document.getElementById('edit-name').value = item.name;
+    document.getElementById('edit-age').value = item.age;
+
+    // document.getElementById('edit-isAccompanying').checked = item.isAaccompanying;
     document.getElementById('editForm').style.display = 'block';
 }
 
@@ -53,7 +54,8 @@ function updateItem() {
     const itemId = document.getElementById('edit-id').value;
     const item = {
         id: parseInt(itemId, 10),
-        isAccompanying: document.getElementById('edit-isAccompanying').checked,
+        // isAaccompanying: document.getElementById('edit-isAccompanying').checked,
+        age: document.getElementById('edit-age').value.trim(),
         name: document.getElementById('edit-name').value.trim()
     };
 
@@ -78,13 +80,13 @@ function closeInput() {
 }
 
 function _displayCount(itemCount) {
-    const name = (itemCount === 1) ? 'music' : 'instruments';
+    const name = (itemCount === 1) ? 'user' : 'users';
 
     document.getElementById('counter').innerText = `${itemCount} ${name}`;
 }
 
 function _displayItems(data) {
-    const tBody = document.getElementById('musics');
+    const tBody = document.getElementById('usrs');
     tBody.innerHTML = '';
 
     _displayCount(data.length);
@@ -92,10 +94,10 @@ function _displayItems(data) {
     const button = document.createElement('button');
 
     data.forEach(item => {
-        let isAccompanyingCheckbox = document.createElement('input');
-        isAccompanyingCheckbox.type = 'checkbox';
-        isAccompanyingCheckbox.disabled = true;
-        isAccompanyingCheckbox.checked = item.isAccompanying;
+        // let isAccompanyingCheckbox = document.createElement('input');
+        // isAccompanyingCheckbox.type = 'checkbox';
+        // isAccompanyingCheckbox.disabled = true;
+        // isAccompanyingCheckbox.checked = item.isAccompanying;
 
         let editButton = button.cloneNode(false);
         editButton.innerText = 'Edit';
@@ -107,19 +109,27 @@ function _displayItems(data) {
 
         let tr = tBody.insertRow();
 
-        let td1 = tr.insertCell(0);
-        td1.appendChild(isAccompanyingCheckbox);
+       let td0 = tr.insertCell(0);
+        let textNode0 = document.createTextNode(item.id);
+        td0.appendChild(textNode0);
 
-        let td2 = tr.insertCell(1);
+        let td1 = tr.insertCell(1);
         let textNode = document.createTextNode(item.name);
-        td2.appendChild(textNode);
+        td1.appendChild(textNode);
 
-        let td3 = tr.insertCell(2);
+
+        let td2 = tr.insertCell(2);
+        let textNode1 = document.createTextNode(item.age);
+        td2.appendChild(textNode1);
+        // td1.appendChild(isAccompanyingCheckbox);
+
+
+        let td3 = tr.insertCell(3);
         td3.appendChild(editButton);
 
-        let td4 = tr.insertCell(3);
+        let td4 = tr.insertCell(4);
         td4.appendChild(deleteButton);
     });
 
-    instruments = data;
+    users = data;
 }
