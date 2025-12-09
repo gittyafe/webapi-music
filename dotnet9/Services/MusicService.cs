@@ -3,6 +3,12 @@ using System.Linq;
 using Microsoft.AspNetCore.Mvc;
 using MusicNameSpace.Models;
 using MusicServices.Interfaces;
+using System.IO;
+using System;
+using System.Net;
+using System.Text.Json;
+using Microsoft.AspNetCore.Hosting;
+
 
 namespace homeWorkSe.Services;
 
@@ -10,16 +16,29 @@ public class MusicService : IMusicService
 {
 
     private List<Music> list;
-    
 
-    public MusicService()
+    public MusicService(IWebHostEnvironment webHost)
     {
-        this.list = new List<Music>{
-             new Music { Id = 1, Name = "guittar",IsAccompanying=true},
-             new Music { Id = 2, Name = "fiddle"},
-             new Music { Id = 3, Name = "organ"},
-             new Music { Id = 4, Name = "piano",IsAccompanying=false} 
-        };
+        this.list = new List<Music>();
+
+        this.filePath = Path.Combine(webHost.ContentRootPath,"Data", "Music.json");
+        using (var jsonFile = File.OpenText(filePath))
+        {
+            var content = jsonFile.ReadToEnd();
+            list = JsonSerializer.Deserialize<List<Music>>(content,
+            new JsonSerializerOptions
+            {
+                PropertyNameCaseInsensitive = true
+            });
+        }
+    }
+
+    private string filePath;
+
+    private void saveToFile()
+    {
+        var text = JsonSerializer.Serialize(list);
+        File.WriteAllText(filePath, text);
     }
     private Music find(int id)
     {
@@ -39,6 +58,7 @@ public class MusicService : IMusicService
         var maxId = list.Max(m => m.Id);
         newMusic.Id = maxId + 1;
         list.Add(newMusic);
+        saveToFile();
         return newMusic;
     }
 
@@ -53,6 +73,7 @@ public class MusicService : IMusicService
         var index = list.IndexOf(music);
         list[index] = newMusic;
 
+        saveToFile();
         return 2;
     }
 
@@ -62,14 +83,15 @@ public class MusicService : IMusicService
         if (music == null)
             return false;
         list.Remove(music);
+        saveToFile();
         return true;
     }
 }
- public static class MUsicServiceExtension
+public static class MUsicServiceExtension
 {
     public static void AddMusicService(this IServiceCollection services)
     {
-        services.AddSingleton<IMusicService, MusicService>();      
+        services.AddSingleton<IMusicService, MusicService>();
     }
 }
 

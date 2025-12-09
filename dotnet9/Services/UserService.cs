@@ -3,6 +3,12 @@ using System.Linq;
 using Microsoft.AspNetCore.Mvc;
 using UserNameSpace.Models;
 using IUserServices.Interfaces;
+using System.IO;
+using System;
+using System.Net;
+using System.Text.Json;
+using Microsoft.AspNetCore.Hosting;
+
 
 namespace UserHW.Services;
 
@@ -10,16 +16,33 @@ public class UserService : IUserService
 {
 
     private List<User> list;
-    
 
-    public UserService()
+    private string filePath;
+
+    public UserService(IWebHostEnvironment webHost)
     {
-        this.list = new List<User>{
-             new User { Id = 1, Name = "Reuven",age=20},
-             new User { Id = 2, Name = "Shimon",age=3},
-             
-        };
+        this.list = new List<User>();
+
+        this.filePath = Path.Combine(webHost.ContentRootPath, "Data", "Users.json");
+        using (var jsonFile = File.OpenText(filePath))
+        {
+            var content = jsonFile.ReadToEnd();
+            list = JsonSerializer.Deserialize<List<User>>(content,
+            new JsonSerializerOptions
+            {
+                PropertyNameCaseInsensitive = true
+            });
+        }
     }
+
+
+    private void saveToFile()
+    {
+        var text = JsonSerializer.Serialize(list);
+        File.WriteAllText(filePath, text);
+    }
+
+
     private User find(int id)
     {
         return list.FirstOrDefault(u => u.Id == id);
@@ -38,6 +61,7 @@ public class UserService : IUserService
         var maxId = list.Max(m => m.Id);
         newUser.Id = maxId + 1;
         list.Add(newUser);
+         saveToFile();
         return newUser;
     }
 
@@ -51,7 +75,7 @@ public class UserService : IUserService
 
         var index = list.IndexOf(usr);
         list[index] = newUser;
-
+        saveToFile();
         return 2;
     }
 
@@ -61,14 +85,15 @@ public class UserService : IUserService
         if (usr == null)
             return false;
         list.Remove(usr);
+        saveToFile();
         return true;
     }
 }
- public static class UserServiceExtension
+public static class UserServiceExtension
 {
     public static void AddUserService(this IServiceCollection services)
     {
-        services.AddSingleton<IUserService, UserService>();      
+        services.AddSingleton<IUserService, UserService>();
     }
 }
 
