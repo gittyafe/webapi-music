@@ -16,7 +16,8 @@ function redirectIfNeeded(){
     }   
 }
 
-redirectIfNeeded();
+redirectIfNeeded(); 
+//check
 
 
 function getItems() {
