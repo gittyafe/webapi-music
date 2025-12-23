@@ -1,6 +1,22 @@
 const uri = '/User';
 let users = [];
 
+function redirectIfNeeded(){
+    console.log("hreereee");
+    if(localStorage.getItem("userToken")==null){
+        const currentUrl = window.location.href; // מקבל את ה-URL הנוכחי
+        const newUrl = currentUrl.substring(0, currentUrl.lastIndexOf('/')); // מסיר את הקטע האחרון
+        console.log(newUrl+'/login.html');
+        window.location.href = newUrl+'/login.html'; // מבצע את ה-redirect
+        
+    }
+    else{
+        console.log("the user has token");
+    }   
+}
+
+redirectIfNeeded();
+
 function getItems() {
     fetch(uri)
         .then(response => response.json())
@@ -10,9 +26,13 @@ function getItems() {
 
 function addItem() {
     const addNameTextbox = document.getElementById('add-name');
+    const addPasswdTextbox = document.getElementById('add-passwd');
+
 
     const item = {
-        name: addNameTextbox.value.trim()
+        name: addNameTextbox.value.trim(),
+        passwd: addPasswdTextbox.value.trim()
+
     };
 
     fetch(uri, {
@@ -27,6 +47,8 @@ function addItem() {
         .then(() => {
             getItems();
             addNameTextbox.value = '';
+            addPasswdTextbox.value = '';
+
         })
         .catch(error => console.error('Unable to add item.', error));
 }
@@ -44,7 +66,7 @@ function displayEditForm(id) {
     
     document.getElementById('edit-id').value = item.id;
     document.getElementById('edit-name').value = item.name;
-    document.getElementById('edit-age').value = item.age;
+    document.getElementById('edit-passwd').value = item.passwd;
 
     // document.getElementById('edit-isAccompanying').checked = item.isAaccompanying;
     document.getElementById('editForm').style.display = 'block';
@@ -54,9 +76,9 @@ function updateItem() {
     const itemId = document.getElementById('edit-id').value;
     const item = {
         id: parseInt(itemId, 10),
-        // isAaccompanying: document.getElementById('edit-isAccompanying').checked,
-        age: document.getElementById('edit-age').value.trim(),
-        name: document.getElementById('edit-name').value.trim()
+        name: document.getElementById('edit-name').value.trim(),    
+        passwd: document.getElementById('edit-passwd').value.trim()
+
     };
 
     fetch(`${uri}/${itemId}`, {
@@ -119,7 +141,7 @@ function _displayItems(data) {
 
 
         let td2 = tr.insertCell(2);
-        let textNode1 = document.createTextNode(item.age);
+        let textNode1 = document.createTextNode(item.passwd);
         td2.appendChild(textNode1);
         // td1.appendChild(isAccompanyingCheckbox);
 

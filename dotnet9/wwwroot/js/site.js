@@ -1,6 +1,24 @@
 const uri = '/Music';
 let instruments = [];
 
+
+function redirectIfNeeded(){
+    console.log("hreereee");
+    if(localStorage.getItem("userToken")==null){
+        const currentUrl = window.location.href; // מקבל את ה-URL הנוכחי
+        const newUrl = currentUrl.substring(0, currentUrl.lastIndexOf('/')); // מסיר את הקטע האחרון
+        console.log(newUrl+'/login.html');
+        window.location.href = newUrl+'/login.html'; // מבצע את ה-redirect
+        
+    }
+    else{
+        console.log("the user has token");
+    }   
+}
+
+redirectIfNeeded();
+
+
 function getItems() {
     fetch(uri)
         .then(response => response.json())

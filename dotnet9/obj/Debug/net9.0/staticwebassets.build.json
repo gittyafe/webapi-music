@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "6/7i/ta19JIIar2leF+QXIxdkeQV3A5iqePZAF+MTZM=",
+  "Hash": "Qwncir2aKam+yhcs9TASKk55Z/dTYgXxdehGcLf0JSQ=",
   "Source": "homeWork",
   "BasePath": "_content/homeWork",
   "Mode": "Default",
@@ -17,12 +17,12 @@
   ],
   "Assets": [
     {
-      "Identity": "Z:\\יד תשפו\\יפה גיטה\\webapi-music\\dotnet9\\obj\\Debug\\net9.0\\compressed\\0f82gnm0a2-zt5gujph8i.gz",
+      "Identity": "Z:\\יד תשפו\\יפה גיטה\\webapi-music\\dotnet9\\obj\\Debug\\net9.0\\compressed\\0f82gnm0a2-hmmotelyn5.gz",
       "SourceId": "homeWork",
       "SourceType": "Discovered",
       "ContentRoot": "Z:\\יד תשפו\\יפה גיטה\\webapi-music\\dotnet9\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "_content/homeWork",
-      "RelativePath": "js/siteUsers#[.{fingerprint=zt5gujph8i}]?.js.gz",
+      "RelativePath": "js/siteUsers#[.{fingerprint=hmmotelyn5}]?.js.gz",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Alternative",
@@ -31,19 +31,19 @@
       "RelatedAsset": "Z:\\יד תשפו\\יפה גיטה\\webapi-music\\dotnet9\\wwwroot\\js\\siteUsers.js",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "2cqotwm92o",
-      "Integrity": "rgeV2ZwG93KlQKD3fCqkzKTM/WhmOuwoDqkRkAvydow=",
+      "Fingerprint": "v9jx21ncx1",
+      "Integrity": "Lcqft4muOt+dY0dFvW/xbbcmxa1wlZbXPMDo6Ogl8Vk=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "Z:\\יד תשפו\\יפה גיטה\\webapi-music\\dotnet9\\wwwroot\\js\\siteUsers.js"
     },
     {
-      "Identity": "Z:\\יד תשפו\\יפה גיטה\\webapi-music\\dotnet9\\obj\\Debug\\net9.0\\compressed\\31miqdhh2t-dv5oekefkf.gz",
+      "Identity": "Z:\\יד תשפו\\יפה גיטה\\webapi-music\\dotnet9\\obj\\Debug\\net9.0\\compressed\\31miqdhh2t-xwr41mpz59.gz",
       "SourceId": "homeWork",
       "SourceType": "Discovered",
       "ContentRoot": "Z:\\יד תשפו\\יפה גיטה\\webapi-music\\dotnet9\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "_content/homeWork",
-      "RelativePath": "index#[.{fingerprint=dv5oekefkf}]?.html.gz",
+      "RelativePath": "index#[.{fingerprint=xwr41mpz59}]?.html.gz",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Alternative",
@@ -52,19 +52,19 @@
       "RelatedAsset": "Z:\\יד תשפו\\יפה גיטה\\webapi-music\\dotnet9\\wwwroot\\index.html",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "5548kz48as",
-      "Integrity": "B/lMpMZjNlmP7R99K5j7TLOMKALHbcNZ6q7uKVgMsvI=",
+      "Fingerprint": "kcy8et4yqd",
+      "Integrity": "HH7f3iwuubCtZUf/N1dYlIUJk27eLfLDhaTP2fxB9HE=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "Z:\\יד תשפו\\יפה גיטה\\webapi-music\\dotnet9\\wwwroot\\index.html"
     },
     {
-      "Identity": "Z:\\יד תשפו\\יפה גיטה\\webapi-music\\dotnet9\\obj\\Debug\\net9.0\\compressed\\7e0pq7btbp-wet6r8yrte.gz",
+      "Identity": "Z:\\יד תשפו\\יפה גיטה\\webapi-music\\dotnet9\\obj\\Debug\\net9.0\\compressed\\7e0pq7btbp-wbyqqioloy.gz",
       "SourceId": "homeWork",
       "SourceType": "Discovered",
       "ContentRoot": "Z:\\יד תשפו\\יפה גיטה\\webapi-music\\dotnet9\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "_content/homeWork",
-      "RelativePath": "users#[.{fingerprint=wet6r8yrte}]?.html.gz",
+      "RelativePath": "users#[.{fingerprint=wbyqqioloy}]?.html.gz",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Alternative",
@@ -73,19 +73,40 @@
       "RelatedAsset": "Z:\\יד תשפו\\יפה גיטה\\webapi-music\\dotnet9\\wwwroot\\users.html",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "x84rd1ec7s",
-      "Integrity": "vwCA88y1rEqqEfesQbm3yhzPVcuyGehNs/dGr/D+pVI=",
+      "Fingerprint": "6wn4zu9i3n",
+      "Integrity": "9pyaGUs1mTN9kWBD5IE9iJXvKg6P61m3PgoDjjhS8Ck=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "Z:\\יד תשפו\\יפה גיטה\\webapi-music\\dotnet9\\wwwroot\\users.html"
     },
     {
-      "Identity": "Z:\\יד תשפו\\יפה גיטה\\webapi-music\\dotnet9\\obj\\Debug\\net9.0\\compressed\\ad99ow8338-t08mwa666y.gz",
+      "Identity": "Z:\\יד תשפו\\יפה גיטה\\webapi-music\\dotnet9\\obj\\Debug\\net9.0\\compressed\\96kubrfkzt-wnnh3kkj07.gz",
       "SourceId": "homeWork",
       "SourceType": "Discovered",
       "ContentRoot": "Z:\\יד תשפו\\יפה גיטה\\webapi-music\\dotnet9\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "_content/homeWork",
-      "RelativePath": "js/site#[.{fingerprint=t08mwa666y}]?.js.gz",
+      "RelativePath": "js/usersLogin#[.{fingerprint=wnnh3kkj07}]?.js.gz",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "Z:\\יד תשפו\\יפה גיטה\\webapi-music\\dotnet9\\wwwroot\\js\\usersLogin.js",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "Fingerprint": "efdqgefzim",
+      "Integrity": "en5wMr73QRVHjgpTvf/Y9Zc71cfR6Z/opZp4ntYUd8w=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "Z:\\יד תשפו\\יפה גיטה\\webapi-music\\dotnet9\\wwwroot\\js\\usersLogin.js"
+    },
+    {
+      "Identity": "Z:\\יד תשפו\\יפה גיטה\\webapi-music\\dotnet9\\obj\\Debug\\net9.0\\compressed\\ad99ow8338-8upm44bbes.gz",
+      "SourceId": "homeWork",
+      "SourceType": "Discovered",
+      "ContentRoot": "Z:\\יד תשפו\\יפה גיטה\\webapi-music\\dotnet9\\obj\\Debug\\net9.0\\compressed\\",
+      "BasePath": "_content/homeWork",
+      "RelativePath": "js/site#[.{fingerprint=8upm44bbes}]?.js.gz",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Alternative",
@@ -94,8 +115,8 @@
       "RelatedAsset": "Z:\\יד תשפו\\יפה גיטה\\webapi-music\\dotnet9\\wwwroot\\js\\site.js",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "4diteno6d7",
-      "Integrity": "yHNHjGZkPcGnz4P7nXa2GSyvonBmtQUopbY1x05BkJs=",
+      "Fingerprint": "iyry3cqmv5",
+      "Integrity": "CnWJMU5zwGpdqUtxjRTNFQ5DJJW/loF1bCCcXRN8deY=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "Z:\\יד תשפו\\יפה גיטה\\webapi-music\\dotnet9\\wwwroot\\js\\site.js"
@@ -120,6 +141,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "Z:\\יד תשפו\\יפה גיטה\\webapi-music\\dotnet9\\wwwroot\\css\\site.css"
+    },
+    {
+      "Identity": "Z:\\יד תשפו\\יפה גיטה\\webapi-music\\dotnet9\\obj\\Debug\\net9.0\\compressed\\ovfz26wefx-yznnbn3g6y.gz",
+      "SourceId": "homeWork",
+      "SourceType": "Discovered",
+      "ContentRoot": "Z:\\יד תשפו\\יפה גיטה\\webapi-music\\dotnet9\\obj\\Debug\\net9.0\\compressed\\",
+      "BasePath": "_content/homeWork",
+      "RelativePath": "login#[.{fingerprint=yznnbn3g6y}]?.html.gz",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "Z:\\יד תשפו\\יפה גיטה\\webapi-music\\dotnet9\\wwwroot\\login.html",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "Fingerprint": "ypqfin8g1v",
+      "Integrity": "BsMWPBAd72A3KGa1NzWYuH8BZ/UDMJ4pLCuPAzfTllw=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "Z:\\יד תשפו\\יפה גיטה\\webapi-music\\dotnet9\\wwwroot\\login.html"
     },
     {
       "Identity": "Z:\\יד תשפו\\יפה גיטה\\webapi-music\\dotnet9\\wwwroot\\css\\site.css",
@@ -157,8 +199,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "dv5oekefkf",
-      "Integrity": "uXE1tn2RKUphhQ3kDdNbj6kF6kOlzVSxxUVPzNUM2us=",
+      "Fingerprint": "xwr41mpz59",
+      "Integrity": "UW+Lg3ETyLAsUP4bRV08J0NXBHVYijvWhnx0qS6Gzqc=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\index.html"
@@ -178,8 +220,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "t08mwa666y",
-      "Integrity": "HTo8zp4kBUMf47E/m5Y43Og8ri2+ioh08qTOjf3rtZA=",
+      "Fingerprint": "8upm44bbes",
+      "Integrity": "sE8eS3+mFT/Pzb+bOo+rzopfu3uvIUkrZqjngiLBxJI=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\site.js"
@@ -199,11 +241,53 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "zt5gujph8i",
-      "Integrity": "h1sRP96dcDEIAvbKdivW8aeF7+7ewujXt04tzdOD+so=",
+      "Fingerprint": "hmmotelyn5",
+      "Integrity": "d3I28jy71z6VhGfAb2sXIhlnTa2/fkYWc7+SW0dAhUA=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\siteUsers.js"
+    },
+    {
+      "Identity": "Z:\\יד תשפו\\יפה גיטה\\webapi-music\\dotnet9\\wwwroot\\js\\usersLogin.js",
+      "SourceId": "homeWork",
+      "SourceType": "Discovered",
+      "ContentRoot": "Z:\\יד תשפו\\יפה גיטה\\webapi-music\\dotnet9\\wwwroot\\",
+      "BasePath": "_content/homeWork",
+      "RelativePath": "js/usersLogin#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "wnnh3kkj07",
+      "Integrity": "DEX2D9ctCSgsn7ciChcAUZ6rB55hbpwFV8GF4zYsmLk=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\usersLogin.js"
+    },
+    {
+      "Identity": "Z:\\יד תשפו\\יפה גיטה\\webapi-music\\dotnet9\\wwwroot\\login.html",
+      "SourceId": "homeWork",
+      "SourceType": "Discovered",
+      "ContentRoot": "Z:\\יד תשפו\\יפה גיטה\\webapi-music\\dotnet9\\wwwroot\\",
+      "BasePath": "_content/homeWork",
+      "RelativePath": "login#[.{fingerprint}]?.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "yznnbn3g6y",
+      "Integrity": "wk/hekaQg8fhnUylk8CYhbyxpVXYWr8ZEQHM4QZ0egA=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\login.html"
     },
     {
       "Identity": "Z:\\יד תשפו\\יפה גיטה\\webapi-music\\dotnet9\\wwwroot\\users.html",
@@ -220,8 +304,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "wet6r8yrte",
-      "Integrity": "mCp8zVzqzset8IN0LRzFzy/fRQs2PBroWXF9B8GPpCE=",
+      "Fingerprint": "wbyqqioloy",
+      "Integrity": "TNJRtEcAMDMagEvoMVnUVrA6y9Wu2h9wLnTnJXlm2qc=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\users.html"
@@ -527,13 +611,13 @@
       ]
     },
     {
-      "Route": "index.dv5oekefkf.html",
-      "AssetFile": "Z:\\יד תשפו\\יפה גיטה\\webapi-music\\dotnet9\\obj\\Debug\\net9.0\\compressed\\31miqdhh2t-dv5oekefkf.gz",
+      "Route": "index.html",
+      "AssetFile": "Z:\\יד תשפו\\יפה גיטה\\webapi-music\\dotnet9\\obj\\Debug\\net9.0\\compressed\\31miqdhh2t-xwr41mpz59.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.001760563380"
+          "Quality": "0.001721170396"
         }
       ],
       "ResponseHeaders": [
@@ -543,19 +627,19 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "567"
+          "Value": "580"
         },
         {
           "Name": "ETag",
-          "Value": "\"B/lMpMZjNlmP7R99K5j7TLOMKALHbcNZ6q7uKVgMsvI=\""
+          "Value": "\"HH7f3iwuubCtZUf/N1dYlIUJk27eLfLDhaTP2fxB9HE=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 03 Dec 2025 16:06:05 GMT"
+          "Value": "Tue, 23 Dec 2025 18:35:37 GMT"
         },
         {
           "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
+          "Value": "no-cache"
         },
         {
           "Name": "Content-Encoding",
@@ -571,26 +655,18 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"uXE1tn2RKUphhQ3kDdNbj6kF6kOlzVSxxUVPzNUM2us=\""
+          "Value": "W/\"UW+Lg3ETyLAsUP4bRV08J0NXBHVYijvWhnx0qS6Gzqc=\""
         }
       ],
       "EndpointProperties": [
         {
-          "Name": "fingerprint",
-          "Value": "dv5oekefkf"
-        },
-        {
-          "Name": "label",
-          "Value": "index.html"
-        },
-        {
           "Name": "integrity",
-          "Value": "sha256-uXE1tn2RKUphhQ3kDdNbj6kF6kOlzVSxxUVPzNUM2us="
+          "Value": "sha256-UW+Lg3ETyLAsUP4bRV08J0NXBHVYijvWhnx0qS6Gzqc="
         }
       ]
     },
     {
-      "Route": "index.dv5oekefkf.html",
+      "Route": "index.html",
       "AssetFile": "Z:\\יד תשפו\\יפה גיטה\\webapi-music\\dotnet9\\wwwroot\\index.html",
       "Selectors": [],
       "ResponseHeaders": [
@@ -600,7 +676,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1290"
+          "Value": "1322"
         },
         {
           "Name": "Content-Type",
@@ -608,11 +684,156 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"uXE1tn2RKUphhQ3kDdNbj6kF6kOlzVSxxUVPzNUM2us=\""
+          "Value": "\"UW+Lg3ETyLAsUP4bRV08J0NXBHVYijvWhnx0qS6Gzqc=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 03 Dec 2025 16:06:05 GMT"
+          "Value": "Tue, 23 Dec 2025 18:35:37 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-UW+Lg3ETyLAsUP4bRV08J0NXBHVYijvWhnx0qS6Gzqc="
+        }
+      ]
+    },
+    {
+      "Route": "index.html.gz",
+      "AssetFile": "Z:\\יד תשפו\\יפה גיטה\\webapi-music\\dotnet9\\obj\\Debug\\net9.0\\compressed\\31miqdhh2t-xwr41mpz59.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "580"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"HH7f3iwuubCtZUf/N1dYlIUJk27eLfLDhaTP2fxB9HE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 23 Dec 2025 18:35:37 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-HH7f3iwuubCtZUf/N1dYlIUJk27eLfLDhaTP2fxB9HE="
+        }
+      ]
+    },
+    {
+      "Route": "index.xwr41mpz59.html",
+      "AssetFile": "Z:\\יד תשפו\\יפה גיטה\\webapi-music\\dotnet9\\obj\\Debug\\net9.0\\compressed\\31miqdhh2t-xwr41mpz59.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.001721170396"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "580"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"HH7f3iwuubCtZUf/N1dYlIUJk27eLfLDhaTP2fxB9HE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 23 Dec 2025 18:35:37 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"UW+Lg3ETyLAsUP4bRV08J0NXBHVYijvWhnx0qS6Gzqc=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "xwr41mpz59"
+        },
+        {
+          "Name": "label",
+          "Value": "index.html"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-UW+Lg3ETyLAsUP4bRV08J0NXBHVYijvWhnx0qS6Gzqc="
+        }
+      ]
+    },
+    {
+      "Route": "index.xwr41mpz59.html",
+      "AssetFile": "Z:\\יד תשפו\\יפה גיטה\\webapi-music\\dotnet9\\wwwroot\\index.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1322"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"UW+Lg3ETyLAsUP4bRV08J0NXBHVYijvWhnx0qS6Gzqc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 23 Dec 2025 18:35:37 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -622,7 +843,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "dv5oekefkf"
+          "Value": "xwr41mpz59"
         },
         {
           "Name": "label",
@@ -630,13 +851,13 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-uXE1tn2RKUphhQ3kDdNbj6kF6kOlzVSxxUVPzNUM2us="
+          "Value": "sha256-UW+Lg3ETyLAsUP4bRV08J0NXBHVYijvWhnx0qS6Gzqc="
         }
       ]
     },
     {
-      "Route": "index.dv5oekefkf.html.gz",
-      "AssetFile": "Z:\\יד תשפו\\יפה גיטה\\webapi-music\\dotnet9\\obj\\Debug\\net9.0\\compressed\\31miqdhh2t-dv5oekefkf.gz",
+      "Route": "index.xwr41mpz59.html.gz",
+      "AssetFile": "Z:\\יד תשפו\\יפה גיטה\\webapi-music\\dotnet9\\obj\\Debug\\net9.0\\compressed\\31miqdhh2t-xwr41mpz59.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -645,7 +866,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "567"
+          "Value": "580"
         },
         {
           "Name": "Content-Type",
@@ -653,11 +874,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"B/lMpMZjNlmP7R99K5j7TLOMKALHbcNZ6q7uKVgMsvI=\""
+          "Value": "\"HH7f3iwuubCtZUf/N1dYlIUJk27eLfLDhaTP2fxB9HE=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 03 Dec 2025 16:06:05 GMT"
+          "Value": "Tue, 23 Dec 2025 18:35:37 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -675,7 +896,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "dv5oekefkf"
+          "Value": "xwr41mpz59"
         },
         {
           "Name": "label",
@@ -683,18 +904,18 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-B/lMpMZjNlmP7R99K5j7TLOMKALHbcNZ6q7uKVgMsvI="
+          "Value": "sha256-HH7f3iwuubCtZUf/N1dYlIUJk27eLfLDhaTP2fxB9HE="
         }
       ]
     },
     {
-      "Route": "index.html",
-      "AssetFile": "Z:\\יד תשפו\\יפה גיטה\\webapi-music\\dotnet9\\obj\\Debug\\net9.0\\compressed\\31miqdhh2t-dv5oekefkf.gz",
+      "Route": "js/site.8upm44bbes.js",
+      "AssetFile": "Z:\\יד תשפו\\יפה גיטה\\webapi-music\\dotnet9\\obj\\Debug\\net9.0\\compressed\\ad99ow8338-8upm44bbes.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.001760563380"
+          "Quality": "0.000771604938"
         }
       ],
       "ResponseHeaders": [
@@ -704,156 +925,19 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "567"
+          "Value": "1295"
         },
         {
           "Name": "ETag",
-          "Value": "\"B/lMpMZjNlmP7R99K5j7TLOMKALHbcNZ6q7uKVgMsvI=\""
+          "Value": "\"CnWJMU5zwGpdqUtxjRTNFQ5DJJW/loF1bCCcXRN8deY=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 03 Dec 2025 16:06:05 GMT"
+          "Value": "Tue, 23 Dec 2025 18:38:33 GMT"
         },
         {
           "Name": "Cache-Control",
-          "Value": "no-cache"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/html"
-        },
-        {
-          "Name": "ETag",
-          "Value": "W/\"uXE1tn2RKUphhQ3kDdNbj6kF6kOlzVSxxUVPzNUM2us=\""
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-uXE1tn2RKUphhQ3kDdNbj6kF6kOlzVSxxUVPzNUM2us="
-        }
-      ]
-    },
-    {
-      "Route": "index.html",
-      "AssetFile": "Z:\\יד תשפו\\יפה גיטה\\webapi-music\\dotnet9\\wwwroot\\index.html",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "1290"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/html"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"uXE1tn2RKUphhQ3kDdNbj6kF6kOlzVSxxUVPzNUM2us=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Wed, 03 Dec 2025 16:06:05 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-uXE1tn2RKUphhQ3kDdNbj6kF6kOlzVSxxUVPzNUM2us="
-        }
-      ]
-    },
-    {
-      "Route": "index.html.gz",
-      "AssetFile": "Z:\\יד תשפו\\יפה גיטה\\webapi-music\\dotnet9\\obj\\Debug\\net9.0\\compressed\\31miqdhh2t-dv5oekefkf.gz",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "567"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/html"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"B/lMpMZjNlmP7R99K5j7TLOMKALHbcNZ6q7uKVgMsvI=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Wed, 03 Dec 2025 16:06:05 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-B/lMpMZjNlmP7R99K5j7TLOMKALHbcNZ6q7uKVgMsvI="
-        }
-      ]
-    },
-    {
-      "Route": "js/site.js",
-      "AssetFile": "Z:\\יד תשפו\\יפה גיטה\\webapi-music\\dotnet9\\obj\\Debug\\net9.0\\compressed\\ad99ow8338-t08mwa666y.gz",
-      "Selectors": [
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip",
-          "Quality": "0.000967117988"
-        }
-      ],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "1033"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"yHNHjGZkPcGnz4P7nXa2GSyvonBmtQUopbY1x05BkJs=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Wed, 03 Dec 2025 16:14:20 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
+          "Value": "max-age=31536000, immutable"
         },
         {
           "Name": "Content-Encoding",
@@ -869,18 +953,26 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"HTo8zp4kBUMf47E/m5Y43Og8ri2+ioh08qTOjf3rtZA=\""
+          "Value": "W/\"sE8eS3+mFT/Pzb+bOo+rzopfu3uvIUkrZqjngiLBxJI=\""
         }
       ],
       "EndpointProperties": [
         {
+          "Name": "fingerprint",
+          "Value": "8upm44bbes"
+        },
+        {
+          "Name": "label",
+          "Value": "js/site.js"
+        },
+        {
           "Name": "integrity",
-          "Value": "sha256-HTo8zp4kBUMf47E/m5Y43Og8ri2+ioh08qTOjf3rtZA="
+          "Value": "sha256-sE8eS3+mFT/Pzb+bOo+rzopfu3uvIUkrZqjngiLBxJI="
         }
       ]
     },
     {
-      "Route": "js/site.js",
+      "Route": "js/site.8upm44bbes.js",
       "AssetFile": "Z:\\יד תשפו\\יפה גיטה\\webapi-music\\dotnet9\\wwwroot\\js\\site.js",
       "Selectors": [],
       "ResponseHeaders": [
@@ -890,7 +982,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "3728"
+          "Value": "4283"
         },
         {
           "Name": "Content-Type",
@@ -898,121 +990,21 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"HTo8zp4kBUMf47E/m5Y43Og8ri2+ioh08qTOjf3rtZA=\""
+          "Value": "\"sE8eS3+mFT/Pzb+bOo+rzopfu3uvIUkrZqjngiLBxJI=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 03 Dec 2025 16:14:20 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-HTo8zp4kBUMf47E/m5Y43Og8ri2+ioh08qTOjf3rtZA="
-        }
-      ]
-    },
-    {
-      "Route": "js/site.js.gz",
-      "AssetFile": "Z:\\יד תשפו\\יפה גיטה\\webapi-music\\dotnet9\\obj\\Debug\\net9.0\\compressed\\ad99ow8338-t08mwa666y.gz",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "1033"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/javascript"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"yHNHjGZkPcGnz4P7nXa2GSyvonBmtQUopbY1x05BkJs=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Wed, 03 Dec 2025 16:14:20 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-yHNHjGZkPcGnz4P7nXa2GSyvonBmtQUopbY1x05BkJs="
-        }
-      ]
-    },
-    {
-      "Route": "js/site.t08mwa666y.js",
-      "AssetFile": "Z:\\יד תשפו\\יפה גיטה\\webapi-music\\dotnet9\\obj\\Debug\\net9.0\\compressed\\ad99ow8338-t08mwa666y.gz",
-      "Selectors": [
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip",
-          "Quality": "0.000967117988"
-        }
-      ],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "1033"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"yHNHjGZkPcGnz4P7nXa2GSyvonBmtQUopbY1x05BkJs=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Wed, 03 Dec 2025 16:14:20 GMT"
+          "Value": "Tue, 23 Dec 2025 18:38:33 GMT"
         },
         {
           "Name": "Cache-Control",
           "Value": "max-age=31536000, immutable"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/javascript"
-        },
-        {
-          "Name": "ETag",
-          "Value": "W/\"HTo8zp4kBUMf47E/m5Y43Og8ri2+ioh08qTOjf3rtZA=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "t08mwa666y"
+          "Value": "8upm44bbes"
         },
         {
           "Name": "label",
@@ -1020,13 +1012,13 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-HTo8zp4kBUMf47E/m5Y43Og8ri2+ioh08qTOjf3rtZA="
+          "Value": "sha256-sE8eS3+mFT/Pzb+bOo+rzopfu3uvIUkrZqjngiLBxJI="
         }
       ]
     },
     {
-      "Route": "js/site.t08mwa666y.js",
-      "AssetFile": "Z:\\יד תשפו\\יפה גיטה\\webapi-music\\dotnet9\\wwwroot\\js\\site.js",
+      "Route": "js/site.8upm44bbes.js.gz",
+      "AssetFile": "Z:\\יד תשפו\\יפה גיטה\\webapi-music\\dotnet9\\obj\\Debug\\net9.0\\compressed\\ad99ow8338-8upm44bbes.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1035,7 +1027,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "3728"
+          "Value": "1295"
         },
         {
           "Name": "Content-Type",
@@ -1043,56 +1035,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"HTo8zp4kBUMf47E/m5Y43Og8ri2+ioh08qTOjf3rtZA=\""
+          "Value": "\"CnWJMU5zwGpdqUtxjRTNFQ5DJJW/loF1bCCcXRN8deY=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 03 Dec 2025 16:14:20 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "t08mwa666y"
-        },
-        {
-          "Name": "label",
-          "Value": "js/site.js"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-HTo8zp4kBUMf47E/m5Y43Og8ri2+ioh08qTOjf3rtZA="
-        }
-      ]
-    },
-    {
-      "Route": "js/site.t08mwa666y.js.gz",
-      "AssetFile": "Z:\\יד תשפו\\יפה גיטה\\webapi-music\\dotnet9\\obj\\Debug\\net9.0\\compressed\\ad99ow8338-t08mwa666y.gz",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "1033"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/javascript"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"yHNHjGZkPcGnz4P7nXa2GSyvonBmtQUopbY1x05BkJs=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Wed, 03 Dec 2025 16:14:20 GMT"
+          "Value": "Tue, 23 Dec 2025 18:38:33 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1110,7 +1057,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "t08mwa666y"
+          "Value": "8upm44bbes"
         },
         {
           "Name": "label",
@@ -1118,18 +1065,18 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-yHNHjGZkPcGnz4P7nXa2GSyvonBmtQUopbY1x05BkJs="
+          "Value": "sha256-CnWJMU5zwGpdqUtxjRTNFQ5DJJW/loF1bCCcXRN8deY="
         }
       ]
     },
     {
-      "Route": "js/siteUsers.js",
-      "AssetFile": "Z:\\יד תשפו\\יפה גיטה\\webapi-music\\dotnet9\\obj\\Debug\\net9.0\\compressed\\0f82gnm0a2-zt5gujph8i.gz",
+      "Route": "js/site.js",
+      "AssetFile": "Z:\\יד תשפו\\יפה גיטה\\webapi-music\\dotnet9\\obj\\Debug\\net9.0\\compressed\\ad99ow8338-8upm44bbes.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000918273646"
+          "Quality": "0.000771604938"
         }
       ],
       "ResponseHeaders": [
@@ -1139,15 +1086,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1088"
+          "Value": "1295"
         },
         {
           "Name": "ETag",
-          "Value": "\"rgeV2ZwG93KlQKD3fCqkzKTM/WhmOuwoDqkRkAvydow=\""
+          "Value": "\"CnWJMU5zwGpdqUtxjRTNFQ5DJJW/loF1bCCcXRN8deY=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 03 Dec 2025 16:08:55 GMT"
+          "Value": "Tue, 23 Dec 2025 18:38:33 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1167,18 +1114,163 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"h1sRP96dcDEIAvbKdivW8aeF7+7ewujXt04tzdOD+so=\""
+          "Value": "W/\"sE8eS3+mFT/Pzb+bOo+rzopfu3uvIUkrZqjngiLBxJI=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-h1sRP96dcDEIAvbKdivW8aeF7+7ewujXt04tzdOD+so="
+          "Value": "sha256-sE8eS3+mFT/Pzb+bOo+rzopfu3uvIUkrZqjngiLBxJI="
         }
       ]
     },
     {
-      "Route": "js/siteUsers.js",
+      "Route": "js/site.js",
+      "AssetFile": "Z:\\יד תשפו\\יפה גיטה\\webapi-music\\dotnet9\\wwwroot\\js\\site.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "4283"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"sE8eS3+mFT/Pzb+bOo+rzopfu3uvIUkrZqjngiLBxJI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 23 Dec 2025 18:38:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-sE8eS3+mFT/Pzb+bOo+rzopfu3uvIUkrZqjngiLBxJI="
+        }
+      ]
+    },
+    {
+      "Route": "js/site.js.gz",
+      "AssetFile": "Z:\\יד תשפו\\יפה גיטה\\webapi-music\\dotnet9\\obj\\Debug\\net9.0\\compressed\\ad99ow8338-8upm44bbes.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1295"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"CnWJMU5zwGpdqUtxjRTNFQ5DJJW/loF1bCCcXRN8deY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 23 Dec 2025 18:38:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-CnWJMU5zwGpdqUtxjRTNFQ5DJJW/loF1bCCcXRN8deY="
+        }
+      ]
+    },
+    {
+      "Route": "js/siteUsers.hmmotelyn5.js",
+      "AssetFile": "Z:\\יד תשפו\\יפה גיטה\\webapi-music\\dotnet9\\obj\\Debug\\net9.0\\compressed\\0f82gnm0a2-hmmotelyn5.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000726216412"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1376"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Lcqft4muOt+dY0dFvW/xbbcmxa1wlZbXPMDo6Ogl8Vk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 23 Dec 2025 18:39:02 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"d3I28jy71z6VhGfAb2sXIhlnTa2/fkYWc7+SW0dAhUA=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "hmmotelyn5"
+        },
+        {
+          "Name": "label",
+          "Value": "js/siteUsers.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-d3I28jy71z6VhGfAb2sXIhlnTa2/fkYWc7+SW0dAhUA="
+        }
+      ]
+    },
+    {
+      "Route": "js/siteUsers.hmmotelyn5.js",
       "AssetFile": "Z:\\יד תשפו\\יפה גיטה\\webapi-music\\dotnet9\\wwwroot\\js\\siteUsers.js",
       "Selectors": [],
       "ResponseHeaders": [
@@ -1188,7 +1280,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "4054"
+          "Value": "4706"
         },
         {
           "Name": "Content-Type",
@@ -1196,121 +1288,21 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"h1sRP96dcDEIAvbKdivW8aeF7+7ewujXt04tzdOD+so=\""
+          "Value": "\"d3I28jy71z6VhGfAb2sXIhlnTa2/fkYWc7+SW0dAhUA=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 03 Dec 2025 16:08:55 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-h1sRP96dcDEIAvbKdivW8aeF7+7ewujXt04tzdOD+so="
-        }
-      ]
-    },
-    {
-      "Route": "js/siteUsers.js.gz",
-      "AssetFile": "Z:\\יד תשפו\\יפה גיטה\\webapi-music\\dotnet9\\obj\\Debug\\net9.0\\compressed\\0f82gnm0a2-zt5gujph8i.gz",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "1088"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/javascript"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"rgeV2ZwG93KlQKD3fCqkzKTM/WhmOuwoDqkRkAvydow=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Wed, 03 Dec 2025 16:08:55 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-rgeV2ZwG93KlQKD3fCqkzKTM/WhmOuwoDqkRkAvydow="
-        }
-      ]
-    },
-    {
-      "Route": "js/siteUsers.zt5gujph8i.js",
-      "AssetFile": "Z:\\יד תשפו\\יפה גיטה\\webapi-music\\dotnet9\\obj\\Debug\\net9.0\\compressed\\0f82gnm0a2-zt5gujph8i.gz",
-      "Selectors": [
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip",
-          "Quality": "0.000918273646"
-        }
-      ],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "1088"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"rgeV2ZwG93KlQKD3fCqkzKTM/WhmOuwoDqkRkAvydow=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Wed, 03 Dec 2025 16:08:55 GMT"
+          "Value": "Tue, 23 Dec 2025 18:39:02 GMT"
         },
         {
           "Name": "Cache-Control",
           "Value": "max-age=31536000, immutable"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/javascript"
-        },
-        {
-          "Name": "ETag",
-          "Value": "W/\"h1sRP96dcDEIAvbKdivW8aeF7+7ewujXt04tzdOD+so=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "zt5gujph8i"
+          "Value": "hmmotelyn5"
         },
         {
           "Name": "label",
@@ -1318,13 +1310,13 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-h1sRP96dcDEIAvbKdivW8aeF7+7ewujXt04tzdOD+so="
+          "Value": "sha256-d3I28jy71z6VhGfAb2sXIhlnTa2/fkYWc7+SW0dAhUA="
         }
       ]
     },
     {
-      "Route": "js/siteUsers.zt5gujph8i.js",
-      "AssetFile": "Z:\\יד תשפו\\יפה גיטה\\webapi-music\\dotnet9\\wwwroot\\js\\siteUsers.js",
+      "Route": "js/siteUsers.hmmotelyn5.js.gz",
+      "AssetFile": "Z:\\יד תשפו\\יפה גיטה\\webapi-music\\dotnet9\\obj\\Debug\\net9.0\\compressed\\0f82gnm0a2-hmmotelyn5.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1333,7 +1325,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "4054"
+          "Value": "1376"
         },
         {
           "Name": "Content-Type",
@@ -1341,56 +1333,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"h1sRP96dcDEIAvbKdivW8aeF7+7ewujXt04tzdOD+so=\""
+          "Value": "\"Lcqft4muOt+dY0dFvW/xbbcmxa1wlZbXPMDo6Ogl8Vk=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 03 Dec 2025 16:08:55 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "zt5gujph8i"
-        },
-        {
-          "Name": "label",
-          "Value": "js/siteUsers.js"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-h1sRP96dcDEIAvbKdivW8aeF7+7ewujXt04tzdOD+so="
-        }
-      ]
-    },
-    {
-      "Route": "js/siteUsers.zt5gujph8i.js.gz",
-      "AssetFile": "Z:\\יד תשפו\\יפה גיטה\\webapi-music\\dotnet9\\obj\\Debug\\net9.0\\compressed\\0f82gnm0a2-zt5gujph8i.gz",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "1088"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/javascript"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"rgeV2ZwG93KlQKD3fCqkzKTM/WhmOuwoDqkRkAvydow=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Wed, 03 Dec 2025 16:08:55 GMT"
+          "Value": "Tue, 23 Dec 2025 18:39:02 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1408,7 +1355,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "zt5gujph8i"
+          "Value": "hmmotelyn5"
         },
         {
           "Name": "label",
@@ -1416,18 +1363,18 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-rgeV2ZwG93KlQKD3fCqkzKTM/WhmOuwoDqkRkAvydow="
+          "Value": "sha256-Lcqft4muOt+dY0dFvW/xbbcmxa1wlZbXPMDo6Ogl8Vk="
         }
       ]
     },
     {
-      "Route": "users.html",
-      "AssetFile": "Z:\\יד תשפו\\יפה גיטה\\webapi-music\\dotnet9\\obj\\Debug\\net9.0\\compressed\\7e0pq7btbp-wet6r8yrte.gz",
+      "Route": "js/siteUsers.js",
+      "AssetFile": "Z:\\יד תשפו\\יפה גיטה\\webapi-music\\dotnet9\\obj\\Debug\\net9.0\\compressed\\0f82gnm0a2-hmmotelyn5.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.001848428835"
+          "Quality": "0.000726216412"
         }
       ],
       "ResponseHeaders": [
@@ -1437,15 +1384,450 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "540"
+          "Value": "1376"
         },
         {
           "Name": "ETag",
-          "Value": "\"vwCA88y1rEqqEfesQbm3yhzPVcuyGehNs/dGr/D+pVI=\""
+          "Value": "\"Lcqft4muOt+dY0dFvW/xbbcmxa1wlZbXPMDo6Ogl8Vk=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 08 Dec 2025 09:54:57 GMT"
+          "Value": "Tue, 23 Dec 2025 18:39:02 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"d3I28jy71z6VhGfAb2sXIhlnTa2/fkYWc7+SW0dAhUA=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-d3I28jy71z6VhGfAb2sXIhlnTa2/fkYWc7+SW0dAhUA="
+        }
+      ]
+    },
+    {
+      "Route": "js/siteUsers.js",
+      "AssetFile": "Z:\\יד תשפו\\יפה גיטה\\webapi-music\\dotnet9\\wwwroot\\js\\siteUsers.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "4706"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"d3I28jy71z6VhGfAb2sXIhlnTa2/fkYWc7+SW0dAhUA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 23 Dec 2025 18:39:02 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-d3I28jy71z6VhGfAb2sXIhlnTa2/fkYWc7+SW0dAhUA="
+        }
+      ]
+    },
+    {
+      "Route": "js/siteUsers.js.gz",
+      "AssetFile": "Z:\\יד תשפו\\יפה גיטה\\webapi-music\\dotnet9\\obj\\Debug\\net9.0\\compressed\\0f82gnm0a2-hmmotelyn5.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1376"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Lcqft4muOt+dY0dFvW/xbbcmxa1wlZbXPMDo6Ogl8Vk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 23 Dec 2025 18:39:02 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-Lcqft4muOt+dY0dFvW/xbbcmxa1wlZbXPMDo6Ogl8Vk="
+        }
+      ]
+    },
+    {
+      "Route": "js/usersLogin.js",
+      "AssetFile": "Z:\\יד תשפו\\יפה גיטה\\webapi-music\\dotnet9\\obj\\Debug\\net9.0\\compressed\\96kubrfkzt-wnnh3kkj07.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.001557632399"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "641"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"en5wMr73QRVHjgpTvf/Y9Zc71cfR6Z/opZp4ntYUd8w=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 23 Dec 2025 17:56:34 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"DEX2D9ctCSgsn7ciChcAUZ6rB55hbpwFV8GF4zYsmLk=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-DEX2D9ctCSgsn7ciChcAUZ6rB55hbpwFV8GF4zYsmLk="
+        }
+      ]
+    },
+    {
+      "Route": "js/usersLogin.js",
+      "AssetFile": "Z:\\יד תשפו\\יפה גיטה\\webapi-music\\dotnet9\\wwwroot\\js\\usersLogin.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1359"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"DEX2D9ctCSgsn7ciChcAUZ6rB55hbpwFV8GF4zYsmLk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 23 Dec 2025 17:56:34 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-DEX2D9ctCSgsn7ciChcAUZ6rB55hbpwFV8GF4zYsmLk="
+        }
+      ]
+    },
+    {
+      "Route": "js/usersLogin.js.gz",
+      "AssetFile": "Z:\\יד תשפו\\יפה גיטה\\webapi-music\\dotnet9\\obj\\Debug\\net9.0\\compressed\\96kubrfkzt-wnnh3kkj07.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "641"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"en5wMr73QRVHjgpTvf/Y9Zc71cfR6Z/opZp4ntYUd8w=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 23 Dec 2025 17:56:34 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-en5wMr73QRVHjgpTvf/Y9Zc71cfR6Z/opZp4ntYUd8w="
+        }
+      ]
+    },
+    {
+      "Route": "js/usersLogin.wnnh3kkj07.js",
+      "AssetFile": "Z:\\יד תשפו\\יפה גיטה\\webapi-music\\dotnet9\\obj\\Debug\\net9.0\\compressed\\96kubrfkzt-wnnh3kkj07.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.001557632399"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "641"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"en5wMr73QRVHjgpTvf/Y9Zc71cfR6Z/opZp4ntYUd8w=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 23 Dec 2025 17:56:34 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"DEX2D9ctCSgsn7ciChcAUZ6rB55hbpwFV8GF4zYsmLk=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "wnnh3kkj07"
+        },
+        {
+          "Name": "label",
+          "Value": "js/usersLogin.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-DEX2D9ctCSgsn7ciChcAUZ6rB55hbpwFV8GF4zYsmLk="
+        }
+      ]
+    },
+    {
+      "Route": "js/usersLogin.wnnh3kkj07.js",
+      "AssetFile": "Z:\\יד תשפו\\יפה גיטה\\webapi-music\\dotnet9\\wwwroot\\js\\usersLogin.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1359"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"DEX2D9ctCSgsn7ciChcAUZ6rB55hbpwFV8GF4zYsmLk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 23 Dec 2025 17:56:34 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "wnnh3kkj07"
+        },
+        {
+          "Name": "label",
+          "Value": "js/usersLogin.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-DEX2D9ctCSgsn7ciChcAUZ6rB55hbpwFV8GF4zYsmLk="
+        }
+      ]
+    },
+    {
+      "Route": "js/usersLogin.wnnh3kkj07.js.gz",
+      "AssetFile": "Z:\\יד תשפו\\יפה גיטה\\webapi-music\\dotnet9\\obj\\Debug\\net9.0\\compressed\\96kubrfkzt-wnnh3kkj07.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "641"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"en5wMr73QRVHjgpTvf/Y9Zc71cfR6Z/opZp4ntYUd8w=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 23 Dec 2025 17:56:34 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "wnnh3kkj07"
+        },
+        {
+          "Name": "label",
+          "Value": "js/usersLogin.js.gz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-en5wMr73QRVHjgpTvf/Y9Zc71cfR6Z/opZp4ntYUd8w="
+        }
+      ]
+    },
+    {
+      "Route": "login.html",
+      "AssetFile": "Z:\\יד תשפו\\יפה גיטה\\webapi-music\\dotnet9\\obj\\Debug\\net9.0\\compressed\\ovfz26wefx-yznnbn3g6y.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.002881844380"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "346"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"BsMWPBAd72A3KGa1NzWYuH8BZ/UDMJ4pLCuPAzfTllw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 23 Dec 2025 17:12:18 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1465,13 +1847,311 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"mCp8zVzqzset8IN0LRzFzy/fRQs2PBroWXF9B8GPpCE=\""
+          "Value": "W/\"wk/hekaQg8fhnUylk8CYhbyxpVXYWr8ZEQHM4QZ0egA=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-mCp8zVzqzset8IN0LRzFzy/fRQs2PBroWXF9B8GPpCE="
+          "Value": "sha256-wk/hekaQg8fhnUylk8CYhbyxpVXYWr8ZEQHM4QZ0egA="
+        }
+      ]
+    },
+    {
+      "Route": "login.html",
+      "AssetFile": "Z:\\יד תשפו\\יפה גיטה\\webapi-music\\dotnet9\\wwwroot\\login.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "630"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"wk/hekaQg8fhnUylk8CYhbyxpVXYWr8ZEQHM4QZ0egA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 23 Dec 2025 17:12:18 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-wk/hekaQg8fhnUylk8CYhbyxpVXYWr8ZEQHM4QZ0egA="
+        }
+      ]
+    },
+    {
+      "Route": "login.html.gz",
+      "AssetFile": "Z:\\יד תשפו\\יפה גיטה\\webapi-music\\dotnet9\\obj\\Debug\\net9.0\\compressed\\ovfz26wefx-yznnbn3g6y.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "346"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"BsMWPBAd72A3KGa1NzWYuH8BZ/UDMJ4pLCuPAzfTllw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 23 Dec 2025 17:12:18 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-BsMWPBAd72A3KGa1NzWYuH8BZ/UDMJ4pLCuPAzfTllw="
+        }
+      ]
+    },
+    {
+      "Route": "login.yznnbn3g6y.html",
+      "AssetFile": "Z:\\יד תשפו\\יפה גיטה\\webapi-music\\dotnet9\\obj\\Debug\\net9.0\\compressed\\ovfz26wefx-yznnbn3g6y.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.002881844380"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "346"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"BsMWPBAd72A3KGa1NzWYuH8BZ/UDMJ4pLCuPAzfTllw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 23 Dec 2025 17:12:18 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"wk/hekaQg8fhnUylk8CYhbyxpVXYWr8ZEQHM4QZ0egA=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "yznnbn3g6y"
+        },
+        {
+          "Name": "label",
+          "Value": "login.html"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-wk/hekaQg8fhnUylk8CYhbyxpVXYWr8ZEQHM4QZ0egA="
+        }
+      ]
+    },
+    {
+      "Route": "login.yznnbn3g6y.html",
+      "AssetFile": "Z:\\יד תשפו\\יפה גיטה\\webapi-music\\dotnet9\\wwwroot\\login.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "630"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"wk/hekaQg8fhnUylk8CYhbyxpVXYWr8ZEQHM4QZ0egA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 23 Dec 2025 17:12:18 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "yznnbn3g6y"
+        },
+        {
+          "Name": "label",
+          "Value": "login.html"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-wk/hekaQg8fhnUylk8CYhbyxpVXYWr8ZEQHM4QZ0egA="
+        }
+      ]
+    },
+    {
+      "Route": "login.yznnbn3g6y.html.gz",
+      "AssetFile": "Z:\\יד תשפו\\יפה גיטה\\webapi-music\\dotnet9\\obj\\Debug\\net9.0\\compressed\\ovfz26wefx-yznnbn3g6y.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "346"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"BsMWPBAd72A3KGa1NzWYuH8BZ/UDMJ4pLCuPAzfTllw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 23 Dec 2025 17:12:18 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "yznnbn3g6y"
+        },
+        {
+          "Name": "label",
+          "Value": "login.html.gz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-BsMWPBAd72A3KGa1NzWYuH8BZ/UDMJ4pLCuPAzfTllw="
+        }
+      ]
+    },
+    {
+      "Route": "users.html",
+      "AssetFile": "Z:\\יד תשפו\\יפה גיטה\\webapi-music\\dotnet9\\obj\\Debug\\net9.0\\compressed\\7e0pq7btbp-wbyqqioloy.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.001751313485"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "570"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"9pyaGUs1mTN9kWBD5IE9iJXvKg6P61m3PgoDjjhS8Ck=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 23 Dec 2025 17:04:59 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"TNJRtEcAMDMagEvoMVnUVrA6y9Wu2h9wLnTnJXlm2qc=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-TNJRtEcAMDMagEvoMVnUVrA6y9Wu2h9wLnTnJXlm2qc="
         }
       ]
     },
@@ -1486,7 +2166,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1255"
+          "Value": "1390"
         },
         {
           "Name": "Content-Type",
@@ -1494,11 +2174,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"mCp8zVzqzset8IN0LRzFzy/fRQs2PBroWXF9B8GPpCE=\""
+          "Value": "\"TNJRtEcAMDMagEvoMVnUVrA6y9Wu2h9wLnTnJXlm2qc=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 08 Dec 2025 09:54:57 GMT"
+          "Value": "Tue, 23 Dec 2025 17:04:59 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1508,13 +2188,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-mCp8zVzqzset8IN0LRzFzy/fRQs2PBroWXF9B8GPpCE="
+          "Value": "sha256-TNJRtEcAMDMagEvoMVnUVrA6y9Wu2h9wLnTnJXlm2qc="
         }
       ]
     },
     {
       "Route": "users.html.gz",
-      "AssetFile": "Z:\\יד תשפו\\יפה גיטה\\webapi-music\\dotnet9\\obj\\Debug\\net9.0\\compressed\\7e0pq7btbp-wet6r8yrte.gz",
+      "AssetFile": "Z:\\יד תשפו\\יפה גיטה\\webapi-music\\dotnet9\\obj\\Debug\\net9.0\\compressed\\7e0pq7btbp-wbyqqioloy.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1523,7 +2203,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "540"
+          "Value": "570"
         },
         {
           "Name": "Content-Type",
@@ -1531,11 +2211,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"vwCA88y1rEqqEfesQbm3yhzPVcuyGehNs/dGr/D+pVI=\""
+          "Value": "\"9pyaGUs1mTN9kWBD5IE9iJXvKg6P61m3PgoDjjhS8Ck=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 08 Dec 2025 09:54:57 GMT"
+          "Value": "Tue, 23 Dec 2025 17:04:59 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1553,18 +2233,18 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-vwCA88y1rEqqEfesQbm3yhzPVcuyGehNs/dGr/D+pVI="
+          "Value": "sha256-9pyaGUs1mTN9kWBD5IE9iJXvKg6P61m3PgoDjjhS8Ck="
         }
       ]
     },
     {
-      "Route": "users.wet6r8yrte.html",
-      "AssetFile": "Z:\\יד תשפו\\יפה גיטה\\webapi-music\\dotnet9\\obj\\Debug\\net9.0\\compressed\\7e0pq7btbp-wet6r8yrte.gz",
+      "Route": "users.wbyqqioloy.html",
+      "AssetFile": "Z:\\יד תשפו\\יפה גיטה\\webapi-music\\dotnet9\\obj\\Debug\\net9.0\\compressed\\7e0pq7btbp-wbyqqioloy.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.001848428835"
+          "Quality": "0.001751313485"
         }
       ],
       "ResponseHeaders": [
@@ -1574,15 +2254,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "540"
+          "Value": "570"
         },
         {
           "Name": "ETag",
-          "Value": "\"vwCA88y1rEqqEfesQbm3yhzPVcuyGehNs/dGr/D+pVI=\""
+          "Value": "\"9pyaGUs1mTN9kWBD5IE9iJXvKg6P61m3PgoDjjhS8Ck=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 08 Dec 2025 09:54:57 GMT"
+          "Value": "Tue, 23 Dec 2025 17:04:59 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1602,13 +2282,13 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"mCp8zVzqzset8IN0LRzFzy/fRQs2PBroWXF9B8GPpCE=\""
+          "Value": "W/\"TNJRtEcAMDMagEvoMVnUVrA6y9Wu2h9wLnTnJXlm2qc=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "wet6r8yrte"
+          "Value": "wbyqqioloy"
         },
         {
           "Name": "label",
@@ -1616,12 +2296,12 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-mCp8zVzqzset8IN0LRzFzy/fRQs2PBroWXF9B8GPpCE="
+          "Value": "sha256-TNJRtEcAMDMagEvoMVnUVrA6y9Wu2h9wLnTnJXlm2qc="
         }
       ]
     },
     {
-      "Route": "users.wet6r8yrte.html",
+      "Route": "users.wbyqqioloy.html",
       "AssetFile": "Z:\\יד תשפו\\יפה גיטה\\webapi-music\\dotnet9\\wwwroot\\users.html",
       "Selectors": [],
       "ResponseHeaders": [
@@ -1631,7 +2311,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1255"
+          "Value": "1390"
         },
         {
           "Name": "Content-Type",
@@ -1639,11 +2319,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"mCp8zVzqzset8IN0LRzFzy/fRQs2PBroWXF9B8GPpCE=\""
+          "Value": "\"TNJRtEcAMDMagEvoMVnUVrA6y9Wu2h9wLnTnJXlm2qc=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 08 Dec 2025 09:54:57 GMT"
+          "Value": "Tue, 23 Dec 2025 17:04:59 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1653,7 +2333,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "wet6r8yrte"
+          "Value": "wbyqqioloy"
         },
         {
           "Name": "label",
@@ -1661,13 +2341,13 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-mCp8zVzqzset8IN0LRzFzy/fRQs2PBroWXF9B8GPpCE="
+          "Value": "sha256-TNJRtEcAMDMagEvoMVnUVrA6y9Wu2h9wLnTnJXlm2qc="
         }
       ]
     },
     {
-      "Route": "users.wet6r8yrte.html.gz",
-      "AssetFile": "Z:\\יד תשפו\\יפה גיטה\\webapi-music\\dotnet9\\obj\\Debug\\net9.0\\compressed\\7e0pq7btbp-wet6r8yrte.gz",
+      "Route": "users.wbyqqioloy.html.gz",
+      "AssetFile": "Z:\\יד תשפו\\יפה גיטה\\webapi-music\\dotnet9\\obj\\Debug\\net9.0\\compressed\\7e0pq7btbp-wbyqqioloy.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1676,7 +2356,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "540"
+          "Value": "570"
         },
         {
           "Name": "Content-Type",
@@ -1684,11 +2364,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"vwCA88y1rEqqEfesQbm3yhzPVcuyGehNs/dGr/D+pVI=\""
+          "Value": "\"9pyaGUs1mTN9kWBD5IE9iJXvKg6P61m3PgoDjjhS8Ck=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 08 Dec 2025 09:54:57 GMT"
+          "Value": "Tue, 23 Dec 2025 17:04:59 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1706,7 +2386,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "wet6r8yrte"
+          "Value": "wbyqqioloy"
         },
         {
           "Name": "label",
@@ -1714,7 +2394,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-vwCA88y1rEqqEfesQbm3yhzPVcuyGehNs/dGr/D+pVI="
+          "Value": "sha256-9pyaGUs1mTN9kWBD5IE9iJXvKg6P61m3PgoDjjhS8Ck="
         }
       ]
     }

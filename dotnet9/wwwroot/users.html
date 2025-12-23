@@ -11,7 +11,9 @@
     <h1>USERS</h1>
     <h3>Add</h3>
     <form action="javascript:void(0);" method="POST" onsubmit="addItem()">
-        <input type="text" id="add-name" placeholder="New User">
+        <input type="text" id="add-name" placeholder="New User's Name">
+        <input type="text" id="add-passwd" placeholder="New User's Passwd">
+
         <input type="submit" value="Add">
     </form>
 
@@ -20,7 +22,7 @@
         <form action="javascript:void(0);" onsubmit="updateItem()">
             <input type="hidden" id="edit-id">
             <input type="text" id="edit-name">
-            <input type="text" id="edit-age">
+            <input type="text" id="edit-passwd">
 
             <input type="submit" value="Save">
             <a onclick="closeInput()" aria-label="Close">&#10006;</a>
@@ -33,13 +35,14 @@
         <tr>
             <th>id</th>
             <th>Name</th>
-            <th>age</th>
+            <th>Password</th>
             <th></th>
             <th></th>
         </tr>
         <tbody id="usrs"></tbody>
     </table>
     <a href="./index.html">to music</a>
+    <a href="./login.html">to login</a>
     <script src="js/siteUsers.js" asp-append-version="true"></script>
     <script type="text/javascript">
         getItems();

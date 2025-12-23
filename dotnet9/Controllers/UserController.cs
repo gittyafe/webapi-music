@@ -4,6 +4,8 @@ using Microsoft.AspNetCore.Mvc;
 using UserNameSpace.Models;
 using UserHW.Services;
 using IUserServices.Interfaces;
+using System.Security.Claims;
+using TS.Services;
 
 namespace homeWorkUser.Controllers;
 
@@ -17,6 +19,34 @@ namespace homeWorkUser.Controllers;
         {
             this.service=userService;
         }
+
+        //
+        [HttpPost]
+        [Route("[action]")]
+        public ActionResult<String> Login([FromBody] User User)
+        {
+            var dt = DateTime.Now;
+            // if (User.Name != "Wray"
+            // || User.Passwd != $"W{dt.Year}#{dt.Day}!")
+            // {
+            //     return Unauthorized();
+            // }
+
+            var claims = new List<Claim>
+            { 
+               
+                new Claim("username", User.Name),
+                new Claim("userid", User.Id.ToString()),
+                new Claim("type", "Admin"),
+
+            };
+
+            var token = TokenService.GetToken(claims);
+
+            return new OkObjectResult(TokenService.WriteToken(token));
+        }
+
+        //
 
         [HttpGet()]
         public ActionResult<IEnumerable<User>> Get()

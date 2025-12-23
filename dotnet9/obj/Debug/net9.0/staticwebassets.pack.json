@@ -17,6 +17,14 @@
       "PackagePath": "staticwebassets\\js\\siteUsers.js"
     },
     {
+      "Id": "Z:\\יד תשפו\\יפה גיטה\\webapi-music\\dotnet9\\wwwroot\\js\\usersLogin.js",
+      "PackagePath": "staticwebassets\\js\\usersLogin.js"
+    },
+    {
+      "Id": "Z:\\יד תשפו\\יפה גיטה\\webapi-music\\dotnet9\\wwwroot\\login.html",
+      "PackagePath": "staticwebassets\\login.html"
+    },
+    {
       "Id": "Z:\\יד תשפו\\יפה גיטה\\webapi-music\\dotnet9\\wwwroot\\users.html",
       "PackagePath": "staticwebassets\\users.html"
     },
