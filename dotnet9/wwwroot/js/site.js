@@ -13,11 +13,10 @@ function redirectIfNeeded(){
     }
     else{
         console.log("the user has token");
+        getItems();
     }   
 }
 
-redirectIfNeeded(); 
-//check
 
 
 function getItems() {

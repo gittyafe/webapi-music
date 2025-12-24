@@ -39,10 +39,17 @@ function handleFormSubmit(event) {
 
              // addNameTextbox.value = '';
             // addPasswdTextbox.value = '';
-        })
-        
+        }) 
         .catch(error => console.error('Unable to add item.', error));
-}
+
+        
+        const currentUrl = window.location.href; // מקבל את ה-URL הנוכחי
+        const newUrl = currentUrl.substring(0, currentUrl.lastIndexOf('/')); // מסיר את הקטע האחרון
+        console.log(newUrl+'/login.html');
+        window.location.href = newUrl+'/index.html'; // מבצע את ה-redirect
+            
+}       
+
 
 form.addEventListener('submit', handleFormSubmit);
 

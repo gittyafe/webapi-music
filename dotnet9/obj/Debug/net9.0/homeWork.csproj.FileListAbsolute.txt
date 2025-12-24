@@ -148,9 +148,9 @@ Z:\יד תשפו\יפה גיטה\webapi-music\dotnet9\bin\Debug\net9.0\Microsoft
 Z:\יד תשפו\יפה גיטה\webapi-music\dotnet9\bin\Debug\net9.0\Swashbuckle.AspNetCore.Swagger.dll
 Z:\יד תשפו\יפה גיטה\webapi-music\dotnet9\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 Z:\יד תשפו\יפה גיטה\webapi-music\dotnet9\bin\Debug\net9.0\System.IdentityModel.Tokens.Jwt.dll
-Z:\יד תשפו\יפה גיטה\webapi-music\dotnet9\obj\Debug\net9.0\compressed\7e0pq7btbp-wbyqqioloy.gz
 Z:\יד תשפו\יפה גיטה\webapi-music\dotnet9\obj\Debug\net9.0\compressed\ovfz26wefx-yznnbn3g6y.gz
-Z:\יד תשפו\יפה גיטה\webapi-music\dotnet9\obj\Debug\net9.0\compressed\96kubrfkzt-wnnh3kkj07.gz
-Z:\יד תשפו\יפה גיטה\webapi-music\dotnet9\obj\Debug\net9.0\compressed\31miqdhh2t-xwr41mpz59.gz
-Z:\יד תשפו\יפה גיטה\webapi-music\dotnet9\obj\Debug\net9.0\compressed\ad99ow8338-8upm44bbes.gz
-Z:\יד תשפו\יפה גיטה\webapi-music\dotnet9\obj\Debug\net9.0\compressed\0f82gnm0a2-hmmotelyn5.gz
+Z:\יד תשפו\יפה גיטה\webapi-music\dotnet9\obj\Debug\net9.0\compressed\31miqdhh2t-vfrnd6k69j.gz
+Z:\יד תשפו\יפה גיטה\webapi-music\dotnet9\obj\Debug\net9.0\compressed\ad99ow8338-4qqgrgaxzi.gz
+Z:\יד תשפו\יפה גיטה\webapi-music\dotnet9\obj\Debug\net9.0\compressed\0f82gnm0a2-l23wijo4u8.gz
+Z:\יד תשפו\יפה גיטה\webapi-music\dotnet9\obj\Debug\net9.0\compressed\7e0pq7btbp-6lcijlyxjr.gz
+Z:\יד תשפו\יפה גיטה\webapi-music\dotnet9\obj\Debug\net9.0\compressed\96kubrfkzt-0j0o171tgf.gz
