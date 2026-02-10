@@ -8,90 +8,70 @@ using System;
 using System.Net;
 using System.Text.Json;
 using Microsoft.AspNetCore.Hosting;
-
+using IMusicRepo.Interfaces;
+using IActiveUserN.Interfaces;
+using MRepo.Services;
 
 namespace homeWorkSe.Services;
 
 public class MusicService : IMusicService
 {
-
-    private List<Music> list;
-
-    public MusicService(IWebHostEnvironment webHost)
-    {
-        this.list = new List<Music>();
-
-        this.filePath = Path.Combine(webHost.ContentRootPath,"Data", "Music.json");
-        using (var jsonFile = File.OpenText(filePath))
-        {
-            var content = jsonFile.ReadToEnd();
-            list = JsonSerializer.Deserialize<List<Music>>(content,
-            new JsonSerializerOptions
-            {
-                PropertyNameCaseInsensitive = true
-            });
-        }
+    private readonly IMusicRepository repository;
+    private readonly int activeUserId;
+    public MusicService(IMusicRepository repository, IActiveUser activeUser){
+        this.repository=repository;
+        activeUserId = activeUser.ActiveUser?.Id
+                ?? throw new System.InvalidOperationException("Active user is required");
     }
 
-    private string filePath;
+    public List<Music> Get() => repository.Get().Where(m=>m.UserId == activeUserId).ToList();
 
-    private void saveToFile()
+    public Music Get(int id)
     {
-        var text = JsonSerializer.Serialize(list);
-        File.WriteAllText(filePath, text);
-    }
-    private Music find(int id)
-    {
-        return list.FirstOrDefault(p => p.Id == id);
-    }
+        var music = repository.Get(id);
+        return music?.UserId == activeUserId ? music : null;
+    }   
 
-    public List<Music> Get()
+    public Music Create(Music music)
     {
-        return list;
+        music.UserId = activeUserId;
+        repository.Create(music);
+        return music;
     }
 
 
-    public Music Get(int id) => find(id);
-
-    public Music Create(Music newMusic)
+    public int Update(int id,Music music)
     {
-        var maxId = list.Max(m => m.Id);
-        newMusic.Id = maxId + 1;
-        list.Add(newMusic);
-        saveToFile();
-        return newMusic;
-    }
-
-    public int Update(int id, Music newMusic)
-    {
-        var music = find(id);
-        if (music == null)
+        if (music.UserId != activeUserId)
             return 0;
-        if (music.Id != newMusic.Id)
+
+        var existing = repository.Get(id);
+        if (existing?.UserId != activeUserId)
             return 1;
 
-        var index = list.IndexOf(music);
-        list[index] = newMusic;
-
-        saveToFile();
+        repository.Update(id,music);
         return 2;
     }
 
     public bool Delete(int id)
     {
-        var music = find(id);
-        if (music == null)
+        var music = Get(id);
+        if (music is null || music.UserId != activeUserId)
             return false;
-        list.Remove(music);
-        saveToFile();
+
+        repository.Delete(id);
         return true;
     }
+
 }
-public static class MUsicServiceExtension
+
+public static partial class MusicExtensions
 {
-    public static void AddMusicService(this IServiceCollection services)
+    public static IServiceCollection AddMusic(this IServiceCollection services)
     {
-        services.AddSingleton<IMusicService, MusicService>();
+        services.AddScoped<IMusicService, MusicService>();
+        services.AddSingleton<IMusicRepository, MusicRepository>();
+        return services;
     }
 }
 

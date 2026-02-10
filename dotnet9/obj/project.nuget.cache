@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "Q3yx3vL42UU=",
+  "dgSpecHash": "anPIAKHivo8=",
   "success": true,
   "projectFilePath": "Z:\\יד תשפו\\יפה גיטה\\webapi-music\\dotnet9\\homeWork.csproj",
   "expectedPackageFiles": [
@@ -32,8 +32,10 @@
     {
       "code": "NU1902",
       "level": "Warning",
-      "warningLevel": 1,
       "message": "Package 'Microsoft.AspNetCore.Authentication.JwtBearer' 5.0.4 has a known moderate severity vulnerability, https://github.com/advisories/GHSA-q7cg-43mg-qp69",
+      "projectPath": "Z:\\יד תשפו\\יפה גיטה\\webapi-music\\dotnet9\\homeWork.csproj",
+      "warningLevel": 1,
+      "filePath": "Z:\\יד תשפו\\יפה גיטה\\webapi-music\\dotnet9\\homeWork.csproj",
       "libraryId": "Microsoft.AspNetCore.Authentication.JwtBearer",
       "targetGraphs": [
         "net9.0"
