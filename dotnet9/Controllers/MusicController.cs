@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using  MusicNameSpace.Models;
 using homeWorkSe.Services;
@@ -9,6 +10,7 @@ namespace homeWork.Controllers;
 
     [ApiController]
     [Route("[controller]")]
+    [Authorize]
     public class MusicController : ControllerBase{
 
         IMusicService service;

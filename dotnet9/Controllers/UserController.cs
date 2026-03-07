@@ -34,11 +34,9 @@ namespace homeWorkUser.Controllers;
 
             var claims = new List<Claim>
             { 
-               
                 new Claim("username", User.Name),
                 new Claim("userid", User.Id.ToString()),
-                new Claim("type", "Admin"),
-
+                new Claim("type", User.Type.ToString()),
             };
 
             var token = TokenService.GetToken(claims);
@@ -76,7 +74,6 @@ namespace homeWorkUser.Controllers;
         [HttpPut("{id}")]
         public ActionResult<User> Update(int id,User newUser)
         {
-
             var flag = service.Update(id, newUser);
             if (flag == 0)
                 return NotFound();

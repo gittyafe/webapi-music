@@ -25,10 +25,21 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddMusic();
 builder.Services.AddActiveUser();
 builder.Services.AddUserService();
-builder.services.AddHttpContextAccessor();
+builder.Services.AddHttpContextAccessor();
 builder.Services.AddControllers();
 
 builder.Services.AddEndpointsApiExplorer();
+
+
+builder.Services.AddAuthentication("Bearer")
+    .AddJwtBearer(options =>
+    {
+        options.TokenValidationParameters = TS.Services.TokenService.GetTokenValidationParameters();
+    });
+
+builder.Services.AddAuthorization();
+
+
 
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Logging.ClearProviders();//log4net seriLog
@@ -57,6 +68,7 @@ app.UseStaticFiles();
 
 app.UseHttpsRedirection();
 
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();

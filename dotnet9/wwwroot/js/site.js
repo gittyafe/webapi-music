@@ -1,5 +1,7 @@
 const uri = '/Music';
 let instruments = [];
+const token = localStorage.getItem("userToken");
+
 
 
 function redirectIfNeeded(){
@@ -19,11 +21,24 @@ function redirectIfNeeded(){
 
 
 
+// function getItems() {
+//     fetch(uri)
+//         .then(response => response.json())
+//         .then(data => _displayItems(data))
+//         .catch(error => console.error('Unable to get items.', error));
+// }
 function getItems() {
-    fetch(uri)
-        .then(response => response.json())
-        .then(data => _displayItems(data))
-        .catch(error => console.error('Unable to get items.', error));
+
+    fetch(uri, {
+        method: "GET",
+        headers: {
+            "Authorization": "Bearer " + token,
+            "Accept": "application/json"
+        }
+    })
+    .then(response => response.json())
+    .then(data => _displayItems(data))
+    .catch(error => console.error('Unable to get items.', error));
 }
 
 function addItem() {
@@ -37,6 +52,7 @@ function addItem() {
     fetch(uri, {
             method: 'POST',
             headers: {
+                  "Authorization": "Bearer " + token,
                 'Accept': 'application/json',
                 'Content-Type': 'application/json'
             },
@@ -52,7 +68,10 @@ function addItem() {
 
 function deleteItem(id) {
     fetch(`${uri}/${id}`, {
-            method: 'DELETE'
+            method: 'DELETE',
+            headers: {
+                  "Authorization": "Bearer " + token,
+            },
         })
         .then(() => getItems())
         .catch(error => console.error('Unable to delete item.', error));
@@ -78,6 +97,7 @@ function updateItem() {
     fetch(`${uri}/${itemId}`, {
             method: 'PUT',
             headers: {
+                  "Authorization": "Bearer " + token,
                 'Accept': 'application/json',
                 'Content-Type': 'application/json'
             },

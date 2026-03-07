@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "Z:\\יד תשפו\\יפה גיטה\\webapi-music\\dotnet9\\homeWork.csproj": {}
+    "C:\\Users\\user\\Documents\\github-for-homework\\new webapi\\webapi-music\\dotnet9\\homeWork.csproj": {}
   },
   "projects": {
-    "Z:\\יד תשפו\\יפה גיטה\\webapi-music\\dotnet9\\homeWork.csproj": {
+    "C:\\Users\\user\\Documents\\github-for-homework\\new webapi\\webapi-music\\dotnet9\\homeWork.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "Z:\\יד תשפו\\יפה גיטה\\webapi-music\\dotnet9\\homeWork.csproj",
+        "projectUniqueName": "C:\\Users\\user\\Documents\\github-for-homework\\new webapi\\webapi-music\\dotnet9\\homeWork.csproj",
         "projectName": "homeWork",
-        "projectPath": "Z:\\יד תשפו\\יפה גיטה\\webapi-music\\dotnet9\\homeWork.csproj",
-        "packagesPath": "C:\\Users\\huser\\.nuget\\packages\\",
-        "outputPath": "Z:\\יד תשפו\\יפה גיטה\\webapi-music\\dotnet9\\obj\\",
+        "projectPath": "C:\\Users\\user\\Documents\\github-for-homework\\new webapi\\webapi-music\\dotnet9\\homeWork.csproj",
+        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\user\\Documents\\github-for-homework\\new webapi\\webapi-music\\dotnet9\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\huser\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -25,7 +25,8 @@
           "net9.0"
         ],
         "sources": {
-          "c:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -90,7 +91,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "c:\\Program Files\\dotnet\\sdk\\9.0.302/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.310/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

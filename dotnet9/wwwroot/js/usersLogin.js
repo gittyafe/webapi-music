@@ -10,45 +10,64 @@ let users = [];
 const form = document.getElementById('form');
 
 // 2. הגדרת הפונקציה שתרוץ ב-submit
-function handleFormSubmit(event) {
-  // מונע את רענון הדף הסטנדרטי של הטופס!
-  event.preventDefault();
+async function handleFormSubmit(event) {
+    // מונע את רענון הדף הסטנדרטי של הטופס!
+    event.preventDefault();
 
 
-    const addNameTextbox = document.getElementById('passwd');
-    const addPasswdTextbox = document.getElementById('name');
+    const addNameTextbox = document.getElementById('name');
+    const addPasswdTextbox = document.getElementById('passwd');
+    const name = addNameTextbox.value.trim();
+    const passwd = addPasswdTextbox.value.trim();
+    let item, item2;
+    await fetch("/User")
+        .then(res => res.json())
+        .then(json => {
+            console.log(json);
+            item = json.find(x => x.name == name && x.passwd == passwd);
+            console.log(item);
+            debugger;
+            item2 = {
+                Id: item.id,
+                Name: item.name,
+                Passwd: item.passwd,
+                Type: "ikk"
+            }
+            if (item == null) {
+                console.log("could not find user");
+                return;
+            }
+            console.log(item);
+        });
 
 
-    const item = {
-        name: addNameTextbox.value.trim(),
-        passwd: addPasswdTextbox.value.trim()
 
-    };
-  
-    fetch(`${uri}`, {
-            method: 'POST',
-            headers: {
-                'Accept': 'application/json',
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(item)
-        })
-        .then(res=>res.json())
-        .then(data=>{
-            localStorage.setItem("userToken",data)
+    await fetch(`${uri}`, {
+        method: 'POST',
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(item2)
+    })
+        .then(res => res.text())
+        .then(data => {
+            console.log(data);
+            const cleanToken = data.replace(/"/g, ""); // מסיר מרכאות
+            localStorage.setItem("userToken", cleanToken);
 
-             // addNameTextbox.value = '';
+            // addNameTextbox.value = '';
             // addPasswdTextbox.value = '';
-        }) 
+        })
         .catch(error => console.error('Unable to add item.', error));
 
-        
-        const currentUrl = window.location.href; // מקבל את ה-URL הנוכחי
-        const newUrl = currentUrl.substring(0, currentUrl.lastIndexOf('/')); // מסיר את הקטע האחרון
-        console.log(newUrl+'/login.html');
-        window.location.href = newUrl+'/index.html'; // מבצע את ה-redirect
-            
-}       
+
+    const currentUrl = window.location.href; // מקבל את ה-URL הנוכחי
+    const newUrl = currentUrl.substring(0, currentUrl.lastIndexOf('/')); // מסיר את הקטע האחרון
+    console.log(newUrl + '/login.html');
+    window.location.href = newUrl + '/index.html'; // מבצע את ה-redirect
+
+}
 
 
 form.addEventListener('submit', handleFormSubmit);

@@ -11,15 +11,16 @@ public class ActiveUserService : IActiveUser
     public User ActiveUser { get; private set; }
     public ActiveUserService(IHttpContextAccessor context)
     {
-        var userId = context?.HttpContext?.User?.FindFirst("Id");
+        var userId = context?.HttpContext?.User?.FindFirst("userid")?.Value;
         if (userId != null)
         {
             ActiveUser = new User
             {
-                Id = int.Parse(userId.Value),
+                Id = int.Parse(userId),
                 Name = "test"
             };
         }
+
     }
 
 }

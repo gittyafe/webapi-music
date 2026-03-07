@@ -75,11 +75,11 @@ function displayEditForm(id) {
 function updateItem() {
     const itemId = document.getElementById('edit-id').value;
     const item = {
-        id: parseInt(itemId, 10),
-        name: document.getElementById('edit-name').value.trim(),    
-        passwd: document.getElementById('edit-passwd').value.trim()
-
-    };
+        Id: parseInt(itemId, 10),
+        Name: document.getElementById('edit-name').value.trim(),    
+        Passwd: document.getElementById('edit-passwd').value.trim(),
+        Type:"ll" 
+      };
 
     fetch(`${uri}/${itemId}`, {
             method: 'PUT',

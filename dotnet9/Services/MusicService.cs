@@ -42,14 +42,12 @@ public class MusicService : IMusicService
 
     public int Update(int id,Music music)
     {
-        if (music.UserId != activeUserId)
-            return 0;
-
         var existing = repository.Get(id);
         if (existing?.UserId != activeUserId)
             return 1;
-
+        music.UserId = activeUserId;
         repository.Update(id,music);
+        
         return 2;
     }
 
