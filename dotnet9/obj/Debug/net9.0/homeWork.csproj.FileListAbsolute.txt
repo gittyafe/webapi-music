@@ -202,7 +202,7 @@ C:\Users\user\Documents\github-for-homework\new webapi\webapi-music\dotnet9\obj\
 C:\Users\user\Documents\github-for-homework\new webapi\webapi-music\dotnet9\obj\Debug\net9.0\homeWork.csproj.Up2Date
 C:\Users\user\Documents\github-for-homework\new webapi\webapi-music\dotnet9\obj\Debug\net9.0\homeWork.genruntimeconfig.cache
 C:\Users\user\Documents\github-for-homework\new webapi\webapi-music\dotnet9\obj\Debug\net9.0\ref\homeWork.dll
-C:\Users\user\Documents\github-for-homework\new webapi\webapi-music\dotnet9\obj\Debug\net9.0\compressed\96kubrfkzt-ylt2m5jji9.gz
 C:\Users\user\Documents\github-for-homework\new webapi\webapi-music\dotnet9\obj\Debug\net9.0\compressed\ad99ow8338-2lr6zua5qk.gz
-C:\Users\user\Documents\github-for-homework\new webapi\webapi-music\dotnet9\obj\Debug\net9.0\compressed\7e0pq7btbp-6lcijlyxjr.gz
-C:\Users\user\Documents\github-for-homework\new webapi\webapi-music\dotnet9\obj\Debug\net9.0\compressed\0f82gnm0a2-rqu05ctfs7.gz
+C:\Users\user\Documents\github-for-homework\new webapi\webapi-music\dotnet9\obj\Debug\net9.0\compressed\96kubrfkzt-e1rz6chqvf.gz
+C:\Users\user\Documents\github-for-homework\new webapi\webapi-music\dotnet9\obj\Debug\net9.0\compressed\7e0pq7btbp-vvzr5ck510.gz
+C:\Users\user\Documents\github-for-homework\new webapi\webapi-music\dotnet9\obj\Debug\net9.0\compressed\0f82gnm0a2-dxxlfezm7n.gz

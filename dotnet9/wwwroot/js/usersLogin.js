@@ -31,7 +31,7 @@ async function handleFormSubmit(event) {
                 Id: item.id,
                 Name: item.name,
                 Passwd: item.passwd,
-                Type: "ikk"
+                Type: item.type
             }
             if (item == null) {
                 console.log("could not find user");

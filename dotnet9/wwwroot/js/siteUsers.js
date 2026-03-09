@@ -2,18 +2,15 @@ const uri = '/User';
 let users = [];
 
 function redirectIfNeeded(){
-    console.log("hreereee");
     if(localStorage.getItem("userToken")==null){
         const currentUrl = window.location.href; // מקבל את ה-URL הנוכחי
         const newUrl = currentUrl.substring(0, currentUrl.lastIndexOf('/')); // מסיר את הקטע האחרון
-        console.log(newUrl+'/login.html');
         window.location.href = newUrl+'/login.html'; // מבצע את ה-redirect
-        
     }
     else{
         console.log("the user has token");
         getItems();
-    }   
+    }
 }
 
 
@@ -27,12 +24,13 @@ function getItems() {
 function addItem() {
     const addNameTextbox = document.getElementById('add-name');
     const addPasswdTextbox = document.getElementById('add-passwd');
+    const addTypeTextbox = document.getElementById('add-type');
 
 
     const item = {
         name: addNameTextbox.value.trim(),
-        passwd: addPasswdTextbox.value.trim()
-
+        passwd: addPasswdTextbox.value.trim(),
+        type: addTypeTextbox.value.trim()
     };
 
     fetch(uri, {
@@ -48,6 +46,7 @@ function addItem() {
             getItems();
             addNameTextbox.value = '';
             addPasswdTextbox.value = '';
+            addTypeTextbox.value = '';
 
         })
         .catch(error => console.error('Unable to add item.', error));
@@ -65,6 +64,7 @@ function displayEditForm(id) {
     const item = users.find(item => item.id === id);
     
     document.getElementById('edit-id').value = item.id;
+    document.getElementById('edit-type').value = item.type;
     document.getElementById('edit-name').value = item.name;
     document.getElementById('edit-passwd').value = item.passwd;
 
@@ -78,7 +78,7 @@ function updateItem() {
         Id: parseInt(itemId, 10),
         Name: document.getElementById('edit-name').value.trim(),    
         Passwd: document.getElementById('edit-passwd').value.trim(),
-        Type:"ll" 
+        Type: document.getElementById('edit-type').value.trim(),
       };
 
     fetch(`${uri}/${itemId}`, {
@@ -116,10 +116,6 @@ function _displayItems(data) {
     const button = document.createElement('button');
 
     data.forEach(item => {
-        // let isAccompanyingCheckbox = document.createElement('input');
-        // isAccompanyingCheckbox.type = 'checkbox';
-        // isAccompanyingCheckbox.disabled = true;
-        // isAccompanyingCheckbox.checked = item.isAccompanying;
 
         let editButton = button.cloneNode(false);
         editButton.innerText = 'Edit';
@@ -143,14 +139,18 @@ function _displayItems(data) {
         let td2 = tr.insertCell(2);
         let textNode1 = document.createTextNode(item.passwd);
         td2.appendChild(textNode1);
-        // td1.appendChild(isAccompanyingCheckbox);
-
 
         let td3 = tr.insertCell(3);
-        td3.appendChild(editButton);
+        let textNode2 = document.createTextNode(item.type);
+        td3.appendChild(textNode2);
+
 
         let td4 = tr.insertCell(4);
-        td4.appendChild(deleteButton);
+        td4.appendChild(editButton);
+
+        let td5 = tr.insertCell(5);
+        td5.appendChild(deleteButton);
+
     });
 
     users = data;

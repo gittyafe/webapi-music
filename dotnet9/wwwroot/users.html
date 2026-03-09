@@ -13,6 +13,7 @@
     <form action="javascript:void(0);" method="POST" onsubmit="addItem()">
         <input type="text" id="add-name" placeholder="New User's Name">
         <input type="text" id="add-passwd" placeholder="New User's Passwd">
+        <input type="text" id="add-type" placeholder="New User's Type">
 
         <input type="submit" value="Add">
     </form>
@@ -23,6 +24,7 @@
             <input type="hidden" id="edit-id">
             <input type="text" id="edit-name">
             <input type="text" id="edit-passwd">
+            <input type="text" id="edit-type">
 
             <input type="submit" value="Save">
             <a onclick="closeInput()" aria-label="Close">&#10006;</a>
@@ -36,6 +38,7 @@
             <th>id</th>
             <th>Name</th>
             <th>Password</th>
+            <th>Type</th>
             <th></th>
             <th></th>
         </tr>
