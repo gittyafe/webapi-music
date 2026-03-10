@@ -37,8 +37,11 @@ builder.Services.AddAuthentication("Bearer")
         options.TokenValidationParameters = TS.Services.TokenService.GetTokenValidationParameters();
     });
 
-builder.Services.AddAuthorization();
-
+ builder.Services.AddAuthorization(cfg =>
+    {
+        cfg.AddPolicy("AllUsers", policy => policy.RequireClaim("type", "Admin", "Regular"));
+        cfg.AddPolicy("Admin", policy => policy.RequireClaim("type", "Admin"));
+    });
 
 
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi

@@ -5,7 +5,6 @@ const token = localStorage.getItem("userToken");
 
 
 function redirectIfNeeded(){
-    console.log("hreereee");
     if(localStorage.getItem("userToken")==null){
         const currentUrl = window.location.href; // מקבל את ה-URL הנוכחי
         const newUrl = currentUrl.substring(0, currentUrl.lastIndexOf('/')); // מסיר את הקטע האחרון
@@ -52,7 +51,7 @@ function addItem() {
     fetch(uri, {
             method: 'POST',
             headers: {
-                  "Authorization": "Bearer " + token,
+                "Authorization": "Bearer " + token,
                 'Accept': 'application/json',
                 'Content-Type': 'application/json'
             },

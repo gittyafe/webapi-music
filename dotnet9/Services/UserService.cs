@@ -61,7 +61,7 @@ public class UserService : IUserService
         var maxId = list.Max(m => m.Id);
         newUser.Id = maxId + 1;
         list.Add(newUser);
-         saveToFile();
+        saveToFile();
         return newUser;
     }
 
@@ -89,6 +89,7 @@ public class UserService : IUserService
         return true;
     }
 }
+
 public static class UserServiceExtension
 {
     public static void AddUserService(this IServiceCollection services)
