@@ -19,6 +19,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi;
+using MusicHubs.Hubs;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -27,15 +29,34 @@ builder.Services.AddActiveUser();
 builder.Services.AddUserService();
 builder.Services.AddHttpContextAccessor();
 builder.Services.AddControllers();
+builder.Services.AddSignalR();
 
 builder.Services.AddEndpointsApiExplorer();
 
-
+///
 builder.Services.AddAuthentication("Bearer")
     .AddJwtBearer(options =>
     {
         options.TokenValidationParameters = TS.Services.TokenService.GetTokenValidationParameters();
+
+        options.Events = new JwtBearerEvents
+        {
+            OnMessageReceived = context =>
+            {
+                var accessToken = context.Request.Query["access_token"];
+
+                var path = context.HttpContext.Request.Path;
+                if (!string.IsNullOrEmpty(accessToken) &&
+                    path.StartsWithSegments("/activityHub"))
+                {
+                    context.Token = accessToken;
+                }
+
+                return Task.CompletedTask;
+            }
+        };
     });
+/// 
 
  builder.Services.AddAuthorization(cfg =>
     {
@@ -70,10 +91,8 @@ app.UseStaticFiles();
 /////////////////
 
 app.UseHttpsRedirection();
-
 app.UseAuthentication();
 app.UseAuthorization();
-
 app.MapControllers();
-
+app.MapHub<ActivityHub>("/activityHub");
 app.Run();

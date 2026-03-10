@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Microsoft.AspNetCore.SignalR;
 using System.Linq;
 using Microsoft.AspNetCore.Mvc;
 using MusicNameSpace.Models;
@@ -11,17 +12,23 @@ using Microsoft.AspNetCore.Hosting;
 using IMusicRepo.Interfaces;
 using IActiveUserN.Interfaces;
 using MRepo.Services;
+using MusicHubs.Hubs;
 
 namespace homeWorkSe.Services;
 
 public class MusicService : IMusicService
 {
+    private readonly IHubContext<ActivityHub> hubContext;
     private readonly IMusicRepository repository;
     private readonly int activeUserId;
-    public MusicService(IMusicRepository repository, IActiveUser activeUser){
+    private readonly string activeUsername;
+
+    public MusicService(IMusicRepository repository, IActiveUser activeUser, IHubContext<ActivityHub> hubContext){
         this.repository=repository;
-        activeUserId = activeUser.ActiveUser?.Id
+        this.activeUserId = activeUser.ActiveUser?.Id
                 ?? throw new System.InvalidOperationException("Active user is required");
+        this.activeUsername = activeUser.ActiveUser?.Name;
+        this.hubContext = hubContext;
     }
 
     public List<Music> Get() => repository.Get().Where(m=>m.UserId == activeUserId).ToList();
@@ -36,6 +43,7 @@ public class MusicService : IMusicService
     {
         music.UserId = activeUserId;
         repository.Create(music);
+         BroadcastActivity("added", music);
         return music;
     }
 
@@ -47,7 +55,7 @@ public class MusicService : IMusicService
             return 1;
         music.UserId = activeUserId;
         repository.Update(id,music);
-        
+         BroadcastActivity("updated", music);
         return 2;
     }
 
@@ -58,9 +66,13 @@ public class MusicService : IMusicService
             return false;
 
         repository.Delete(id);
+         BroadcastActivity("deleted", music);
         return true;
     }
-
+     private void BroadcastActivity(string action, Music music)
+    {
+      hubContext.Clients.All.SendAsync("ReceiveActivity", activeUsername, action, music.Name);
+     }
 }
 
 public static partial class MusicExtensions

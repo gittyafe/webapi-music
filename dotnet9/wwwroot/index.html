@@ -27,6 +27,10 @@
     </div>
 
     <p id="counter"></p>
+  <div id="activityFeed">
+        <h3>Activity Feed</h3>
+        <ul id="activityList"></ul>
+    </div>
 
     <table>
         <tr>
@@ -38,10 +42,10 @@
         <tbody id="musics"></tbody>
     </table>
     <a href="./users.html">to go to users</a>
-
+    <script src="js/signalr.min.js"></script>
     <script src="js/site.js" asp-append-version="true"></script>
     <script type="text/javascript">
-        // redirectIfNeeded();
+        initSignalR();
         redirectIfNeeded();
     </script>
 </body>

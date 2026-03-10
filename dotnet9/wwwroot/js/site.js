@@ -9,23 +9,13 @@ function redirectIfNeeded(){
         const currentUrl = window.location.href; // מקבל את ה-URL הנוכחי
         const newUrl = currentUrl.substring(0, currentUrl.lastIndexOf('/')); // מסיר את הקטע האחרון
         console.log(newUrl+'/login.html');
-        window.location.href = newUrl+'/login.html'; // מבצע את ה-redirect
-        
+        window.location.href = newUrl+'/login.html'; // מבצע את ה-redirect  
     }
-    else{
-        console.log("the user has token");
-        getItems();
-    }   
+    getItems();
+
 }
 
 
-
-// function getItems() {
-//     fetch(uri)
-//         .then(response => response.json())
-//         .then(data => _displayItems(data))
-//         .catch(error => console.error('Unable to get items.', error));
-// }
 function getItems() {
 
     fetch(uri, {
@@ -59,7 +49,6 @@ function addItem() {
         })
         .then(response => response.json())
         .then(() => {
-            getItems();
             addNameTextbox.value = '';
         })
         .catch(error => console.error('Unable to add item.', error));
@@ -72,7 +61,6 @@ function deleteItem(id) {
                   "Authorization": "Bearer " + token,
             },
         })
-        .then(() => getItems())
         .catch(error => console.error('Unable to delete item.', error));
 }
 
@@ -102,7 +90,6 @@ function updateItem() {
             },
             body: JSON.stringify(item)
         })
-        .then(() => getItems())
         .catch(error => console.error('Unable to update item.', error));
 
     closeInput();
@@ -159,4 +146,29 @@ function _displayItems(data) {
     });
 
     instruments = data;
+}
+
+
+//לבינתיים...
+function initSignalR() {
+    const connection = new signalR.HubConnectionBuilder()
+        .withUrl("/activityHub", {
+                accessTokenFactory: () => token
+            })
+                .build();
+    connection.on("ReceiveActivity", function (username, action, pizzaName) {
+        getItems();
+        const activityList = document.getElementById("activityList");
+        const li = document.createElement("li");
+        li.textContent = `${username} ${action} '${pizzaName}'`;
+        activityList.insertBefore(li, activityList.firstChild);
+
+        // Keep only last 10 activities
+        while (activityList.children.length > 10) {
+            activityList.removeChild(activityList.lastChild);
+        }
+    });
+    connection.start()
+        .then(() => console.log("SignalR connected"))
+        .catch(err => console.error("SignalR connection error:", err));
 }
