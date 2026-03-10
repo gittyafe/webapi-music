@@ -74,6 +74,9 @@ namespace homeWorkUser.Controllers;
         {
             if(!(id == activeUser.Id || activeUser.Type == "Admin"))
                 return Unauthorized();
+            if(activeUser.Type != "Admin" && newUser.Type!=activeUser.Type)
+                return Unauthorized();
+                
             var flag = service.Update(id, newUser);
             if (flag == 0)
                 return NotFound();
