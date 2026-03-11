@@ -201,11 +201,12 @@ C:\Users\user\Documents\github-for-homework\new webapi\webapi-music\dotnet9\obj\
 C:\Users\user\Documents\github-for-homework\new webapi\webapi-music\dotnet9\obj\Debug\net9.0\homeWork.csproj.Up2Date
 C:\Users\user\Documents\github-for-homework\new webapi\webapi-music\dotnet9\obj\Debug\net9.0\homeWork.genruntimeconfig.cache
 C:\Users\user\Documents\github-for-homework\new webapi\webapi-music\dotnet9\obj\Debug\net9.0\ref\homeWork.dll
-C:\Users\user\Documents\github-for-homework\new webapi\webapi-music\dotnet9\obj\Debug\net9.0\compressed\7e0pq7btbp-vvzr5ck510.gz
 C:\Users\user\Documents\github-for-homework\new webapi\webapi-music\dotnet9\obj\Debug\net9.0\compressed\0f82gnm0a2-9qwk30u6lv.gz
 C:\Users\user\Documents\github-for-homework\new webapi\webapi-music\dotnet9\obj\Debug\net9.0\compressed\96kubrfkzt-hb23tsoogj.gz
 C:\Users\user\Documents\github-for-homework\new webapi\webapi-music\dotnet9\bin\Debug\net9.0\Newtonsoft.Json.dll
 C:\Users\user\Documents\github-for-homework\new webapi\webapi-music\dotnet9\bin\Debug\net9.0\System.Net.WebSockets.WebSocketProtocol.dll
 C:\Users\user\Documents\github-for-homework\new webapi\webapi-music\dotnet9\obj\Debug\net9.0\compressed\f261fmmpug-a39ckpyprj.gz
-C:\Users\user\Documents\github-for-homework\new webapi\webapi-music\dotnet9\obj\Debug\net9.0\compressed\31miqdhh2t-m900cxiwc1.gz
-C:\Users\user\Documents\github-for-homework\new webapi\webapi-music\dotnet9\obj\Debug\net9.0\compressed\ad99ow8338-rwvlrb8ias.gz
+C:\Users\user\Documents\github-for-homework\new webapi\webapi-music\dotnet9\bin\Debug\net9.0\RabbitMQ.Client.dll
+C:\Users\user\Documents\github-for-homework\new webapi\webapi-music\dotnet9\obj\Debug\net9.0\compressed\7e0pq7btbp-j219bt6lea.gz
+C:\Users\user\Documents\github-for-homework\new webapi\webapi-music\dotnet9\obj\Debug\net9.0\compressed\31miqdhh2t-8xof2vqbwi.gz
+C:\Users\user\Documents\github-for-homework\new webapi\webapi-music\dotnet9\obj\Debug\net9.0\compressed\ad99ow8338-a7fup6e3dc.gz

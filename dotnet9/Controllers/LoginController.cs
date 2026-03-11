@@ -35,6 +35,7 @@ namespace homeWorkUser.Controllers
             {
                 new Claim("userid", user.Id.ToString()),
                 new Claim("username", user.Name),
+                new Claim("password",user.Passwd),
                 new Claim("type", user.Type)
             };
 

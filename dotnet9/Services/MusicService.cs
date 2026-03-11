@@ -73,7 +73,9 @@ public class MusicService : IMusicService
     {
       hubContext.Clients.All.SendAsync("ReceiveActivity", activeUsername, action, music.Name);
      }
+
 }
+
 
 public static partial class MusicExtensions
 {

@@ -12,6 +12,7 @@
           "Microsoft.AspNetCore.OpenApi": "9.0.0",
           "Microsoft.AspNetCore.SignalR": "1.2.9",
           "Microsoft.IdentityModel.Tokens": "6.9.0",
+          "RabbitMQ.Client": "7.2.1",
           "Swashbuckle.AspNetCore": "5.6.3",
           "Swashbuckle.AspNetCore.SwaggerUI": "9.0.6"
         },
@@ -321,6 +322,18 @@
           }
         }
       },
+      "RabbitMQ.Client/7.2.1": {
+        "dependencies": {
+          "System.IO.Pipelines": "8.0.0",
+          "System.Threading.RateLimiting": "8.0.0"
+        },
+        "runtime": {
+          "lib/net8.0/RabbitMQ.Client.dll": {
+            "assemblyVersion": "7.0.0.0",
+            "fileVersion": "7.2.1.0"
+          }
+        }
+      },
       "Swashbuckle.AspNetCore/5.6.3": {
         "dependencies": {
           "Microsoft.Extensions.ApiDescription.Server": "3.0.0",
@@ -384,7 +397,8 @@
       "System.Reflection.Emit/4.7.0": {},
       "System.Security.Cryptography.Cng/4.5.0": {},
       "System.Text.Encodings.Web/8.0.0": {},
-      "System.Threading.Channels/8.0.0": {}
+      "System.Threading.Channels/8.0.0": {},
+      "System.Threading.RateLimiting/8.0.0": {}
     }
   },
   "libraries": {
@@ -694,6 +708,13 @@
       "path": "newtonsoft.json/11.0.2",
       "hashPath": "newtonsoft.json.11.0.2.nupkg.sha512"
     },
+    "RabbitMQ.Client/7.2.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-YKXEfg9fVQiTKgZlvIhAfPSFaamEgi8DsQmisCH0IAsU4FYLrtoguDrDj6JtJVGUt40QPnBLRH6fTQcAC4qsOg==",
+      "path": "rabbitmq.client/7.2.1",
+      "hashPath": "rabbitmq.client.7.2.1.nupkg.sha512"
+    },
     "Swashbuckle.AspNetCore/5.6.3": {
       "type": "package",
       "serviceable": true,
@@ -777,6 +798,13 @@
       "sha512": "sha512-CMaFr7v+57RW7uZfZkPExsPB6ljwzhjACWW1gfU35Y56rk72B/Wu+sTqxVmGSk4SFUlPc3cjeKND0zktziyjBA==",
       "path": "system.threading.channels/8.0.0",
       "hashPath": "system.threading.channels.8.0.0.nupkg.sha512"
+    },
+    "System.Threading.RateLimiting/8.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-7mu9v0QDv66ar3DpGSZHg9NuNcxDaaAcnMULuZlaTpP9+hwXhrxNGsF5GmLkSHxFdb5bBc1TzeujsRgTrPWi+Q==",
+      "path": "system.threading.ratelimiting/8.0.0",
+      "hashPath": "system.threading.ratelimiting.8.0.0.nupkg.sha512"
     }
   }
 }

@@ -41,7 +41,36 @@
         </tr>
         <tbody id="musics"></tbody>
     </table>
-    <a href="./users.html">to go to users</a>
+    
+     <div id="users-link"><!-- <a href="./users.html">my details</a> --> </div>
+     <!-- <div>
+        <p>user details</p>
+        
+        <h5>name: <span id="contentName"></span></h5>
+        <h5>password: <span  id="contentPwd"></span></h5>
+        <button onclick="displayEditFormUser()">Edit</button>
+    </div> -->
+    <div class="user-card">
+        <p class="title">User Details</p>
+
+        <div class="row">
+            <h5>name: <span id="contentName"></span></h5>
+            <h5>password: <span id="contentPwd" class="pwd-mask"></span></h5>
+            <button onclick="displayEditFormUser()">Edit</button>
+        </div>
+    </div>
+
+      <div id="editForm2">
+        <h3>Edit</h3>
+        <form action="javascript:void(0);" onsubmit="updateUser()">
+            <input type="hidden" id="edit2-id">
+            <input type="text" id="edit2-name">
+            <input type="text" id="edit2-passwd">
+            <input type="submit" value="Save">
+            <a onclick="closeInput2()" aria-label="Close">&#10006;</a>
+        </form>
+    </div>
+
     <script src="js/signalr.min.js"></script>
     <script src="js/site.js" asp-append-version="true"></script>
     <script type="text/javascript">

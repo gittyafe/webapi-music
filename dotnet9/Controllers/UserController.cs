@@ -27,7 +27,7 @@ namespace homeWorkUser.Controllers;
                 ?? throw new System.InvalidOperationException("Active user is required");
         }
         
-        [Authorize(Policy="AllUsers")]
+        [Authorize(Policy="Admin")]
         [HttpGet()]
         public ActionResult<IEnumerable<User>> Get()
         {
@@ -35,13 +35,6 @@ namespace homeWorkUser.Controllers;
             if (l==null)
                 return NotFound() ;
 
-            if (activeUser.Type == "Regular")
-            {
-                var user = l.FirstOrDefault(u => u.Id == activeUser.Id);
-                if (user == null)
-                    return NotFound();
-                return new List<User> { user };
-            }
             return l;
         }
 
@@ -56,14 +49,12 @@ namespace homeWorkUser.Controllers;
                 return m;
             }
             return Unauthorized();
-          
         }
 
         [Authorize(Policy="Admin")]
         [HttpPost]
         public ActionResult Create(User newU)
         {
-
             User m = service.Create(newU);
             return CreatedAtAction(nameof(Create), new { id = m.Id });
         }

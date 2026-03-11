@@ -3,7 +3,7 @@ using homeWorkSe.Services;
 using MyMiddleware;
 using UserHW.Services;
 using ActiveUser.Services;
-
+using MQ.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,6 +21,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi;
 using MusicHubs.Hubs;
 
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -30,6 +31,7 @@ builder.Services.AddUserService();
 builder.Services.AddHttpContextAccessor();
 builder.Services.AddControllers();
 builder.Services.AddSignalR();
+builder.Services.AddRabbitMq();
 
 builder.Services.AddEndpointsApiExplorer();
 
