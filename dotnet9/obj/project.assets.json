@@ -2257,9 +2257,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\user\\Documents\\github-for-homework\\new webapi\\webapi-music\\dotnet9\\homeWork.csproj",
-      "projectName": "homeWork",
-      "projectPath": "C:\\Users\\user\\Documents\\github-for-homework\\new webapi\\webapi-music\\dotnet9\\homeWork.csproj",
+      "projectUniqueName": "C:\\Users\\user\\Documents\\github-for-homework\\new webapi\\webapi-music\\dotnet9\\MusicWebapi.csproj",
+      "projectName": "WebApiMusic",
+      "projectPath": "C:\\Users\\user\\Documents\\github-for-homework\\new webapi\\webapi-music\\dotnet9\\MusicWebapi.csproj",
       "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\user\\Documents\\github-for-homework\\new webapi\\webapi-music\\dotnet9\\obj\\",
       "projectStyle": "PackageReference",

@@ -86,42 +86,42 @@ public class MyLogMiddleware
 
 
     public async Task Invoke(HttpContext context)
-{
-    var sw = Stopwatch.StartNew();
-    var startTime = DateTime.Now;
-
-    await _next(context);
-
-    sw.Stop();
-
-    // שליפת ה-Scoped Service
-    var activeUserService = context.RequestServices.GetService<IActiveUser>();
-    var activeUser = activeUserService?.ActiveUser;
-
-    // הגנה מפני null
-    var userId = activeUser?.Id ?? 0;
-    var username = activeUser?.Name ?? "Anonymous";
-
-    // שליפת Controller + Action
-    var endpoint = context.GetEndpoint();
-    var actionDescriptor = endpoint?.Metadata
-        .GetMetadata<Microsoft.AspNetCore.Mvc.Controllers.ControllerActionDescriptor>();
-
-    var controllerName = actionDescriptor?.ControllerName ?? "UnknownController";
-    var actionName = actionDescriptor?.ActionName ?? "UnknownAction";
-
-    // יצירת מודל הלוג
-    var logMessage = new MusicLogMessage
     {
-        UserId = userId,
-        Username = username,
-        Action = $"{controllerName}/{actionName}",
-        Timestamp = startTime,
-        DurationTime = (int)sw.ElapsedMilliseconds
-    };
+        var sw = Stopwatch.StartNew();
+        var startTime = DateTime.Now;
 
-    _producer.Publish(logMessage);
-}
+        await _next(context);
+
+        sw.Stop();
+
+        // שליפת ה-Scoped Service
+        var activeUserService = context.RequestServices.GetService<IActiveUser>();
+        var activeUser = activeUserService?.ActiveUser;
+
+        // הגנה מפני null
+        var userId = activeUser?.Id ?? 0;
+        var username = activeUser?.Name ?? "Anonymous";
+
+        // שליפת Controller + Action
+        var endpoint = context.GetEndpoint();
+        var actionDescriptor = endpoint?.Metadata
+            .GetMetadata<Microsoft.AspNetCore.Mvc.Controllers.ControllerActionDescriptor>();
+
+        var controllerName = actionDescriptor?.ControllerName ?? "UnknownController";
+        var actionName = actionDescriptor?.ActionName ?? "UnknownAction";
+
+        // יצירת מודל הלוג
+        var logMessage = new MusicLogMessage
+        {
+            UserId = userId,
+            Username = username,
+            Action = $"{controllerName}/{actionName}",
+            Timestamp = startTime,
+            DurationTime = (int)sw.ElapsedMilliseconds
+        };
+
+        await _producer.Publish(logMessage);
+    }
 }
 
 public static partial class MiddlewareExtensions

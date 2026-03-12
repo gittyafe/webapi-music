@@ -27,7 +27,7 @@ public class GenericRepository<T> : IGenericRepository<T> where T : IEntity
 
         var content = File.ReadAllText(filePath);
         list = JsonSerializer.Deserialize<List<T>>(content,
-            new JsonSerializerOptions { PropertyNameCaseInsensitive = true }) 
+            new JsonSerializerOptions { PropertyNameCaseInsensitive = true })
             ?? new List<T>();
     }
 

@@ -9,30 +9,30 @@ using System.Security.Claims;
 namespace MusicWebapi.Api.Controllers;
 
 
-    [ApiController]
-    [Route("[controller]")]
-    public class LoginController : ControllerBase
+[ApiController]
+[Route("[controller]")]
+public class LoginController : ControllerBase
+{
+    private readonly IGenericRepository<User> service;
+
+    public LoginController(IGenericRepository<User> service)
     {
-        private readonly IGenericRepository<User> service;
+        this.service = service;
+    }
 
-        public LoginController(IGenericRepository<User> service)
-        {
-            this.service = service;
-        }
+    // לא דורש טוקן
+    [AllowAnonymous]
+    [HttpPost]
+    public ActionResult<string> Login([FromBody] LoginRequest req)
+    {
+        var user = service
+            .Get()
+            .FirstOrDefault(u => u.Name == req.Name && u.Passwd == req.Passwd);
 
-        // לא דורש טוקן
-        [AllowAnonymous]
-        [HttpPost]
-        public ActionResult<string> Login([FromBody] LoginRequest req)
-        {
-            var user = service
-                .Get()
-                .FirstOrDefault(u => u.Name == req.Name && u.Passwd == req.Passwd);
+        if (user == null)
+            return NotFound("Wrong userId / password");
 
-            if (user == null)
-                return NotFound("Wrong userId / password");
-
-            var claims = new List<Claim>
+        var claims = new List<Claim>
             {
                 new Claim("userid", user.Id.ToString()),
                 new Claim("username", user.Name),
@@ -40,13 +40,13 @@ namespace MusicWebapi.Api.Controllers;
                 new Claim("type", user.Type)
             };
 
-            var token = TokenService.GetToken(claims);
-            return Ok(TokenService.WriteToken(token));
-        }
+        var token = TokenService.GetToken(claims);
+        return Ok(TokenService.WriteToken(token));
     }
+}
 
-    public class LoginRequest
-    {
-        public string Name { get; set; }
-        public string Passwd { get; set; }
-    }
+public class LoginRequest
+{
+    public string? Name { get; set; }
+    public string? Passwd { get; set; }
+}

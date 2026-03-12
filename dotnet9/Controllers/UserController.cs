@@ -12,26 +12,27 @@ namespace MusicWebapi.Api.Controllers;
 [ApiController]
 [Route("[controller]")]
 [Authorize]
-public class UserController : ControllerBase{
+public class UserController : ControllerBase
+{
 
     IUserService service;
 
     public UserController(IUserService service)
     {
-        this.service=service;
+        this.service = service;
     }
-    
-    [Authorize(Policy="Admin")]
+
+    [Authorize(Policy = "Admin")]
     [HttpGet()]
     public ActionResult<IEnumerable<User>> Get()
     {
-        var l=service.Get();
-        if (l==null)
+        var l = service.Get();
+        if (l == null)
             return NotFound();
         return l;
     }
 
-    [Authorize(Policy="AllUsers")]
+    [Authorize(Policy = "AllUsers")]
     [HttpGet("{id}")]
     public ActionResult<User> Get(int id)
     {
@@ -41,17 +42,17 @@ public class UserController : ControllerBase{
         return m;
     }
 
-    [Authorize(Policy="AllUsers")]
+    [Authorize(Policy = "AllUsers")]
     [HttpGet("me")]
     public ActionResult<User> GetMe()
-    { 
+    {
         var m = service.GetMe();
         if (m == null)
             return NotFound();
         return m;
     }
 
-    [Authorize(Policy="Admin")]
+    [Authorize(Policy = "Admin")]
     [HttpPost]
     public ActionResult Create(User newU)
     {
@@ -59,21 +60,21 @@ public class UserController : ControllerBase{
         return CreatedAtAction(nameof(Create), new { id = m.Id });
     }
 
-    [Authorize(Policy="AllUsers")]
+    [Authorize(Policy = "AllUsers")]
     [HttpPut("{id}")]
-    public ActionResult<User> Update(int id,User newUser)
-    {  
+    public ActionResult<User> Update(int id, User newUser)
+    {
         var flag = service.Update(id, newUser);
         if (flag == 0)
             return NotFound();
-        if (flag==1)
+        if (flag == 1)
             return BadRequest();
-        if(flag == 4) //symbolying 'Unauthorized'
+        if (flag == 4) //symbolying 'Unauthorized'
             return Unauthorized();
         return NoContent();
     }
 
-    [Authorize(Policy="Admin")]
+    [Authorize(Policy = "Admin")]
     [HttpDelete("{id}")]
     public ActionResult Delete(int id)
     {

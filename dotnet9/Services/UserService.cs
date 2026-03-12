@@ -22,7 +22,7 @@ public class UserService : IUserService
 
     public UserService(IGenericRepository<User> repository, IActiveUser activeUser, IHubContext<ActivityHub> hubContext)
     {
-        this.repository=repository;
+        this.repository = repository;
         this.activeUser = activeUser.ActiveUser
                 ?? throw new System.InvalidOperationException("Active user is required");
         this.hubContext = hubContext;
@@ -32,33 +32,34 @@ public class UserService : IUserService
 
     public User Get(int id)
     {
-        if(id != activeUser.Id && activeUser.Type != "Admin")
+        if (id != activeUser.Id && activeUser.Type != "Admin")
             return null;
         var user = repository.Get(id);
         return user;
-    }   
+    }
 
-    public User GetMe(){
+    public User GetMe()
+    {
         return Get(activeUser.Id);
     }
 
     public User Create(User user)
     {
         repository.Create(user);
-         BroadcastActivity("added user", user);
+        BroadcastActivity("added user", user);
         return user;
     }
 
 
-    public int Update(int id,User user)
+    public int Update(int id, User user)
     {
-         if(!(id == activeUser.Id || activeUser.Type == "Admin"))
-                return 4; //symbolying 'Unauthorized'
-        if(activeUser.Type != "Admin" && user.Type!=activeUser.Type)
+        if (!(id == activeUser.Id || activeUser.Type == "Admin"))
+            return 4; //symbolying 'Unauthorized'
+        if (activeUser.Type != "Admin" && user.Type != activeUser.Type)
             return 4; //symbolying 'Unauthorized'
 
         var existing = repository.Get(id);
-        int status = repository.Update(id,user);
+        int status = repository.Update(id, user);
         BroadcastActivity("updated user", user);
         return status;
     }
@@ -73,11 +74,11 @@ public class UserService : IUserService
         BroadcastActivity("deleted user", user);
         return true;
     }
-     
-     private void BroadcastActivity(string action, User user)
+
+    private void BroadcastActivity(string action, User user)
     {
-      hubContext.Clients.All.SendAsync("ReceiveActivity", activeUser.Name, action, user.Name);
-     }
+        hubContext.Clients.All.SendAsync("ReceiveActivity", activeUser.Name, action, user.Name);
+    }
 
 }
 

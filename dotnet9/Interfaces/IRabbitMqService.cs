@@ -8,7 +8,6 @@ using MusicWebapi.Application.Interfaces;
 using MusicWebapi.Api.Models;
 
 
-
 namespace MusicWebapi.Application.Interfaces;
 
 public interface IRabbitMqService

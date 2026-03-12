@@ -11,21 +11,22 @@ namespace MusicWebapi.Api.Controllers;
 [ApiController]
 [Route("[controller]")]
 [Authorize]
-public class MusicController : ControllerBase{
+public class MusicController : ControllerBase
+{
 
     IMusicService service;
 
     public MusicController(IMusicService service)
     {
-        this.service= service;
+        this.service = service;
     }
 
     [HttpGet()]
     public ActionResult<IEnumerable<Music>> Get()
     {
-        var l=service.Get();
-        if (l==null)
-            return NotFound() ;
+        var l = service.Get();
+        if (l == null)
+            return NotFound();
         return l;
     }
 
@@ -46,13 +47,13 @@ public class MusicController : ControllerBase{
     }
 
     [HttpPut("{id}")]
-    public ActionResult<Music> Update(int id,Music newMusic)
+    public ActionResult<Music> Update(int id, Music newMusic)
     {
 
         var flag = service.Update(id, newMusic);
         if (flag == 0)
             return NotFound();
-        if (flag==1)
+        if (flag == 1)
             return BadRequest();
         return NoContent();
     }

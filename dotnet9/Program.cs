@@ -59,16 +59,16 @@ builder.Services.AddAuthentication("Bearer")
     });
 /// 
 
- builder.Services.AddAuthorization(cfg =>
-    {
-        cfg.AddPolicy("AllUsers", policy => policy.RequireClaim("type", "Admin", "Regular"));
-        cfg.AddPolicy("Admin", policy => policy.RequireClaim("type", "Admin"));
-    });
+builder.Services.AddAuthorization(cfg =>
+   {
+       cfg.AddPolicy("AllUsers", policy => policy.RequireClaim("type", "Admin", "Regular"));
+       cfg.AddPolicy("Admin", policy => policy.RequireClaim("type", "Admin"));
+   });
 
 
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Logging.ClearProviders();//log4net seriLog
-builder.Logging.AddConsole(); 
+builder.Logging.AddConsole();
 // builder.Services.AddOpenApi();
 
 var app = builder.Build();

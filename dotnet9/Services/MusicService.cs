@@ -23,39 +23,42 @@ public class MusicService : IMusicService
     private readonly int activeUserId;
     private readonly string activeUsername;
 
-    public MusicService(IGenericRepository<Music> repository, IActiveUser activeUser, IHubContext<ActivityHub> hubContext){
-        this.repository=repository;
+    public MusicService(IGenericRepository<Music> repository, IActiveUser activeUser, IHubContext<ActivityHub> hubContext)
+    {
+        this.repository = repository;
         this.activeUserId = activeUser.ActiveUser?.Id
                 ?? throw new System.InvalidOperationException("Active user is required");
+#pragma warning disable CS8601 // Possible null reference assignment.
         this.activeUsername = activeUser.ActiveUser?.Name;
+#pragma warning restore CS8601 // Possible null reference assignment.
         this.hubContext = hubContext;
     }
 
-    public List<Music> Get() => repository.Get().Where(m=>m.UserId == activeUserId).ToList();
+    public List<Music> Get() => repository.Get().Where(m => m.UserId == activeUserId).ToList();
 
     public Music Get(int id)
     {
         var music = repository.Get(id);
         return music?.UserId == activeUserId ? music : null;
-    }   
+    }
 
     public Music Create(Music music)
     {
         music.UserId = activeUserId;
         repository.Create(music);
-         BroadcastActivity("added music", music);
+        BroadcastActivity("added music", music);
         return music;
     }
 
 
-    public int Update(int id,Music music)
+    public int Update(int id, Music music)
     {
         var existing = repository.Get(id);
         if (existing?.UserId != activeUserId)
             return 1;
         music.UserId = activeUserId;
-        repository.Update(id,music);
-         BroadcastActivity("updated music", music);
+        repository.Update(id, music);
+        BroadcastActivity("updated music", music);
         return 2;
     }
 
@@ -66,13 +69,13 @@ public class MusicService : IMusicService
             return false;
 
         repository.Delete(id);
-         BroadcastActivity("deleted music", music);
+        BroadcastActivity("deleted music", music);
         return true;
     }
-     private void BroadcastActivity(string action, Music music)
+    private void BroadcastActivity(string action, Music music)
     {
-      hubContext.Clients.All.SendAsync("ReceiveActivity", activeUsername, action, music.Name);
-     }
+        hubContext.Clients.All.SendAsync("ReceiveActivity", activeUsername, action, music.Name);
+    }
 
 }
 
