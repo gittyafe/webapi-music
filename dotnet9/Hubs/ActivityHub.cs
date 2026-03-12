@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 
 
-namespace MusicHubs.Hubs;
+namespace MusicWebapi.Api.Hubs;
 
 [Authorize]
 public class ActivityHub : Hub

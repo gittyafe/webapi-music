@@ -1,14 +1,8 @@
-using MusicServices.Interfaces;
-using homeWorkSe.Services;
-using MyMiddleware;
-using UserHW.Services;
-using ActiveUser.Services;
-using MQ.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-
+using System.Diagnostics;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -19,7 +13,12 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi;
-using MusicHubs.Hubs;
+using MusicWebapi.Api.Hubs;
+using MusicWebapi.Api.Models;
+using MusicWebapi.Application.Services;
+using MusicWebapi.Application.Interfaces;
+using MusicWebapi.Api.Middleware;
+
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -27,7 +26,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddMusic();
 builder.Services.AddActiveUser();
-builder.Services.AddUserService();
+builder.Services.AddUser();
 builder.Services.AddHttpContextAccessor();
 builder.Services.AddControllers();
 builder.Services.AddSignalR();
@@ -39,7 +38,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddAuthentication("Bearer")
     .AddJwtBearer(options =>
     {
-        options.TokenValidationParameters = TS.Services.TokenService.GetTokenValidationParameters();
+        options.TokenValidationParameters = MusicWebapi.Application.Services.TokenService.GetTokenValidationParameters();
 
         options.Events = new JwtBearerEvents
         {

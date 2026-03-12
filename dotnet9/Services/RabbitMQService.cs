@@ -2,17 +2,14 @@ using System;
 using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
-using MusicMessage.Models;
 using RabbitMQ.Client;
 using Microsoft.Extensions.DependencyInjection;
-using worker.Services; 
+using MusicWebapi.Api.Models;
+using MusicWebapi.Application.Services;
+using MusicWebapi.Application.Interfaces;
 
-namespace MQ.Services
-{
-    public interface IRabbitMqService
-    {
-        Task Publish(MusicLogMessage message);
-    }
+
+namespace MusicWebapi.Application.Services;
 
     public class RabbitMqService : IRabbitMqService, IDisposable
     {
@@ -68,6 +65,6 @@ namespace MQ.Services
             return services;
         }
     }
-}
+
 
 

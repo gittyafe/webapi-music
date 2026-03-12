@@ -1,10 +1,10 @@
-using IActiveUserN.Interfaces;
-using UserNameSpace.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
+using MusicWebapi.Application.Interfaces;
+using MusicWebapi.Api.Models;
 
 
-namespace ActiveUser.Services;
+namespace MusicWebapi.Application.Services;
 
 public class ActiveUserService : IActiveUser
 {

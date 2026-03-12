@@ -1,22 +1,24 @@
 
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Authorization;
-using IUserServices.Interfaces;
+using MusicWebapi.Api.Models;
+using MusicWebapi.Application.Interfaces;
+using MusicWebapi.Application.Services;
 using System.Security.Claims;
-using TS.Services; // TokenService
-using UserNameSpace.Models;
 
-namespace homeWorkUser.Controllers
-{
+
+namespace MusicWebapi.Api.Controllers;
+
+
     [ApiController]
     [Route("[controller]")]
     public class LoginController : ControllerBase
     {
-        private readonly IUserService service;
+        private readonly IGenericRepository<User> service;
 
-        public LoginController(IUserService userService)
+        public LoginController(IGenericRepository<User> service)
         {
-            service = userService;
+            this.service = service;
         }
 
         // לא דורש טוקן
@@ -29,7 +31,7 @@ namespace homeWorkUser.Controllers
                 .FirstOrDefault(u => u.Name == req.Name && u.Passwd == req.Passwd);
 
             if (user == null)
-                return Unauthorized("Wrong userId / password");
+                return NotFound("Wrong userId / password");
 
             var claims = new List<Claim>
             {
@@ -49,4 +51,3 @@ namespace homeWorkUser.Controllers
         public string Name { get; set; }
         public string Passwd { get; set; }
     }
-}

@@ -1,16 +1,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.AspNetCore.Mvc;
-using UserNameSpace.Models;
-using UserHW.Services;
-using IUserServices.Interfaces;
 using System.Security.Claims;
-using TS.Services;
 using Microsoft.AspNetCore.Authorization;
-using IActiveUserN.Interfaces;
+using MusicWebapi.Api.Models;
+using MusicWebapi.Application.Services;
+using MusicWebapi.Application.Interfaces;
 
-
-namespace homeWorkUser.Controllers;
+namespace MusicWebapi.Api.Controllers;
 
     [ApiController]
     [Route("[controller]")]
@@ -51,6 +48,19 @@ namespace homeWorkUser.Controllers;
             return Unauthorized();
         }
 
+        [Authorize(Policy="AllUsers")]
+        [HttpGet("me")]
+        public ActionResult<User> GetMe()
+        {
+            
+                var m = service.GetMe();
+                if (m == null)
+                    return NotFound();
+                return m;
+            
+        }
+
+
         [Authorize(Policy="Admin")]
         [HttpPost]
         public ActionResult Create(User newU)
@@ -87,5 +97,3 @@ namespace homeWorkUser.Controllers;
         }
 
     }
-
-

@@ -2,9 +2,9 @@ using RabbitMQ.Client;
 using RabbitMQ.Client.Events;
 using System.Text;
 using System.Text.Json;
-using MusicMessage.Models;
+using MusicWebapi.Api.Models;
 
-namespace worker.Services; 
+namespace MusicWebapi.Application.Services;
 
 public class LogWorkerService : BackgroundService
 {

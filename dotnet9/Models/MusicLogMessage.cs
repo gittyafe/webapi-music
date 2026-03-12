@@ -1,13 +1,13 @@
 using System;
 
-namespace MusicMessage.Models
+namespace MusicWebapi.Api.Models;
+
+public class MusicLogMessage
 {
-    public class MusicLogMessage
-    {
-        public int UserId { get; set; }
-        public string Username { get; set; }
-        public string Action { get; set; }
-        public DateTime Timestamp { get; set; }
-        public int DurationTime {get; set;}
-    }
+    public int UserId { get; set; }
+    public string Username { get; set; }
+    public string Action { get; set; }
+    public DateTime Timestamp { get; set; }
+    public int DurationTime {get; set;}
 }
+

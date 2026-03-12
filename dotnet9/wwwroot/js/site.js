@@ -2,26 +2,14 @@ const uri = '/Music';
 let instruments = [];
 const token = localStorage.getItem("userToken");
 
-function parseJwt(token) {
-    const base64Url = token.split('.')[1];
-    const base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
-    const jsonPayload = decodeURIComponent(
-        atob(base64)
-            .split('')
-            .map(c => '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2))
-            .join('')
-    );
 
-    return JSON.parse(jsonPayload);
-}
 
 
 function displayUserDetailes(){
-    const userData = parseJwt(token);
-    console.log(userData);
-    const userId = userData.userid;
+    
+    closeInput2();
 
-    fetch(`User/${userId}`, {
+      fetch(`User/me`, {
         method: "GET",
         headers: {
             "Authorization": "Bearer " + token,
@@ -29,8 +17,7 @@ function displayUserDetailes(){
         }
     })
     .then(response => response.json())
-    .then(data => {console.log(data)
-        displayUser(data)})
+    .then(data => { displayUser(data);})
     .catch(error => console.error("Unable to get user.", error));
 }
 
@@ -38,7 +25,6 @@ function displayUser(user) {
     // הכנסת נתונים ל-inputs
     document.getElementById("contentName").innerText = user.name || "";
     document.getElementById("contentPwd").innerText = user.passwd || "";
-    closeInput2();
     // אם הוא אדמין – מציגים קישור
     if (user.type === "Admin") {
         const adminLink = document.getElementById("users-link");
@@ -53,12 +39,7 @@ function displayUser(user) {
 }
 
 function displayEditFormUser() {
-    ///
-const userData = parseJwt(token);
-    console.log(userData);
-    const userId = userData.userid;
-
-    fetch(`User/${userId}`, {
+    fetch(`User/me`, {
         method: "GET",
         headers: {
             "Authorization": "Bearer " + token,
@@ -66,27 +47,25 @@ const userData = parseJwt(token);
         }
     })
     .then(response => response.json())
-    .then( userData=> {
-////////
+    .then(userData => {
+
     document.getElementById('edit2-id').value = userData.id;
+    document.getElementById('edit2-type').value = userData.type;
     document.getElementById('edit2-name').value = userData.name;
     document.getElementById('edit2-passwd').value = userData.passwd;
-
-    // document.getElementById('edit-isAccompanying').checked = item.isAaccompanying;
     document.getElementById('editForm2').style.display = 'block';
-    })
-        .catch(error => console.error("Unable to get user.", error));
 
+    })
+    .catch(error => console.error("Unable to get user.", error));
 }
 
 function updateUser() {
-    
     const userId = document.getElementById('edit2-id').value;
     const user = {
         Id: parseInt(userId, 10),
         Name: document.getElementById('edit2-name').value.trim(),    
         Passwd: document.getElementById('edit2-passwd').value.trim(),
-        Type: parseJwt(token).type
+        Type: document.getElementById('edit2-type').value.trim(),
       };
 
     fetch(`User/${userId}`, {

@@ -2,11 +2,11 @@ using System.Collections.Generic;
 using System.Linq;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using  MusicNameSpace.Models;
-using homeWorkSe.Services;
-using MusicServices.Interfaces;
+using MusicWebapi.Api.Models;
+using MusicWebapi.Application.Services;
+using MusicWebapi.Application.Interfaces;
 
-namespace homeWork.Controllers;
+namespace MusicWebapi.Api.Controllers;
 
 [ApiController]
 [Route("[controller]")]
