@@ -43,7 +43,7 @@ public class MusicService : IMusicService
     {
         music.UserId = activeUserId;
         repository.Create(music);
-         BroadcastActivity("added", music);
+         BroadcastActivity("added music", music);
         return music;
     }
 
@@ -55,7 +55,7 @@ public class MusicService : IMusicService
             return 1;
         music.UserId = activeUserId;
         repository.Update(id,music);
-         BroadcastActivity("updated", music);
+         BroadcastActivity("updated music", music);
         return 2;
     }
 
@@ -66,7 +66,7 @@ public class MusicService : IMusicService
             return false;
 
         repository.Delete(id);
-         BroadcastActivity("deleted", music);
+         BroadcastActivity("deleted music", music);
         return true;
     }
      private void BroadcastActivity(string action, Music music)

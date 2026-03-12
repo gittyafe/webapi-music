@@ -206,7 +206,7 @@ C:\Users\user\Documents\github-for-homework\new webapi\webapi-music\dotnet9\bin\
 C:\Users\user\Documents\github-for-homework\new webapi\webapi-music\dotnet9\obj\Debug\net9.0\compressed\f261fmmpug-a39ckpyprj.gz
 C:\Users\user\Documents\github-for-homework\new webapi\webapi-music\dotnet9\bin\Debug\net9.0\RabbitMQ.Client.dll
 C:\Users\user\Documents\github-for-homework\new webapi\webapi-music\dotnet9\obj\Debug\net9.0\compressed\7e0pq7btbp-pwihd75cb8.gz
-C:\Users\user\Documents\github-for-homework\new webapi\webapi-music\dotnet9\obj\Debug\net9.0\compressed\31miqdhh2t-908qciseqy.gz
 C:\Users\user\Documents\github-for-homework\new webapi\webapi-music\dotnet9\obj\Debug\net9.0\compressed\oux2ognsvu-ch8xleonxt.gz
-C:\Users\user\Documents\github-for-homework\new webapi\webapi-music\dotnet9\obj\Debug\net9.0\compressed\ad99ow8338-56k3ti97zm.gz
 C:\Users\user\Documents\github-for-homework\new webapi\webapi-music\dotnet9\bin\Debug\net9.0\Data\User.json
+C:\Users\user\Documents\github-for-homework\new webapi\webapi-music\dotnet9\obj\Debug\net9.0\compressed\ad99ow8338-h91twfg6xa.gz
+C:\Users\user\Documents\github-for-homework\new webapi\webapi-music\dotnet9\obj\Debug\net9.0\compressed\31miqdhh2t-d3ffmwqil4.gz

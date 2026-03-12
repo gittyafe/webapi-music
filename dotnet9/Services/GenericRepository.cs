@@ -10,87 +10,6 @@ using MusicWebapi.Application.Interfaces;
 
 namespace MusicWebapi.Application.Services;
 
-// namespace GenericRepo.Services;
-
-// public class GenericRepository<T> : ICRUD<T>{
-
-//     private List<T> list;
-
-//     public GenericRepository(IWebHostEnvironment webHost)
-//     {
-//         this.list = new List<T>();
-
-//         this.filePath = Path.Combine(webHost.ContentRootPath,"Data", $"{T}.json");
-//         using (var jsonFile = File.OpenText(filePath))
-//         {
-//             var content = jsonFile.ReadToEnd();
-//             list = JsonSerializer.Deserialize<List<T>>(content,
-//             new JsonSerializerOptions
-//             {
-//                 PropertyNameCaseInsensitive = true
-//             });
-//         }
-//     }
-
-//     private string filePath;
-
-//     private void saveToFile()
-//     {
-//         var text = JsonSerializer.Serialize(list);
-//         File.WriteAllText(filePath, text);
-//     }
-//     private T find(int id)
-//     {
-//         return list.FirstOrDefault(p => p.Id == id);
-//     }
-
-//     public List<T> Get()
-//     {
-//         return list;
-//     }
-
-
-//     public T Get(int id) => find(id);
-
-//     public T Create(T newT)
-//     {
-//         var maxId = list.Max(m => m.Id);
-//         newT.Id = maxId + 1;
-//         list.Add(newT);
-//         saveToFile();
-//         return newT;
-//     }
-
-//     public int Update(int id, T newT)
-//     {
-//         var T = find(id);
-//         if (T == null)
-//             return 0;
-//         if (T.Id != newT.Id)
-//             return 1;
-
-//         var index = list.IndexOf(T);
-//         list[index] = newT;
-
-//         saveToFile();
-//         return 2;
-//     }
-
-//     public bool Delete(int id)
-//     {
-//         var T = find(id);
-//         if (T == null)
-//             return false;
-//         list.Remove(T);
-//         saveToFile();
-//         return true;
-//     }
-// }
-
-
-
-
-
 
 public class GenericRepository<T> : IGenericRepository<T> where T : IEntity
 {
@@ -100,7 +19,6 @@ public class GenericRepository<T> : IGenericRepository<T> where T : IEntity
     public GenericRepository(IWebHostEnvironment env)
     {
         filePath = Path.Combine(env.ContentRootPath, "Data", $"{typeof(T).Name}.json");
-
         if (!File.Exists(filePath))
         {
             list = new List<T>();

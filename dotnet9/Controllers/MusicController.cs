@@ -15,16 +15,10 @@ public class MusicController : ControllerBase{
 
     IMusicService service;
 
-    public MusicController(IMusicService musicService)
+    public MusicController(IMusicService service)
     {
-        this.service=musicService;
+        this.service= service;
     }
-
-    // private Music find(int id)
-    //  {
-    // return list.FirstOrDefault(p => p.Id == id);
-
-    // }
 
     [HttpGet()]
     public ActionResult<IEnumerable<Music>> Get()
@@ -63,7 +57,7 @@ public class MusicController : ControllerBase{
         return NoContent();
     }
 
-        [HttpDelete("{id}")]
+    [HttpDelete("{id}")]
     public ActionResult Delete(int id)
     {
         var flag = service.Delete(id);
