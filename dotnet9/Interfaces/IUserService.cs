@@ -1,16 +1,8 @@
-using UserNameSpace.Models;
+using MusicWebapi.Api.Models;
 
-namespace IUserServices.Interfaces;
+namespace MusicWebapi.Application.Interfaces;
 
- public interface IUserService{
-       List<User> Get();
-
-       User Get(int id);
-
-       User Create(User newUser);
-
-       int Update(int id,User newUser);
-
-       bool Delete(int id);
-
- }
+public interface IUserService : ICRUD<User>
+{
+     User GetMe();
+}

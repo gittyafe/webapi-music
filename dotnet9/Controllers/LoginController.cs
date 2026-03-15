@@ -1,37 +1,38 @@
-
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Authorization;
-using IUserServices.Interfaces;
+using MusicWebapi.Api.Models;
+using MusicWebapi.Application.Interfaces;
+using MusicWebapi.Application.Services;
 using System.Security.Claims;
-using TS.Services; // TokenService
-using UserNameSpace.Models;
 
-namespace homeWorkUser.Controllers
+
+namespace MusicWebapi.Api.Controllers;
+
+
+[ApiController]
+[Route("[controller]")]
+public class LoginController : ControllerBase
 {
-    [ApiController]
-    [Route("[controller]")]
-    public class LoginController : ControllerBase
+    private readonly IGenericRepository<User> service;
+
+    public LoginController(IGenericRepository<User> service)
     {
-        private readonly IUserService service;
+        this.service = service;
+    }
 
-        public LoginController(IUserService userService)
-        {
-            service = userService;
-        }
+    // לא דורש טוקן
+    [AllowAnonymous]
+    [HttpPost]
+    public ActionResult<string> Login([FromBody] LoginRequest req)
+    {
+        var user = service
+            .Get()
+            .FirstOrDefault(u => u.Name == req.Name && u.Passwd == req.Passwd);
 
-        // לא דורש טוקן
-        [AllowAnonymous]
-        [HttpPost]
-        public ActionResult<string> Login([FromBody] LoginRequest req)
-        {
-            var user = service
-                .Get()
-                .FirstOrDefault(u => u.Name == req.Name && u.Passwd == req.Passwd);
+        if (user == null)
+            return NotFound("Wrong userId / password");
 
-            if (user == null)
-                return Unauthorized("Wrong userId / password");
-
-            var claims = new List<Claim>
+        var claims = new List<Claim>
             {
                 new Claim("userid", user.Id.ToString()),
                 new Claim("username", user.Name),
@@ -39,14 +40,13 @@ namespace homeWorkUser.Controllers
                 new Claim("type", user.Type)
             };
 
-            var token = TokenService.GetToken(claims);
-            return Ok(TokenService.WriteToken(token));
-        }
+        var token = TokenService.GetToken(claims);
+        return Ok(TokenService.WriteToken(token));
     }
+}
 
-    public class LoginRequest
-    {
-        public string Name { get; set; }
-        public string Passwd { get; set; }
-    }
+public class LoginRequest
+{
+    public string? Name { get; set; }
+    public string? Passwd { get; set; }
 }

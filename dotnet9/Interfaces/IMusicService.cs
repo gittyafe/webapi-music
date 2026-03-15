@@ -1,16 +1,5 @@
-using MusicNameSpace.Models;
+using MusicWebapi.Api.Models;
 
-namespace MusicServices.Interfaces;
+namespace MusicWebapi.Application.Interfaces;
 
- public interface IMusicService{
-       List<Music> Get();
-
-       Music Get(int id);
-
-       Music Create(Music newMusic);
-
-       int Update(int id,Music newMusic);
-
-       bool Delete(int id);
-
- }
+public interface IMusicService : ICRUD<Music> { }

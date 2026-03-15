@@ -1,8 +1,8 @@
-using UserNameSpace.Models;
+using MusicWebapi.Api.Models;
 using Microsoft.AspNetCore.Http;
 
 
-namespace IActiveUserN.Interfaces;
+namespace MusicWebapi.Application.Interfaces;
 
 public interface IActiveUser
 {

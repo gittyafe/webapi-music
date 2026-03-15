@@ -66,14 +66,12 @@
 
 
 
-using MQ.Services;
 using System.Diagnostics;
-using MusicMessage.Models;
-using UserNameSpace.Models;
-using IActiveUserN.Interfaces;
+using MusicWebapi.Api.Models;
+using MusicWebapi.Application.Services;
+using MusicWebapi.Application.Interfaces;
 
-namespace MyMiddleware;
-
+namespace MusicWebapi.Api.Middleware;
 
 public class MyLogMiddleware
 {
@@ -86,78 +84,44 @@ public class MyLogMiddleware
         _producer = producer;
     }
 
-    // public async Task Invoke(HttpContext context)
-    // {
-    //     // שולפים את ה-Scoped Service מתוך ה-Request Scope
-    //     var activeUserService = context.RequestServices.GetRequiredService<IActiveUser>();
-    //     var activeUser = activeUserService.ActiveUser;
-
-    //     var sw = Stopwatch.StartNew();
-    //     var startTime = DateTime.Now;
-
-    //     await _next(context);
-
-    //     sw.Stop();
-
-    //     // שליפת Controller + Action
-    //     var endpoint = context.GetEndpoint();
-    //     var actionDescriptor = endpoint?.Metadata
-    //         .GetMetadata<Microsoft.AspNetCore.Mvc.Controllers.ControllerActionDescriptor>();
-
-    //     var controllerName = actionDescriptor?.ControllerName ?? "UnknownController";
-    //     var actionName = actionDescriptor?.ActionName ?? "UnknownAction";
-
-    //     // יצירת מודל הלוג
-    //     var logMessage = new MusicLogMessage
-    //     {
-    //         UserId = activeUser.Id,
-    //         Username = activeUser.Name,
-    //         Action = $"{controllerName}/{actionName}",
-    //         Timestamp = startTime,
-    //         DurationTime = (int)sw.ElapsedMilliseconds
-    //     };
-
-    //     // שליחה ל-RabbitMQ
-    //     _producer.Publish(logMessage);
-    // }
 
     public async Task Invoke(HttpContext context)
-{
-    var sw = Stopwatch.StartNew();
-    var startTime = DateTime.Now;
-
-    await _next(context);
-
-    sw.Stop();
-
-    // שליפת ה-Scoped Service
-    var activeUserService = context.RequestServices.GetService<IActiveUser>();
-    var activeUser = activeUserService?.ActiveUser;
-
-    // הגנה מפני null
-    var userId = activeUser?.Id ?? 0;
-    var username = activeUser?.Name ?? "Anonymous";
-
-    // שליפת Controller + Action
-    var endpoint = context.GetEndpoint();
-    var actionDescriptor = endpoint?.Metadata
-        .GetMetadata<Microsoft.AspNetCore.Mvc.Controllers.ControllerActionDescriptor>();
-
-    var controllerName = actionDescriptor?.ControllerName ?? "UnknownController";
-    var actionName = actionDescriptor?.ActionName ?? "UnknownAction";
-
-    // יצירת מודל הלוג
-    var logMessage = new MusicLogMessage
     {
-        UserId = userId,
-        Username = username,
-        Action = $"{controllerName}/{actionName}",
-        Timestamp = startTime,
-        DurationTime = (int)sw.ElapsedMilliseconds
-    };
+        var sw = Stopwatch.StartNew();
+        var startTime = DateTime.Now;
 
-    _producer.Publish(logMessage);
-}
+        await _next(context);
+
+        sw.Stop();
+
+        // שליפת ה-Scoped Service
+        var activeUserService = context.RequestServices.GetService<IActiveUser>();
+        var activeUser = activeUserService?.ActiveUser;
+
+        // הגנה מפני null
+        var userId = activeUser?.Id ?? 0;
+        var username = activeUser?.Name ?? "Anonymous";
+
+        // שליפת Controller + Action
+        var endpoint = context.GetEndpoint();
+        var actionDescriptor = endpoint?.Metadata
+            .GetMetadata<Microsoft.AspNetCore.Mvc.Controllers.ControllerActionDescriptor>();
+
+        var controllerName = actionDescriptor?.ControllerName ?? "UnknownController";
+        var actionName = actionDescriptor?.ActionName ?? "UnknownAction";
+
+        // יצירת מודל הלוג
+        var logMessage = new MusicLogMessage
+        {
+            UserId = userId,
+            Username = username,
+            Action = $"{controllerName}/{actionName}",
+            Timestamp = startTime,
+            DurationTime = (int)sw.ElapsedMilliseconds
+        };
+
+        await _producer.Publish(logMessage);
+    }
 }
 
 public static partial class MiddlewareExtensions

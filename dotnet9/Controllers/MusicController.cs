@@ -2,36 +2,31 @@ using System.Collections.Generic;
 using System.Linq;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using  MusicNameSpace.Models;
-using homeWorkSe.Services;
-using MusicServices.Interfaces;
+using MusicWebapi.Api.Models;
+using MusicWebapi.Application.Services;
+using MusicWebapi.Application.Interfaces;
 
-namespace homeWork.Controllers;
+namespace MusicWebapi.Api.Controllers;
 
 [ApiController]
 [Route("[controller]")]
 [Authorize]
-public class MusicController : ControllerBase{
+public class MusicController : ControllerBase
+{
 
     IMusicService service;
 
-    public MusicController(IMusicService musicService)
+    public MusicController(IMusicService service)
     {
-        this.service=musicService;
+        this.service = service;
     }
-
-    // private Music find(int id)
-    //  {
-    // return list.FirstOrDefault(p => p.Id == id);
-
-    // }
 
     [HttpGet()]
     public ActionResult<IEnumerable<Music>> Get()
     {
-        var l=service.Get();
-        if (l==null)
-            return NotFound() ;
+        var l = service.Get();
+        if (l == null)
+            return NotFound();
         return l;
     }
 
@@ -52,18 +47,18 @@ public class MusicController : ControllerBase{
     }
 
     [HttpPut("{id}")]
-    public ActionResult<Music> Update(int id,Music newMusic)
+    public ActionResult<Music> Update(int id, Music newMusic)
     {
 
         var flag = service.Update(id, newMusic);
         if (flag == 0)
             return NotFound();
-        if (flag==1)
+        if (flag == 1)
             return BadRequest();
         return NoContent();
     }
 
-        [HttpDelete("{id}")]
+    [HttpDelete("{id}")]
     public ActionResult Delete(int id)
     {
         var flag = service.Delete(id);
