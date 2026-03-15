@@ -76,7 +76,7 @@ function displayEditForm(id) {
     const item = users.find(item => item.id === id);
     
     document.getElementById('edit-id').value = item.id;
-    document.getElementById('edit-type').value = item.type;
+    document.getElementById('edit-role').value = item.type;
     document.getElementById('edit-name').value = item.name;
     document.getElementById('edit-passwd').value = item.passwd;
 

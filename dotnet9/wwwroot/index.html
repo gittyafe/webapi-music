@@ -1,83 +1,98 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <title>MUSIC - instruments</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Instruments Manager</title>
     <link rel="stylesheet" href="css/site.css" />
 </head>
 
 <body>
-    <h1>MUSIC - instruments</h1>
-    <h3>Add</h3>
-    <form action="javascript:void(0);" method="POST" onsubmit="addItem()">
-        <input type="text" id="add-name" placeholder="New Music">
-        <input type="submit" value="Add">
-    </form>
-
-    <div id="editForm">
-        <h3>Edit</h3>
-        <form action="javascript:void(0);" onsubmit="updateItem()">
-            <input type="hidden" id="edit-id">
-            <input type="checkbox" id="edit-isAccompanying">
-            <input type="text" id="edit-name">
-            <input type="submit" value="Save">
-            <a onclick="closeInput()" aria-label="Close">&#10006;</a>
-        </form>
-    </div>
-
-    <p id="counter"></p>
-  <div id="activityFeed">
-        <h3>Activity Feed</h3>
-        <ul id="activityList"></ul>
-    </div>
-
-    <table>
-        <tr>
-            <th>Is Accompanying?</th>
-            <th>Name</th>
-            <th></th>
-            <th></th>
-        </tr>
-        <tbody id="musics"></tbody>
-    </table>
-    
-     <div id="users-link"><!-- <a href="./users.html">my details</a> --> </div>
-     <!-- <div>
-        <p>user details</p>
-        
-        <h5>name: <span id="contentName"></span></h5>
-        <h5>password: <span  id="contentPwd"></span></h5>
-        <button onclick="displayEditFormUser()">Edit</button>
-    </div> -->
-    <div class="user-card">
-        <p class="title">User Details</p>
-
-        <div class="row">
-            <h5>name: <span id="contentName"></span></h5>
-            <h5>password: <span id="contentPwd" class="pwd-mask"></span></h5>
-            <button onclick="displayEditFormUser()">Edit</button>
-        </div>
-    </div>
-
-      <div id="editForm2">
-        <h3>Edit</h3>
-        <form action="javascript:void(0);" onsubmit="updateUser()">
-            <input type="hidden" id="edit2-id">
-            <input type="hidden" id="edit2-role">
-            <input type="text" id="edit2-name">
-            <input type="text" id="edit2-passwd">
-            <input type="submit" value="Save">
-            <a onclick="closeInput2()" aria-label="Close">&#10006;</a>
-        </form>
-    </div>
-
+    <header>
+        <h1>MUSIC Instruments Manager</h1>
+    </header>
+    <main class="container">
+        <section class="music-section">
+            <div class="form-card">
+                <h2>Add Instrument</h2>
+                <form action="javascript:void(0);" method="POST" onsubmit="addItem()">
+                    <label for="add-name">Instrument Name: </label>
+                    <input type="text" id="add-name" placeholder="New Instrument" required>
+                    <input type="submit" value="Add">
+                </form>
+            </div>
+            <div id="editForm" class="form-card">
+                <h2>Edit Instrument</h2>
+                <form action="javascript:void(0);" onsubmit="updateItem()">
+                    <input type="hidden" id="edit-id">
+                    <label for="edit-isAccompanying">Is Accompanying?</label>
+                    <input type="checkbox" id="edit-isAccompanying">
+                    <input type="text" id="edit-name" placeholder="Instrument Name" required>
+                    <input type="submit" value="Save">
+                    <a onclick="closeInput()" aria-label="Close" class="close-btn">&#10006;</a>
+                </form>
+            </div>
+            <div class="table-card">
+                <div class="table-header">
+                    <h2>Instruments</h2>
+                    <p id="counter"></p>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Is Accompanying?</th>
+                            <th>Name</th>
+                            <th>Edit</th>
+                            <th>Delete</th>
+                        </tr>
+                    </thead>
+                    <tbody id="musics"></tbody>
+                </table>
+        </section>
+        <aside class="sidebar">
+            <div class="user-card">
+                <h2>User Details</h2>
+                <div class="row">
+                    <p><strong>Name: </strong> <span id="contentName"></span></p>
+                    <p><strong>Password: </strong> <span id="contentPwd" class="pwd-mask"></span></p>
+                    <button onclick="displayEditFormUser()">Edit</button>
+                </div>
+            </div>
+            <div id="editForm2" class="form-card" style="display:none;">
+                <h2>Edit User</h2>
+                <form action="javascript:void(0);" onsubmit="updateUser()">
+                    <input type="hidden" id="edit2-id">
+                    <input type="hidden" id="edit2-role">
+                    <label for="edit2-name">Name: </label>
+                    <input type="text" id="edit2-name" placeholder="User Name" required>
+                    <label for="edit2-passwd">Password: </label>
+                    <input type="text" id="edit2-passwd" placeholder="Password" required>
+                    <input type="submit" value="Save">
+                    <a onclick="closeInput2()" aria-label="Close" class="close-btn">&#10006;</a>
+                </form>
+            </div>
+            <div class="activity-section">
+                <div id="activityFeed">
+                    <h2>Activity Feed</h2>
+                    <ul id="activityList"></ul>
+                </div>
+            </div>
+                        <div class="admin-link-container">
+                <a id="users-link" href="./users.html" class="admin-link-btn" style="display:none;">Users Page</a>
+            </div>
+        </aside>
+    </main>
     <script src="js/signalr.min.js"></script>
     <script src="js/site.js" asp-append-version="true"></script>
     <script type="text/javascript">
+        closeInput()
         initSignalR();
         redirectIfNeeded();
     </script>
+</body>
+
+</html>
 </body>
 
 </html>

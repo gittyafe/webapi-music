@@ -32,7 +32,6 @@ function displayUser(user) {
             return;
         const link = document.createElement("a");
         link.href= "./users.html";
-        link.textContent ="to go to users";
         adminLink.append(link);
         adminLink.style.display = "inline-block";
     }

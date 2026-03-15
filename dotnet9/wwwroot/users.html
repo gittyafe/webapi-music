@@ -7,46 +7,68 @@
     <link rel="stylesheet" href="css/site.css" />
 </head>
 
+
 <body>
-    <h1>USERS</h1>
-    <h3>Add</h3>
-    <form action="javascript:void(0);" method="POST" onsubmit="addItem()">
-        <input type="text" id="add-name" placeholder="New User's Name">
-        <input type="text" id="add-passwd" placeholder="New User's Passwd">
-        <input type="text" id="add-role" placeholder="New User's Role">
-
-        <input type="submit" value="Add">
-    </form>
-
-    <div id="editForm">
-        <h3>Edit</h3>
-        <form action="javascript:void(0);" onsubmit="updateItem()">
-            <input type="hidden" id="edit-id">
-            <input type="text" id="edit-name">
-            <input type="text" id="edit-passwd">
-            <input type="text" id="edit-role">
-            <input type="submit" value="Save">
-            <a onclick="closeInput()" aria-label="Close">&#10006;</a>
-        </form>
-    </div>
-
-    <p id="counter"></p>
-
-    <table>
-        <tr>
-            <th>id</th>
-            <th>Name</th>
-            <th>Password</th>
-            <th>Type</th>
-            <th></th>
-            <th></th>
-        </tr>
-        <tbody id="usrs"></tbody>
-    </table>
-    <a href="./index.html">to music</a>
+    <header>
+        <h1>Users Management</h1>
+    </header>
+    <main class="container">
+        <section class="music-section">
+            <div class="form-card">
+                <h2>Add User</h2>
+                <form action="javascript:void(0);" method="POST" onsubmit="addItem()">
+                    <label for="add-name">Name</label>
+                    <input type="text" id="add-name" placeholder="New User's Name" required>
+                    <label for="add-passwd">Password</label>
+                    <input type="text" id="add-passwd" placeholder="New User's Password" required>
+                    <label for="add-role">Role</label>
+                    <input type="text" id="add-role" placeholder="New User's Role" required>
+                    <input type="submit" value="Add">
+                </form>
+            </div>
+            <div id="editForm" class="form-card" style="display:none;">
+                <h2>Edit User</h2>
+                <form action="javascript:void(0);" onsubmit="updateItem()">
+                    <input type="hidden" id="edit-id">
+                    <label for="edit-name">Name</label>
+                    <input type="text" id="edit-name" required>
+                    <label for="edit-passwd">Password</label>
+                    <input type="text" id="edit-passwd" required>
+                    <label for="edit-role">Role</label>
+                    <input type="text" id="edit-role" required>
+                    <input type="submit" value="Save">
+                    <a onclick="closeInput()" aria-label="Close" class="close-btn">&#10006;</a>
+                </form>
+            </div>
+            <div class="table-card">
+                <div class="table-header">
+                    <h2>Users</h2>
+                    <p id="counter"></p>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>Name</th>
+                            <th>Password</th>
+                            <th>Role</th>
+                            <th>Edit</th>
+                            <th>Delete</th>
+                        </tr>
+                    </thead>
+                    <tbody id="usrs"></tbody>
+                </table>
+            </div>
+        </section>
+        <aside class="sidebar">
+            <div class="admin-link-container">
+                <a href="./index.html" class="admin-link-btn">To Music</a>
+            </div>
+        </aside>
+    </main>
     <script src="js/siteUsers.js" asp-append-version="true"></script>
     <script type="text/javascript">
-redirectIfNeeded();
+        redirectIfNeeded();
     </script>
 </body>
 
