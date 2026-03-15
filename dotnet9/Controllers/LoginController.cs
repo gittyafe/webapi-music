@@ -37,7 +37,7 @@ public class LoginController : ControllerBase
                 new Claim("userid", user.Id.ToString()),
                 new Claim("username", user.Name),
                 new Claim("password",user.Passwd),
-                new Claim("type", user.Type)
+                new Claim("role", user.Role)
             };
 
         var token = TokenService.GetToken(claims);

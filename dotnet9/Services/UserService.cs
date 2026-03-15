@@ -32,7 +32,7 @@ public class UserService : IUserService
 
     public User Get(int id)
     {
-        if (id != activeUser.Id && activeUser.Type != "Admin")
+        if (id != activeUser.Id && activeUser.Role != "Admin")
             return null;
         var user = repository.Get(id);
         return user;
@@ -53,9 +53,9 @@ public class UserService : IUserService
 
     public int Update(int id, User user)
     {
-        if (!(id == activeUser.Id || activeUser.Type == "Admin"))
+        if (!(id == activeUser.Id || activeUser.Role == "Admin"))
             return 4; //symbolying 'Unauthorized'
-        if (activeUser.Type != "Admin" && user.Type != activeUser.Type)
+        if (activeUser.Role != "Admin" && user.Role != activeUser.Role)
             return 4; //symbolying 'Unauthorized'
 
         var existing = repository.Get(id);

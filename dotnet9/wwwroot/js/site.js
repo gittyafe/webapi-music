@@ -26,7 +26,7 @@ function displayUser(user) {
     document.getElementById("contentName").innerText = user.name || "";
     document.getElementById("contentPwd").innerText = user.passwd || "";
     // אם הוא אדמין – מציגים קישור
-    if (user.type === "Admin") {
+    if (user.role === "Admin") {
         const adminLink = document.getElementById("users-link");
         if (adminLink.querySelector("a")) 
             return;
@@ -50,7 +50,7 @@ function displayEditFormUser() {
     .then(userData => {
 
     document.getElementById('edit2-id').value = userData.id;
-    document.getElementById('edit2-type').value = userData.type;
+    document.getElementById('edit2-role').value = userData.role;
     document.getElementById('edit2-name').value = userData.name;
     document.getElementById('edit2-passwd').value = userData.passwd;
     document.getElementById('editForm2').style.display = 'block';
@@ -65,7 +65,7 @@ function updateUser() {
         Id: parseInt(userId, 10),
         Name: document.getElementById('edit2-name').value.trim(),    
         Passwd: document.getElementById('edit2-passwd').value.trim(),
-        Type: document.getElementById('edit2-type').value.trim(),
+        Role: document.getElementById('edit2-role').value.trim(),
       };
 
     fetch(`User/${userId}`, {

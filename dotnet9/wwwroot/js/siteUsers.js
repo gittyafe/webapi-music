@@ -32,13 +32,13 @@ function getItems() {
 function addItem() {
     const addNameTextbox = document.getElementById('add-name');
     const addPasswdTextbox = document.getElementById('add-passwd');
-    const addTypeTextbox = document.getElementById('add-type');
+    const addRoleTextbox = document.getElementById('add-role');
 
 
     const item = {
         name: addNameTextbox.value.trim(),
         passwd: addPasswdTextbox.value.trim(),
-        type: addTypeTextbox.value.trim()
+        role: addRoleTextbox.value.trim()
     };
 
     fetch(uri, {
@@ -55,7 +55,7 @@ function addItem() {
             getItems();
             addNameTextbox.value = '';
             addPasswdTextbox.value = '';
-            addTypeTextbox.value = '';
+            addRoleTextbox.value = '';
 
         })
         .catch(error => console.error('Unable to add item.', error));
@@ -90,7 +90,7 @@ function updateItem() {
         Id: parseInt(itemId, 10),
         Name: document.getElementById('edit-name').value.trim(),    
         Passwd: document.getElementById('edit-passwd').value.trim(),
-        Type: document.getElementById('edit-type').value.trim(),
+        Role: document.getElementById('edit-role').value.trim(),
       };
 
     fetch(`${uri}/${itemId}`, {
@@ -154,7 +154,7 @@ function _displayItems(data) {
         td2.appendChild(textNode1);
 
         let td3 = tr.insertCell(3);
-        let textNode2 = document.createTextNode(item.type);
+        let textNode2 = document.createTextNode(item.role);
         td3.appendChild(textNode2);
 
 

@@ -1,22 +1,8 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using System.Diagnostics;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
-using Microsoft.OpenApi;
 using MusicWebapi.Api.Hubs;
-using MusicWebapi.Api.Models;
 using MusicWebapi.Application.Services;
-using MusicWebapi.Application.Interfaces;
 using MusicWebapi.Api.Middleware;
 
 
@@ -39,6 +25,9 @@ builder.Services.AddAuthentication("Bearer")
     .AddJwtBearer(options =>
     {
         options.TokenValidationParameters = MusicWebapi.Application.Services.TokenService.GetTokenValidationParameters();
+        options.TokenValidationParameters.RoleClaimType = "role";
+        // Also set the default claim type for roles globally
+        options.ClaimsIssuer = "https://localhost:7159";
 
         options.Events = new JwtBearerEvents
         {
@@ -57,12 +46,15 @@ builder.Services.AddAuthentication("Bearer")
             }
         };
     });
-/// 
+
+// Set the default role claim type globally for authorization
+System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.DefaultInboundClaimTypeMap["role"] = "role";
+
 
 builder.Services.AddAuthorization(cfg =>
    {
-       cfg.AddPolicy("AllUsers", policy => policy.RequireClaim("type", "Admin", "Regular"));
-       cfg.AddPolicy("Admin", policy => policy.RequireClaim("type", "Admin"));
+       cfg.AddPolicy("AllUsers", policy => policy.RequireClaim("role", "Admin", "Regular"));
+       cfg.AddPolicy("Admin", policy => policy.RequireClaim("role", "Admin"));
    });
 
 
@@ -86,10 +78,8 @@ if (app.Environment.IsDevelopment())
     });
 }
 
-//////////////
 app.UseDefaultFiles();
 app.UseStaticFiles();
-/////////////////
 
 app.UseHttpsRedirection();
 app.UseAuthentication();

@@ -12,7 +12,7 @@ public class ActiveUserService : IActiveUser
     public ActiveUserService(IHttpContextAccessor context)
     {
         var id = context?.HttpContext?.User?.FindFirst("userid")?.Value;
-        var type = context?.HttpContext?.User?.FindFirst("type")?.Value;
+        var role = context?.HttpContext?.User?.FindFirst("role")?.Value;
         var name = context?.HttpContext?.User?.FindFirst("username")?.Value;
 
         if (id != null)
@@ -21,7 +21,7 @@ public class ActiveUserService : IActiveUser
             {
                 Id = int.Parse(id),
                 Name = name,
-                Type = type
+                Role = role
             };
         }
 

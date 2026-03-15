@@ -14,7 +14,8 @@ namespace MusicWebapi.Application.Services;
 public static class TokenService
 {
     private static SymmetricSecurityKey key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("GGGYYY458946769GITTY64"));
-    private static string issuer = "https://fbi-demo.com";
+    // Use local server URL for issuer during development
+    private static string issuer = "https://localhost:7159";
     public static SecurityToken GetToken(List<Claim> claims) =>
         new JwtSecurityToken(
             issuer,
