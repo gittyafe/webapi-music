@@ -19,21 +19,25 @@ public class UserService : IUserService
     private readonly IHubContext<ActivityHub> hubContext;
     private readonly IGenericRepository<User> repository;
     private readonly User activeUser;
+    private readonly IGenericRepository<Music> musicRepository;
 
-    public UserService(IGenericRepository<User> repository, IActiveUser activeUser, IHubContext<ActivityHub> hubContext)
+    public UserService(IGenericRepository<User> repository, IActiveUser activeUser, IHubContext<ActivityHub> hubContext, IGenericRepository<Music> musicRepository)
     {
         this.repository = repository;
         this.activeUser = activeUser.ActiveUser
                 ?? throw new System.InvalidOperationException("Active user is required");
         this.hubContext = hubContext;
+        this.musicRepository = musicRepository;
     }
 
     public List<User> Get() => repository.Get().ToList();
 
     public User Get(int id)
     {
+        if (activeUser == null)
+            throw new InvalidOperationException("Active user is not set.");
         if (id != activeUser.Id && activeUser.Role != "Admin")
-            return null;
+            return null!;
         var user = repository.Get(id);
         return user;
     }
@@ -70,6 +74,7 @@ public class UserService : IUserService
         if (user is null)
             return false;
 
+        musicRepository.Get().Where(m => m.UserId == id).ToList().ForEach(m => musicRepository.Delete(m.Id));
         repository.Delete(id);
         BroadcastActivity("deleted user", user);
         return true;
@@ -77,7 +82,8 @@ public class UserService : IUserService
 
     private void BroadcastActivity(string action, User user)
     {
-        hubContext.Clients.All.SendAsync("ReceiveActivity", activeUser.Name, action, user.Name);
+        // Send only to the currently logged-in user (like music)
+        hubContext.Clients.User(activeUser.Id.ToString()).SendAsync("ReceiveActivity", activeUser.Name, action, user.Name);
     }
 
 }

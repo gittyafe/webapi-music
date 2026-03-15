@@ -168,3 +168,26 @@ function _displayItems(data) {
 
     users = data;
 }
+
+function initSignalR() {
+    const connection = new signalR.HubConnectionBuilder()
+        .withUrl("/activityHub", {
+                accessTokenFactory: () => token
+            })
+                .build();
+    connection.on("ReceiveActivity", function (username, action, itemName) {
+        getItems();
+        const activityList = document.getElementById("activityList");
+        const li = document.createElement("li");
+        li.textContent = `${username} ${action} '${itemName}'`;
+        activityList.insertBefore(li, activityList.firstChild);
+
+        // Keep only last 10 activities
+        while (activityList.children.length > 10) {
+            activityList.removeChild(activityList.lastChild);
+        }
+    });
+    connection.start()
+        .then(() => console.log("SignalR connected"))
+        .catch(err => console.error("SignalR connection error:", err));
+}

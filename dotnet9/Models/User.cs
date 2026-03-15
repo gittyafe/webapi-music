@@ -9,4 +9,6 @@ public class User : IEntity
     public string? Name { get; set; }
     public string? Passwd { get; set; }
     public string? Role { get; set; }
+    public string? Email { get; set; }
+
 }

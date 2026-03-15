@@ -8,8 +8,15 @@ namespace MusicWebapi.Api.Hubs;
 [Authorize]
 public class ActivityHub : Hub
 {
-    public async Task BroadcastActivity(string username, string action, string musicName)
+    public async Task BroadcastActivity(string username, string action, string musicName, string userId = null)
     {
-        await Clients.All.SendAsync("ReceiveActivity", username, action, musicName);
+        if (!string.IsNullOrEmpty(userId))
+        {
+            await Clients.User(userId).SendAsync("ReceiveActivity", username, action, musicName);
+        }
+        else
+        {
+            await Clients.All.SendAsync("ReceiveActivity", username, action, musicName);
+        }
     }
 }

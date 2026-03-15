@@ -87,20 +87,28 @@ public class MyLogMiddleware
 
     public async Task Invoke(HttpContext context)
     {
+
         var sw = Stopwatch.StartNew();
         var startTime = DateTime.Now;
-
         await _next(context);
-
         sw.Stop();
 
-        // שליפת ה-Scoped Service
-        var activeUserService = context.RequestServices.GetService<IActiveUser>();
-        var activeUser = activeUserService?.ActiveUser;
-
-        // הגנה מפני null
-        var userId = activeUser?.Id ?? 0;
-        var username = activeUser?.Name ?? "Anonymous";
+        int userId = 0;
+        string username = "Anonymous";
+        try
+        {
+            var activeUserService = context.RequestServices.GetService<IActiveUser>();
+            var activeUser = activeUserService?.ActiveUser;
+            if (activeUser != null)
+            {
+                userId = activeUser.Id;
+                username = activeUser.Name ?? "Anonymous";
+            }
+        }
+        catch (Exception ex)
+        {
+            // Optionally log the exception here, but do not throw
+        }
 
         // שליפת Controller + Action
         var endpoint = context.GetEndpoint();

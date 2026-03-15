@@ -11,7 +11,6 @@ namespace MusicWebapi.Api.Controllers;
 
 [ApiController]
 [Route("[controller]")]
-[Authorize]
 public class UserController : ControllerBase
 {
 

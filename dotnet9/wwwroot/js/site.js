@@ -110,6 +110,7 @@ function closeInput2() {
 
 
 
+
 function redirectIfNeeded(){
     if(localStorage.getItem("userToken")==null){
         const currentUrl = window.location.href; // מקבל את ה-URL הנוכחי
@@ -263,11 +264,11 @@ function initSignalR() {
                 accessTokenFactory: () => token
             })
                 .build();
-    connection.on("ReceiveActivity", function (username, action, pizzaName) {
+    connection.on("ReceiveActivity", function (username, action, itemName) {
         getItems();
         const activityList = document.getElementById("activityList");
         const li = document.createElement("li");
-        li.textContent = `${username} ${action} '${pizzaName}'`;
+        li.textContent = `${username} ${action} '${itemName}'`;
         activityList.insertBefore(li, activityList.firstChild);
 
         // Keep only last 10 activities

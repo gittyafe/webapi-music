@@ -70,11 +70,12 @@ public class MusicService : IMusicService
 
         repository.Delete(id);
         BroadcastActivity("deleted music", music);
+        Console.WriteLine("BroadcastActivity called for user.Id = " + activeUserId);
         return true;
     }
     private void BroadcastActivity(string action, Music music)
     {
-        hubContext.Clients.All.SendAsync("ReceiveActivity", activeUsername, action, music.Name);
+        hubContext.Clients.User(activeUserId.ToString()).SendAsync("ReceiveActivity", activeUsername, action, music.Name);
     }
 
 }

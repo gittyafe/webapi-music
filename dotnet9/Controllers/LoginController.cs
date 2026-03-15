@@ -36,8 +36,9 @@ public class LoginController : ControllerBase
             {
                 new Claim("userid", user.Id.ToString()),
                 new Claim("username", user.Name),
-                new Claim("password",user.Passwd),
-                new Claim("role", user.Role)
+                new Claim("role", user.Role),
+                // Add NameIdentifier claim for SignalR user targeting
+                new Claim(ClaimTypes.NameIdentifier, user.Id.ToString())
             };
 
         var token = TokenService.GetToken(claims);
