@@ -1,0 +1,103 @@
+input[type='submit'],
+button,
+[aria-label] {
+    cursor: pointer;
+}
+
+#editForm {
+    display: none;
+}
+
+table {
+    font-family: Arial, sans-serif;
+    border: 1px solid;
+    border-collapse: collapse;
+}
+
+th {
+    background-color: #f8f8f8;
+    padding: 5px;
+}
+
+td {
+    border: 1px solid;
+    padding: 5px;
+}
+
+/* .user-card {
+    border: 2px solid #ccc;
+    border-radius: 12px;
+    padding: 20px;
+    width: fit-content;
+    background: #f9f9f9;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    font-size: 18px;
+}
+
+.user-card .title {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.row h5 {
+    margin: 0;
+}
+
+button {
+    padding: 8px 16px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: none;
+    background-color: #4a90e2;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #357ac9;
+}
+
+.pwd-mask {
+    -webkit-text-security: disc;
+    text-security: disc;
+} */
+
+
+.user-card {
+    margin-top: 10px;
+    border: 1px solid #000;
+    border-radius: 0; /* מסגרת ריבועית */
+    padding: 5px;
+    width: fit-content;
+    background: #fff;
+    font-size: 20px;
+}
+
+.user-card .title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.row h5 {
+    margin: 0;
+}
+
+
+.pwd-mask {
+    -webkit-text-security: disc;
+    text-security: disc;
+}

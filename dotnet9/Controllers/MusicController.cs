@@ -1,0 +1,72 @@
+using System.Collections.Generic;
+using System.Linq;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+using MusicWebapi.Api.Models;
+using MusicWebapi.Application.Services;
+using MusicWebapi.Application.Interfaces;
+
+namespace MusicWebapi.Api.Controllers;
+
+[ApiController]
+[Route("[controller]")]
+[Authorize]
+public class MusicController : ControllerBase
+{
+
+    IMusicService service;
+
+    public MusicController(IMusicService service)
+    {
+        this.service = service;
+    }
+
+    [HttpGet()]
+    public ActionResult<IEnumerable<Music>> Get()
+    {
+        var l = service.Get();
+        if (l == null)
+            return NotFound();
+        return l;
+    }
+
+    [HttpGet("{id}")]
+    public ActionResult<Music> Get(int id)
+    {
+        var m = service.Get(id);
+        if (m == null)
+            return NotFound();
+        return m;
+    }
+
+    [HttpPost]
+    public ActionResult Create(Music newMusic)
+    {
+        Music m = service.Create(newMusic);
+        return CreatedAtAction(nameof(Create), new { id = m.Id });
+    }
+
+    [HttpPut("{id}")]
+    public ActionResult<Music> Update(int id, Music newMusic)
+    {
+
+        var flag = service.Update(id, newMusic);
+        if (flag == 0)
+            return NotFound();
+        if (flag == 1)
+            return BadRequest();
+        return NoContent();
+    }
+
+    [HttpDelete("{id}")]
+    public ActionResult Delete(int id)
+    {
+        var flag = service.Delete(id);
+        if (flag == false)
+            return NotFound();
+        return NoContent();
+    }
+
+}
+
+

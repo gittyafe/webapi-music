@@ -1,0 +1,57 @@
+
+🐇 התקנת RabbitMQ ב‑Windows
+1) התקנת Erlang (נדרש ל‑RabbitMQ)
+winget install Erlang.Erlang
+
+
+2) התקנת RabbitMQ
+winget install RabbitMQ.RabbitMQ
+
+
+
+▶️ הפעלת RabbitMQ
+RabbitMQ רץ כשירות (Service):
+Start-Service rabbitmq
+
+
+בדיקת סטטוס:
+Get-Service rabbitmq
+
+
+
+⏹️ עצירת RabbitMQ
+Stop-Service rabbitmq
+
+
+
+🔧 פתיחת ממשק הניהול (Management UI)
+הפעלת תוסף ה‑Management
+יש להכנס לsbin: cd "C:\Program Files\RabbitMQ Server\rabbitmq_server-*\sbin"
+.\rabbitmq-plugins enable rabbitmq_management
+
+פתיחת הדפדפן לממשק הניהול
+כתובת ברירת המחדל:
+http://localhost:15672
+
+
+משתמש ברירת מחדל:
+- User: guest
+- Password: guest
+
+🛠️ פקודות שימושיות נוספות
+בדיקת מצב השרת
+rabbitmqctl status
+
+
+רשימת משתמשים
+rabbitmqctl list_users
+
+
+יצירת משתמש חדש עם הרשאות מלאות
+rabbitmqctl add_user myuser mypassword
+rabbitmqctl set_user_tags myuser administrator
+rabbitmqctl set_permissions -p / myuser ".*" ".*" ".*"
+
+
+
+אם תרצי, אני יכול להכין לך סקריפט PowerShell אוטומטי אחד שמתקין, מפעיל ומגדיר הכול בלחיצה אחת.
