@@ -28,11 +28,18 @@ public class AuthController : ControllerBase
         GoogleJsonWebSignature.Payload payload;
         try
         {
+            // var settings = new GoogleJsonWebSignature.ValidationSettings()
+            // {
+            //     // החלף במחרוזת ה-Client ID האמיתית שלך מה-Google Console
+            //     Audience = new[] { "753534409769-esd1uivsvk45lrnuf5l3m17d275v6euc.apps.googleusercontent.com" }
+            // };
+            // payload = await GoogleJsonWebSignature.ValidateAsync(request.IdToken, settings);
             payload = await GoogleJsonWebSignature.ValidateAsync(request.IdToken);
         }
-        catch
+        catch (Exception ex)
         {
-            return Unauthorized("Invalid Google token");
+            // זה יגלה לך אם הבעיה היא בטוקן, בשעון, או ב-Audience
+            return Unauthorized($"Internal Error: {ex.Message}");
         }
 
         // בדוק אם המשתמש קיים ב-User.json לפי מייל
@@ -59,9 +66,9 @@ public class AuthController : ControllerBase
         var claims = new List<Claim>
         {
             new Claim("userid", user.Id.ToString()),
-            new Claim("username", user.Name),
-            new Claim("password", user.Passwd),
-            new Claim("role", user.Role),
+            new Claim("username", user.Name??""),
+            new Claim("password", user.Passwd??""),
+            new Claim("role", user.Role??""),
 
             // חשוב ל‑SignalR — רק אחד!
             new Claim(ClaimTypes.NameIdentifier, user.Id.ToString())
@@ -75,5 +82,5 @@ public class AuthController : ControllerBase
 
 public class GoogleLoginRequest
 {
-    public string IdToken { get; set; }
+    public string? IdToken { get; set; }
 }

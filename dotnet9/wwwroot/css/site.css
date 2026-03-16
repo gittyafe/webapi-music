@@ -243,3 +243,112 @@ button,
     -webkit-text-security: disc;
     text-security: disc;
 }
+
+/* עיצוב כל שדה טופס */
+/* קבוצת עטיפה לכל שדה כדי ליצור ריווח */
+.form-group {
+    margin-bottom: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+/* עיצוב ה-Label */
+form label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #555; /* אפור כהה שמתאים ל-#222 של ה-body */
+    display: block;
+    transition: color 0.2s;
+}
+
+/* עיצוב ה-Input */
+form input[type="text"],
+form input[type="email"],
+form input[type="password"],
+form input[type="number"],
+form select,
+form textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    font-family: inherit; /* שומר על Segoe UI */
+    font-size: 1rem;
+    border: 1px solid #e0e0e0; /* תואם לגבולות הטבלה שלך */
+    border-radius: 8px; /* מעט יותר מעוגל מהכפתור, למראה מודרני */
+    background-color: #fff;
+    color: #333;
+    box-sizing: border-box; /* מבטיח שהפדינג לא יחרוג מהרוחב */
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+/* אפקט פוקוס - כחול כמו ה-Header */
+form input:focus {
+    outline: none;
+    border-color: #4a90e2;
+    box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.1);
+}
+
+/* שינוי צבע ה-label כשהאינפוט בפוקוס */
+.form-group:focus-within label {
+    color: #4a90e2;
+}
+
+/* עיצוב Placeholder */
+form input::placeholder {
+    color: #bbb;
+}
+
+/* עיצוב כללי לכל הכפתורים בטופס */
+form button,
+form input[type="submit"],
+form input[type="button"] {
+    display: inline-block;
+    padding: 0.6rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #fff;
+    background-color: #4a90e2; /* צבע המותג שלך */
+    border: none;
+    border-radius: 6px; /* רדיוס עדין ומקצועי */
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0 2px 4px rgba(74, 144, 226, 0.2);
+    margin-top: 10px;
+}
+
+/* אפקט Hover - עדין ומזמין */
+form button:hover,
+form input[type="submit"]:hover,
+form input[type="button"]:hover {
+    background-color: #357ac9;
+    box-shadow: 0 4px 8px rgba(74, 144, 226, 0.3);
+    transform: translateY(-1px);
+}
+
+/* אפקט לחיצה (Active) */
+form button:active,
+form input[type="submit"]:active {
+    transform: translateY(0);
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* כפתור ביטול / משני (Secondary) */
+.btn-secondary {
+    background-color: #f4f6fa;
+    color: #555;
+    border: 1px solid #e0e0e0;
+    margin-left: 10px;
+}
+
+.btn-secondary:hover {
+    background-color: #e8ebf0;
+    color: #222;
+}
+
+/* מיכל לכפתורים למקרה שיש יותר מאחד בשורה */
+.form-actions {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 1rem;
+}

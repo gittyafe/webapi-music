@@ -56,6 +56,7 @@
                 <div class="row">
                     <p><strong>Name: </strong> <span id="contentName"></span></p>
                     <p><strong>Password: </strong> <span id="contentPwd" class="pwd-mask"></span></p>
+                    <p><strong>Email: </strong> <span id="contentEmail"></span></p>
                     <button onclick="displayEditFormUser()">Edit</button>
                 </div>
             </div>
@@ -68,6 +69,8 @@
                     <input type="text" id="edit2-name" placeholder="User Name" required>
                     <label for="edit2-passwd">Password: </label>
                     <input type="text" id="edit2-passwd" placeholder="Password" required>
+                    <label for="edit2-email">Email: </label>
+                    <input type="text" id="edit2-email" placeholder="User Email" required>
                     <input type="submit" value="Save">
                     <a onclick="closeInput2()" aria-label="Close" class="close-btn">&#10006;</a>
                 </form>

@@ -39,7 +39,7 @@ form.addEventListener('submit', handleFormSubmit);
 async function handleGoogleCredentialResponse(response) {
     const idToken = response.credential;
     // שלח את ה-ID Token לשרת שלך
-    const res = await fetch('Auth/google-login', {
+    const res = await fetch('/Auth/google-login', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'

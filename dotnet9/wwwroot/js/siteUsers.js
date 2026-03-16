@@ -9,7 +9,6 @@ function redirectIfNeeded(){
         window.location.href = newUrl+'/login.html'; // מבצע את ה-redirect
     }
     else{
-        console.log("the user has token");
         getItems();
     }
 }
@@ -33,12 +32,14 @@ function addItem() {
     const addNameTextbox = document.getElementById('add-name');
     const addPasswdTextbox = document.getElementById('add-passwd');
     const addRoleTextbox = document.getElementById('add-role');
+    const addEmailTextbox = document.getElementById('add-email');
 
 
     const item = {
         name: addNameTextbox.value.trim(),
         passwd: addPasswdTextbox.value.trim(),
-        role: addRoleTextbox.value.trim()
+        role: addRoleTextbox.value.trim(),
+        email: addEmailTextbox.value.trim()
     };
 
     fetch(uri, {
@@ -56,6 +57,7 @@ function addItem() {
             addNameTextbox.value = '';
             addPasswdTextbox.value = '';
             addRoleTextbox.value = '';
+            addEmailTextbox.value = '';
 
         })
         .catch(error => console.error('Unable to add item.', error));
@@ -74,11 +76,13 @@ function deleteItem(id) {
 
 function displayEditForm(id) {
     const item = users.find(item => item.id === id);
-    
+    console.log(item);
+    console.log(users);
     document.getElementById('edit-id').value = item.id;
-    document.getElementById('edit-role').value = item.type;
+    document.getElementById('edit-role').value = item.role;
     document.getElementById('edit-name').value = item.name;
     document.getElementById('edit-passwd').value = item.passwd;
+    document.getElementById('edit-email').value = item.email;
 
     // document.getElementById('edit-isAccompanying').checked = item.isAaccompanying;
     document.getElementById('editForm').style.display = 'block';
@@ -91,6 +95,7 @@ function updateItem() {
         Name: document.getElementById('edit-name').value.trim(),    
         Passwd: document.getElementById('edit-passwd').value.trim(),
         Role: document.getElementById('edit-role').value.trim(),
+        Email: document.getElementById('edit-email').value.trim()
       };
 
     fetch(`${uri}/${itemId}`, {
@@ -157,12 +162,15 @@ function _displayItems(data) {
         let textNode2 = document.createTextNode(item.role);
         td3.appendChild(textNode2);
 
-
         let td4 = tr.insertCell(4);
-        td4.appendChild(editButton);
+        let textNode4 = document.createTextNode(item.email);
+        td4.appendChild(textNode4);
 
         let td5 = tr.insertCell(5);
-        td5.appendChild(deleteButton);
+        td5.appendChild(editButton);
+
+        let td6 = tr.insertCell(6);
+        td6.appendChild(deleteButton);
 
     });
 

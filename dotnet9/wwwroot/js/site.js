@@ -25,6 +25,7 @@ function displayUser(user) {
     // הכנסת נתונים ל-inputs
     document.getElementById("contentName").innerText = user.name || "";
     document.getElementById("contentPwd").innerText = user.passwd || "";
+    document.getElementById("contentEmail").innerText = user.email || "";
     // אם הוא אדמין – מציגים קישור
     if (user.role === "Admin") {
         const adminLink = document.getElementById("users-link");
@@ -52,6 +53,7 @@ function displayEditFormUser() {
     document.getElementById('edit2-role').value = userData.role;
     document.getElementById('edit2-name').value = userData.name;
     document.getElementById('edit2-passwd').value = userData.passwd;
+    document.getElementById('edit2-email').value = userData.email;
     document.getElementById('editForm2').style.display = 'block';
 
     })
@@ -65,6 +67,7 @@ function updateUser() {
         Name: document.getElementById('edit2-name').value.trim(),    
         Passwd: document.getElementById('edit2-passwd').value.trim(),
         Role: document.getElementById('edit2-role').value.trim(),
+        Email: document.getElementById('edit2-email').value.trim()
       };
 
     fetch(`User/${userId}`, {

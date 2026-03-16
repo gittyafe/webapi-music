@@ -239,7 +239,11 @@ builder.Logging.AddConsole();
 
 
 var app = builder.Build();
-
+// app.Use((context, next) =>
+// {
+//     context.Response.Headers.Add("Cross-Origin-Opener-Policy", "same-origin-allow-popups");
+//     return next();
+// });
 app.UseMyLogMiddleware();
 
 if (app.Environment.IsDevelopment())
