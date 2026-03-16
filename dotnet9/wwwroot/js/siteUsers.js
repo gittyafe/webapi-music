@@ -76,8 +76,6 @@ function deleteItem(id) {
 
 function displayEditForm(id) {
     const item = users.find(item => item.id === id);
-    console.log(item);
-    console.log(users);
     document.getElementById('edit-id').value = item.id;
     document.getElementById('edit-role').value = item.role;
     document.getElementById('edit-name').value = item.name;

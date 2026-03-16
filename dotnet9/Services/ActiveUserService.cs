@@ -29,14 +29,7 @@ namespace MusicWebapi.Application.Services;
 
 // }
 
-public static partial class MusicExtensions
-{
-    public static IServiceCollection AddActiveUser(this IServiceCollection services)
-    {
-        services.AddScoped<IActiveUser, ActiveUserService>();
-        return services;
-    }
-}
+
 public class ActiveUserService : IActiveUser
 {
     private readonly IHttpContextAccessor _context;
@@ -72,5 +65,15 @@ public class ActiveUserService : IActiveUser
 
             return _cachedUser;
         }
+    }
+}
+
+
+public static partial class MusicExtensions
+{
+    public static IServiceCollection AddActiveUser(this IServiceCollection services)
+    {
+        services.AddScoped<IActiveUser, ActiveUserService>();
+        return services;
     }
 }
