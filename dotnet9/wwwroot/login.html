@@ -1,7 +1,6 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,23 +8,29 @@
     <link rel="stylesheet" href="css/site.css" />
     <style>
         /* Center the login card on the screen */
-        body { 
-            display: flex; 
-            flex-direction: column; 
-            align-items: center; 
-            justify-content: center; 
-            min-height: 100vh; 
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
             background: #f4f6fa;
         }
-        .login-container { width: 100%; max-width: 400px; }
-        .g_id_signin { display: flex; justify-content: center; margin-top: 1rem; }
+
+        .login-container {
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .g_id_signin {
+            display: flex;
+            justify-content: center;
+            margin-top: 1rem;
+        }
     </style>
 </head>
 
 <body>
-
-  
-
     <div class="login-container">
         <div class="form-card">
             <form id="form">
@@ -40,24 +45,25 @@
                 </div>
 
                 <div class="form-actions" style="display: flex; justify-content: center; margin-top: 1.5rem;">
-                    <button type="submit" class="admin-link-btn" style="padding: 0.5rem 2rem; font-size: 1rem;">Login</button>
+                    <button type="submit" class="admin-link-btn"
+                        style="padding: 0.5rem 2rem; font-size: 1rem;">Login</button>
                 </div>
             </form>
 
             <hr style="border: 0; border-top: 1px solid #eee; margin: 1.5rem 0;">
 
-            <div id="g_id_onload" 
-                 data-client_id="753534409769-esd1uivsvk45lrnuf5l3m17d275v6euc.apps.googleusercontent.com"
-                 data-callback="handleGoogleCredentialResponse" 
-                 data-auto_prompt="false">
+            <div id="g_id_onload"
+                data-client_id="753534409769-esd1uivsvk45lrnuf5l3m17d275v6euc.apps.googleusercontent.com"
+                data-callback="handleGoogleCredentialResponse" data-auto_prompt="false">
             </div>
             <div class="g_id_signin" data-type="standard"></div>
         </div>
     </div>
 
-    
+
 
     <script src="https://accounts.google.com/gsi/client" async defer></script>
     <script src="js/usersLogin.js"></script>
 </body>
+
 </html>

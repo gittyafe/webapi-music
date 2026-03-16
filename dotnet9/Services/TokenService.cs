@@ -71,8 +71,8 @@ namespace MusicWebapi.Application.Services
     public static class TokenService
     {
         private static SymmetricSecurityKey key;
-        private static string issuer;
-        private static string audience;
+        private static string? issuer;
+        private static string? audience;
 
         static TokenService()
         {

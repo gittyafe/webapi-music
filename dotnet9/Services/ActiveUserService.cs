@@ -6,30 +6,6 @@ using MusicWebapi.Api.Models;
 
 namespace MusicWebapi.Application.Services;
 
-// public class ActiveUserService : IActiveUser
-// {
-//     public User ActiveUser { get; private set; }
-//     public ActiveUserService(IHttpContextAccessor context)
-//     {
-//         var id = context?.HttpContext?.User?.FindFirst("userid")?.Value;
-//         var role = context?.HttpContext?.User?.FindFirst("role")?.Value;
-//         var name = context?.HttpContext?.User?.FindFirst("username")?.Value;
-
-//         if (id != null)
-//         {
-//             ActiveUser = new User
-//             {
-//                 Id = int.Parse(id),
-//                 Name = name,
-//                 Role = role
-//             };
-//         }
-
-//     }
-
-// }
-
-
 public class ActiveUserService : IActiveUser
 {
     private readonly IHttpContextAccessor _context;
@@ -68,7 +44,6 @@ public class ActiveUserService : IActiveUser
     }
 }
 
-
 public static partial class MusicExtensions
 {
     public static IServiceCollection AddActiveUser(this IServiceCollection services)
@@ -77,3 +52,30 @@ public static partial class MusicExtensions
         return services;
     }
 }
+
+
+
+//irrelevant code:
+
+// public class ActiveUserService : IActiveUser
+// {
+//     public User ActiveUser { get; private set; }
+//     public ActiveUserService(IHttpContextAccessor context)
+//     {
+//         var id = context?.HttpContext?.User?.FindFirst("userid")?.Value;
+//         var role = context?.HttpContext?.User?.FindFirst("role")?.Value;
+//         var name = context?.HttpContext?.User?.FindFirst("username")?.Value;
+
+//         if (id != null)
+//         {
+//             ActiveUser = new User
+//             {
+//                 Id = int.Parse(id),
+//                 Name = name,
+//                 Role = role
+//             };
+//         }
+
+//     }
+
+// }

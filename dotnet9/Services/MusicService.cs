@@ -21,16 +21,14 @@ public class MusicService : IMusicService
     private readonly IHubContext<ActivityHub> hubContext;
     private readonly IGenericRepository<Music> repository;
     private readonly int activeUserId;
-    private readonly string activeUsername;
+    private readonly string? activeUsername;
 
     public MusicService(IGenericRepository<Music> repository, IActiveUser activeUser, IHubContext<ActivityHub> hubContext)
     {
         this.repository = repository;
         this.activeUserId = activeUser.ActiveUser?.Id
                 ?? throw new System.InvalidOperationException("Active user is required");
-#pragma warning disable CS8601 // Possible null reference assignment.
         this.activeUsername = activeUser.ActiveUser?.Name;
-#pragma warning restore CS8601 // Possible null reference assignment.
         this.hubContext = hubContext;
     }
 
@@ -39,7 +37,9 @@ public class MusicService : IMusicService
     public Music Get(int id)
     {
         var music = repository.Get(id);
-        return music?.UserId == activeUserId ? music : null;
+        if(music == null)
+            return null!;
+        return music;
     }
 
     public Music Create(Music music)

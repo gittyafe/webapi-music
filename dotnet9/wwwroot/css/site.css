@@ -241,7 +241,7 @@ button,
 
 .pwd-mask {
     -webkit-text-security: disc;
-    text-security: disc;
+    /* text-security: disc; */
 }
 
 /* עיצוב כל שדה טופס */

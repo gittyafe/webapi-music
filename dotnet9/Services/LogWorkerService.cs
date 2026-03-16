@@ -8,8 +8,8 @@ namespace MusicWebapi.Application.Services;
 
 public class LogWorkerService : BackgroundService
 {
-    private IConnection connection;
-    private IChannel channel;
+    private IConnection? connection;
+    private IChannel? channel;
     private const string QueueName = "music-log";
 
     protected override async Task ExecuteAsync(CancellationToken stoppingToken)
@@ -32,7 +32,7 @@ public class LogWorkerService : BackgroundService
             var json = Encoding.UTF8.GetString(ea.Body.ToArray());
             var log = JsonSerializer.Deserialize<MusicLogMessage>(json);
 
-            var line = $"time: {log.Timestamp:yyyy-MM-dd HH:mm:ss} | user: {log.Username} | action: {log.Action} | duration: {log.DurationTime}ms";
+            var line = $"time: {log?.Timestamp:yyyy-MM-dd HH:mm:ss} | user: {log?.Username} | action: {log?.Action} | duration: {log?.DurationTime}ms";
             await File.AppendAllTextAsync("logs.txt", line + Environment.NewLine);
 
             await channel.BasicAckAsync(ea.DeliveryTag, false);

@@ -2,20 +2,20 @@ const uri = '/User';
 let users = [];
 const token = localStorage.getItem("userToken");
 
-function redirectIfNeeded(){
-    if(localStorage.getItem("userToken")==null){
+function redirectIfNeeded() {
+    if (localStorage.getItem("userToken") == null) {
         const currentUrl = window.location.href; // מקבל את ה-URL הנוכחי
         const newUrl = currentUrl.substring(0, currentUrl.lastIndexOf('/')); // מסיר את הקטע האחרון
-        window.location.href = newUrl+'/login.html'; // מבצע את ה-redirect
+        window.location.href = newUrl + '/login.html'; // מבצע את ה-redirect
     }
-    else{
+    else {
         getItems();
     }
 }
 
 
 function getItems() {
-   
+
     fetch(uri, {
         method: "GET",
         headers: {
@@ -23,9 +23,9 @@ function getItems() {
             "Accept": "application/json"
         }
     })
-    .then(response => response.json())
-    .then(data => _displayItems(data))
-    .catch(error => console.error('Unable to get user.', error));
+        .then(response => response.json())
+        .then(data => _displayItems(data))
+        .catch(error => console.error('Unable to get user.', error));
 }
 
 function addItem() {
@@ -43,14 +43,14 @@ function addItem() {
     };
 
     fetch(uri, {
-            method: 'POST',
-            headers: {
-                'Authorization': "Bearer " + token,
-                'Accept': 'application/json',
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(item)
-        })
+        method: 'POST',
+        headers: {
+            'Authorization': "Bearer " + token,
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(item)
+    })
         .then(response => response.json())
         .then(() => {
             getItems();
@@ -65,11 +65,11 @@ function addItem() {
 
 function deleteItem(id) {
     fetch(`${uri}/${id}`, {
-            method: 'DELETE',
-            headers:{
-                'Authorization': "Bearer " + token,        
-            }
-        })
+        method: 'DELETE',
+        headers: {
+            'Authorization': "Bearer " + token,
+        }
+    })
         .then(() => getItems())
         .catch(error => console.error('Unable to delete item.', error));
 }
@@ -90,21 +90,21 @@ function updateItem() {
     const itemId = document.getElementById('edit-id').value;
     const item = {
         Id: parseInt(itemId, 10),
-        Name: document.getElementById('edit-name').value.trim(),    
+        Name: document.getElementById('edit-name').value.trim(),
         Passwd: document.getElementById('edit-passwd').value.trim(),
         Role: document.getElementById('edit-role').value.trim(),
         Email: document.getElementById('edit-email').value.trim()
-      };
+    };
 
     fetch(`${uri}/${itemId}`, {
-            method: 'PUT',
-            headers: {
-                'Authorization': "Bearer " + token,
-                'Accept': 'application/json',
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(item)
-        })
+        method: 'PUT',
+        headers: {
+            'Authorization': "Bearer " + token,
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(item)
+    })
         .then(() => getItems())
         .catch(error => console.error('Unable to update item.', error));
 
@@ -143,7 +143,7 @@ function _displayItems(data) {
 
         let tr = tBody.insertRow();
 
-       let td0 = tr.insertCell(0);
+        let td0 = tr.insertCell(0);
         let textNode0 = document.createTextNode(item.id);
         td0.appendChild(textNode0);
 
@@ -178,9 +178,9 @@ function _displayItems(data) {
 function initSignalR() {
     const connection = new signalR.HubConnectionBuilder()
         .withUrl("/activityHub", {
-                accessTokenFactory: () => token
-            })
-                .build();
+            accessTokenFactory: () => token
+        })
+        .build();
     connection.on("ReceiveActivity", function (username, action, itemName) {
         getItems();
         const activityList = document.getElementById("activityList");

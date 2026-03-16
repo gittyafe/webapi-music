@@ -4,21 +4,22 @@ const token = localStorage.getItem("userToken");
 
 
 
+//כאן נמצאות כל הפונקציות שקשורות למשתמש הנוכחי (הצגת פרטים, עדכון פרטים, בדיקת התחברות וכו')
 
-function displayUserDetailes(){
-    
+function displayUserDetailes() {
+
     closeInput2();
 
-      fetch(`User/me`, {
+    fetch(`User/me`, {
         method: "GET",
         headers: {
             "Authorization": "Bearer " + token,
             "Accept": "application/json"
         }
     })
-    .then(response => response.json())
-    .then(data => { displayUser(data);})
-    .catch(error => console.error("Unable to get user.", error));
+        .then(response => response.json())
+        .then(data => { displayUser(data); })
+        .catch(error => console.error("Unable to get user.", error));
 }
 
 function displayUser(user) {
@@ -29,10 +30,10 @@ function displayUser(user) {
     // אם הוא אדמין – מציגים קישור
     if (user.role === "Admin") {
         const adminLink = document.getElementById("users-link");
-        if (adminLink.querySelector("a")) 
+        if (adminLink.querySelector("a"))
             return;
         const link = document.createElement("a");
-        link.href= "./users.html";
+        link.href = "./users.html";
         adminLink.append(link);
         adminLink.style.display = "inline-block";
     }
@@ -46,39 +47,39 @@ function displayEditFormUser() {
             "Accept": "application/json"
         }
     })
-    .then(response => response.json())
-    .then(userData => {
+        .then(response => response.json())
+        .then(userData => {
 
-    document.getElementById('edit2-id').value = userData.id;
-    document.getElementById('edit2-role').value = userData.role;
-    document.getElementById('edit2-name').value = userData.name;
-    document.getElementById('edit2-passwd').value = userData.passwd;
-    document.getElementById('edit2-email').value = userData.email;
-    document.getElementById('editForm2').style.display = 'block';
+            document.getElementById('edit2-id').value = userData.id;
+            document.getElementById('edit2-role').value = userData.role;
+            document.getElementById('edit2-name').value = userData.name;
+            document.getElementById('edit2-passwd').value = userData.passwd;
+            document.getElementById('edit2-email').value = userData.email;
+            document.getElementById('editForm2').style.display = 'block';
 
-    })
-    .catch(error => console.error("Unable to get user.", error));
+        })
+        .catch(error => console.error("Unable to get user.", error));
 }
 
 function updateUser() {
     const userId = document.getElementById('edit2-id').value;
     const user = {
         Id: parseInt(userId, 10),
-        Name: document.getElementById('edit2-name').value.trim(),    
+        Name: document.getElementById('edit2-name').value.trim(),
         Passwd: document.getElementById('edit2-passwd').value.trim(),
         Role: document.getElementById('edit2-role').value.trim(),
         Email: document.getElementById('edit2-email').value.trim()
-      };
+    };
 
     fetch(`User/${userId}`, {
-            method: 'PUT',
-            headers: {
-                'Authorization': "Bearer " + token,
-                'Accept': 'application/json',
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(user)
-        })
+        method: 'PUT',
+        headers: {
+            'Authorization': "Bearer " + token,
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(user)
+    })
         .then(() => displayUserDetailes())
         .catch(error => console.error('Unable to update item.', error));
 
@@ -94,37 +95,20 @@ function closeInput2() {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-function redirectIfNeeded(){
-    if(localStorage.getItem("userToken")==null){
+// בדיקה אם המשתמש מחובר, אם לא – הפניה לעמוד התחברות
+function redirectIfNeeded() {
+    if (localStorage.getItem("userToken") == null) {
         const currentUrl = window.location.href; // מקבל את ה-URL הנוכחי
         const newUrl = currentUrl.substring(0, currentUrl.lastIndexOf('/')); // מסיר את הקטע האחרון
-        window.location.href = newUrl+'/login.html'; // מבצע את ה-redirect  
+        window.location.href = newUrl + '/login.html'; // מבצע את ה-redirect  
     }
     getItems();
     displayUserDetailes();
 
 }
 
+
+// החל מכאן הפונקציות הקשורות לניהול המוזיקה (הצגה, הוספה, מחיקה, עדכון)
 
 function getItems() {
 
@@ -135,9 +119,9 @@ function getItems() {
             "Accept": "application/json"
         }
     })
-    .then(response => response.json())
-    .then(data => _displayItems(data))
-    .catch(error => console.error('Unable to get items.', error));
+        .then(response => response.json())
+        .then(data => _displayItems(data))
+        .catch(error => console.error('Unable to get items.', error));
 }
 
 function addItem() {
@@ -149,14 +133,14 @@ function addItem() {
     };
 
     fetch(uri, {
-            method: 'POST',
-            headers: {
-                "Authorization": "Bearer " + token,
-                'Accept': 'application/json',
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(item)
-        })
+        method: 'POST',
+        headers: {
+            "Authorization": "Bearer " + token,
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(item)
+    })
         .then(response => response.json())
         .then(() => {
             addNameTextbox.value = '';
@@ -166,11 +150,11 @@ function addItem() {
 
 function deleteItem(id) {
     fetch(`${uri}/${id}`, {
-            method: 'DELETE',
-            headers: {
-                  "Authorization": "Bearer " + token,
-            },
-        })
+        method: 'DELETE',
+        headers: {
+            "Authorization": "Bearer " + token,
+        },
+    })
         .catch(error => console.error('Unable to delete item.', error));
 }
 
@@ -192,14 +176,14 @@ function updateItem() {
     };
 
     fetch(`${uri}/${itemId}`, {
-            method: 'PUT',
-            headers: {
-                  "Authorization": "Bearer " + token,
-                'Accept': 'application/json',
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(item)
-        })
+        method: 'PUT',
+        headers: {
+            "Authorization": "Bearer " + token,
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(item)
+    })
         .catch(error => console.error('Unable to update item.', error));
 
     closeInput();
@@ -259,13 +243,12 @@ function _displayItems(data) {
 }
 
 
-//לבינתיים...
 function initSignalR() {
     const connection = new signalR.HubConnectionBuilder()
         .withUrl("/activityHub", {
-                accessTokenFactory: () => token
-            })
-                .build();
+            accessTokenFactory: () => token
+        })
+        .build();
     connection.on("ReceiveActivity", function (username, action, itemName) {
         getItems();
         const activityList = document.getElementById("activityList");
