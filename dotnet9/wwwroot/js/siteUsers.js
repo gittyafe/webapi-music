@@ -53,7 +53,6 @@ function addItem() {
     })
         .then(response => response.json())
         .then(() => {
-            getItems();
             addNameTextbox.value = '';
             addPasswdTextbox.value = '';
             addRoleTextbox.value = '';
@@ -70,7 +69,6 @@ function deleteItem(id) {
             'Authorization': "Bearer " + token,
         }
     })
-        .then(() => getItems())
         .catch(error => console.error('Unable to delete item.', error));
 }
 
@@ -105,7 +103,6 @@ function updateItem() {
         },
         body: JSON.stringify(item)
     })
-        .then(() => getItems())
         .catch(error => console.error('Unable to update item.', error));
 
     closeInput();
@@ -175,6 +172,8 @@ function _displayItems(data) {
     users = data;
 }
 
+
+// פונקציה לאתחול חיבור ה-SignalR לקבלת עדכונים בזמן אמת על פעילויות משתמשים
 function initSignalR() {
     const connection = new signalR.HubConnectionBuilder()
         .withUrl("/activityHub", {

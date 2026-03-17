@@ -95,6 +95,7 @@ function closeInput2() {
 
 
 
+
 // בדיקה אם המשתמש מחובר, אם לא – הפניה לעמוד התחברות
 function redirectIfNeeded() {
     if (localStorage.getItem("userToken") == null) {
@@ -106,6 +107,8 @@ function redirectIfNeeded() {
     displayUserDetailes();
 
 }
+
+
 
 
 // החל מכאן הפונקציות הקשורות לניהול המוזיקה (הצגה, הוספה, מחיקה, עדכון)
@@ -243,6 +246,8 @@ function _displayItems(data) {
 }
 
 
+
+// פונקציה לאתחול חיבור ה-SignalR לקבלת עדכונים בזמן אמת על פעילויות משתמשים
 function initSignalR() {
     const connection = new signalR.HubConnectionBuilder()
         .withUrl("/activityHub", {
