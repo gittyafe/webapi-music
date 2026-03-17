@@ -245,7 +245,10 @@ function _displayItems(data) {
     instruments = data;
 }
 
-
+function signOut() {
+    localStorage.removeItem("userToken");
+    window.location.href = "./login.html";
+}
 
 // פונקציה לאתחול חיבור ה-SignalR לקבלת עדכונים בזמן אמת על פעילויות משתמשים
 function initSignalR() {

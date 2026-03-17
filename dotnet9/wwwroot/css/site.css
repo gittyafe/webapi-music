@@ -352,3 +352,34 @@ form input[type="submit"]:active {
     align-items: center;
     margin-top: 1rem;
 }
+
+button{
+    /* display: inline-block; */
+    /* padding: 0.6rem 1.5rem; */
+    font-size: 1rem;
+    font-weight: 600;
+    color: #fff;
+    background-color: #4a90e2; /* צבע המותג שלך */
+    border: none;
+    border-radius: 6px; /* רדיוס עדין ומקצועי */
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0 2px 4px rgba(74, 144, 226, 0.2);
+    /* margin-top: 10px;     */
+}
+
+#signout{
+    display: inline-block;
+    background: #a6c1e1;
+    color: #fff;
+    font-size: 1.0rem;
+    font-weight: 600;
+    padding: 0.5rem 2.0rem;
+    border-radius: 8px;
+    text-decoration: none;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+    transition: background 0.2s, box-shadow 0.2s;
+    letter-spacing: 1px;
+    margin:0;
+    margin-left: 8px;
+}
