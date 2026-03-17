@@ -22,6 +22,7 @@ public class MusicService : IMusicService
     private readonly IGenericRepository<Music> repository;
     private readonly int activeUserId;
     private readonly string? activeUsername;
+    private readonly string? activeUserRole;
 
     public MusicService(IGenericRepository<Music> repository, IActiveUser activeUser, IHubContext<ActivityHub> hubContext)
     {
@@ -29,6 +30,7 @@ public class MusicService : IMusicService
         this.activeUserId = activeUser.ActiveUser?.Id
                 ?? throw new System.InvalidOperationException("Active user is required");
         this.activeUsername = activeUser.ActiveUser?.Name;
+        this.activeUserRole = activeUser.ActiveUser?.Role;
         this.hubContext = hubContext;
     }
 
@@ -73,10 +75,17 @@ public class MusicService : IMusicService
         Console.WriteLine("BroadcastActivity called for user.Id = " + activeUserId);
         return true;
     }
-    private void BroadcastActivity(string action, Music music)
+private void BroadcastActivity(string action, Music music)
+{
+    // 1. תמיד נשלח לקבוצת ה-Admins (זה יכסה את כל המנהלים, כולל זה שביצע את הפעולה אם הוא אדמין)
+    hubContext.Clients.Group("Admins").SendAsync("ReceiveActivity", activeUsername, action, music.Name);
+
+    // 2. נשלח למשתמש הספציפי רק אם הוא *לא* אדמין (כדי שלא יקבל כפול)
+    if (activeUserRole != "Admin")
     {
         hubContext.Clients.User(activeUserId.ToString()).SendAsync("ReceiveActivity", activeUsername, action, music.Name);
     }
+}
 
 }
 
