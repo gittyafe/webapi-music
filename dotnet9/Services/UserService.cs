@@ -37,7 +37,7 @@ public class UserService : IUserService
         if (activeUser == null)
             throw new InvalidOperationException("Active user is not set.");
         if (id != activeUser.Id && activeUser.Role != "Admin")
-            return null!;
+            return null;
         var user = repository.Get(id);
         return user;
     }
@@ -50,7 +50,7 @@ public class UserService : IUserService
     public User Create(User user)
     {
         repository.Create(user);
-        BroadcastActivity("added user", user);
+        NotifyActivity("added user", user);
         return user;
     }
 
@@ -64,7 +64,8 @@ public class UserService : IUserService
 
         var existing = repository.Get(id);
         int status = repository.Update(id, user);
-        BroadcastActivity("updated user", user);
+        if (status == 2) // Update successful
+             NotifyActivity("updated user", user);
         return status;
     }
 
@@ -76,14 +77,14 @@ public class UserService : IUserService
 
         musicRepository.Get().Where(m => m.UserId == id).ToList().ForEach(m => musicRepository.Delete(m.Id));
         repository.Delete(id);
-        BroadcastActivity("deleted user", user);
+        NotifyActivity("deleted user", user);
         return true;
     }
 
-    private void BroadcastActivity(string action, User user)
+    private async Task NotifyActivity(string action, User user)
     {
-        // Send only to the currently logged-in user (like music)
-        hubContext.Clients.User(activeUser.Id.ToString()).SendAsync("ReceiveActivity", activeUser.Name, action, user.Name);
+        await hubContext.Clients.Group($"User_{user.Id}").SendAsync("ReceivePersonalUpdate", action, user.Name);
+        await hubContext.Clients.Group("Admins").SendAsync("ReceiveAdminAlert", activeUser.Name, action, user.Name, user.Id.ToString());
     }
 
 }

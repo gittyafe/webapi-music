@@ -257,11 +257,13 @@ function initSignalR() {
             accessTokenFactory: () => token
         })
         .build();
-    connection.on("ReceiveActivity", function (username, action, itemName) {
+     
+    connection.on("ReceivePersonalUpdate", function (action, itemName) {
         getItems();
+        displayUserDetailes();
         const activityList = document.getElementById("activityList");
         const li = document.createElement("li");
-        li.textContent = `${username} ${action} '${itemName}'`;
+        li.textContent = `${action} '${itemName}'`;
         activityList.insertBefore(li, activityList.firstChild);
 
         // Keep only last 10 activities

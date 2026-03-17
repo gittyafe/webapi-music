@@ -180,7 +180,7 @@ function initSignalR() {
             accessTokenFactory: () => token
         })
         .build();
-    connection.on("ReceiveActivity", function (username, action, itemName) {
+    connection.on("ReceiveAdminAlert", function (username, action, itemName) {
         getItems();
         const activityList = document.getElementById("activityList");
         const li = document.createElement("li");

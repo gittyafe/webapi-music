@@ -46,7 +46,7 @@ public class MusicService : IMusicService
     {
         music.UserId = activeUserId;
         repository.Create(music);
-        BroadcastActivity("added music", music);
+        NotifyActivity("added music", music);
         return music;
     }
 
@@ -58,7 +58,7 @@ public class MusicService : IMusicService
             return 1;
         music.UserId = activeUserId;
         repository.Update(id, music);
-        BroadcastActivity("updated music", music);
+        NotifyActivity("updated music", music);
         return 2;
     }
 
@@ -69,15 +69,13 @@ public class MusicService : IMusicService
             return false;
 
         repository.Delete(id);
-        BroadcastActivity("deleted music", music);
-        Console.WriteLine("BroadcastActivity called for user.Id = " + activeUserId);
+        NotifyActivity("deleted music", music);
         return true;
     }
-    private void BroadcastActivity(string action, Music music)
+    async private Task NotifyActivity(string action, Music music)
     {
-        hubContext.Clients.User(activeUserId.ToString()).SendAsync("ReceiveActivity", activeUsername, action, music.Name);
+        await hubContext.Clients.Group($"User_{music.UserId}").SendAsync("ReceivePersonalUpdate", action, music.Name);
     }
-
 }
 
 
